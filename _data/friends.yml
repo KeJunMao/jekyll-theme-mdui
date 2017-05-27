@@ -29,7 +29,7 @@
   describe: Welcome to disturb
 
 - name:  Elias's Cave
-  image: http://meniny.cn/img/default_s.jpg
+  image: http://meniny.cn/assets/images/icons/Chair/logo.png
   url: http://meniny.cn
   describe: Welcome
 

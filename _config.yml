@@ -1,0 +1,23 @@
+title: "KeJun blog"
+description: "A Jekyll theme based on MDUI"
+url: 
+baseurl: 
+author: "KeJun"
+avatar: "https://ooo.0o0.ooo/2017/05/26/5928368d409dd.png"
+lang: "zh-CN"
+paginate: 5
+paginate_path: "/blog/page:num/"
+
+gems:
+  - jekyll-sitemap
+  - jekyll-paginate
+
+exclude:
+  - package.json
+  - node_modules
+  - gulpfile.js
+  - Gemfile
+  - Gemfile.lock
+  - jekyll-theme-mdui.gemspec
+  - LICENSE.txt
+  - README.md

@@ -1,0 +1,55 @@
+<script src="{{ "/assets/js/main.js" | prepend: site.baseurl }}"></script>
+<script src="{{ "/assets/js/mdui.min.js" | prepend: site.baseurl }}"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="{{ "/assets/js/jquery.scrollToTop.js" | prepend: site.baseurl }}"></script>
+
+<script>
+    $(function(){
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register("{{ "/sw.js" | relative_url }}").then(function() {
+      console.log("Service Worker Registered");
+    });
+  }
+        Array.prototype.forEach.call(document.querySelectorAll(".mdui-card-media"), function(a) {
+        var b = a.querySelector("a");
+        if (!b) {
+            return
+        }
+        var c = b.getAttribute("href");
+        if (!c) {
+            return
+        }
+        a.addEventListener("click", function() {
+            location.href = c
+        })
+    });
+    $("#toTop").scrollToTop();
+    })
+</script>
+
+{% if page.layout == "post" %}
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
+<script src="{{ "/assets/js/toc.min.js" | prepend: site.baseurl }}"></script>
+<script src="{{ "/assets/js/pushpin.js" | prepend: site.baseurl }}"></script>
+<script>
+    $(function(){
+$("div.k-page-col").css('margin',0);
+    hljs.initHighlightingOnLoad();
+       $('#toc').toc({
+        'selectors': 'h2',
+        'prefix': 'toc',
+        'highlightOffset': 64
+      });
+    $("#toc").find("ul").fadeIn(1000);
+    var tocBottom = $('.mdui-card-content').offset().top + $('.mdui-card-content').height() - $('#toc-card').height();
+    var tocOffset = $('.k-post-media').offset().top;
+    var tocTop = $('.mdui-card-header').offset().top;
+    $('#toc-card').pushpin({
+      top: tocTop,
+      bottom: 99999,
+      offset: tocOffset
+    });
+    })
+    
+</script>
+{% endif %}

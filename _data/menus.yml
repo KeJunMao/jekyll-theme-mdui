@@ -1,0 +1,9 @@
+- name: HOME
+  url: /
+  icon: home
+- name: TODO
+  url: /pages/menus/todo.html
+  icon: "&#xe22b;"
+- name: ABOUT
+  url: /pages/menus/about.html
+  icon: "&#xe7fd;"

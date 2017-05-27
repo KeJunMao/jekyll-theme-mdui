@@ -1,0 +1,104 @@
+
+.k-container{
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+    max-width: 900px;
+    flex-shrink: 0;
+}
+.k-posts-list{
+    padding-top:65px; 
+}
+.k-posts-list .mdui-card {
+    margin-bottom: 45px;
+}
+.k-post-media{
+    cursor: pointer;max-height: 245px;min-height:245px;background-position: 50% 50%;background-size: cover; background-color: #448aff;
+}
+.k-post-media .mdui-card-primary-title a{
+text-decoration: none;
+}
+.k-posts-list .mdui-card-content a{
+    margin-left:35px;
+}
+#toc a{
+    text-align: left;
+    color: black;
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    position: relative;
+    min-width: 88px;
+    height: 36px;
+    box-sizing: border-box;
+    padding: 0 16px;
+    margin: 0;
+    overflow: hidden;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 36px;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    zoom: 1;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background: transparent;
+    border: none;
+    border-radius: 2px;
+    outline: none;
+    transition: all .2s cubic-bezier(.4, 0, .2, 1), box-shadow .2s cubic-bezier(.4, 0, 1, 1);
+    will-change: box-shadow;
+    -webkit-user-drag: none;
+}
+#toc-card{
+    width: 260px;
+}
+#toc a:hover{
+    background-color: rgba(0, 0, 0, .1);
+}
+#toc ul{
+    display: none;
+    padding: 8px 0;
+    margin: 0;
+    list-style: none;
+}
+#toc ul li{
+    max-width: 300px;
+    min-width: 200px;
+}
+#toc ul .toc-active{
+    border-left: 3px solid #448aff;
+    background-color: rgba(0, 0, 0, .2)
+}
+.pinned{
+    position: fixed;
+}
+.pin-top{
+    margin-top: 245px;
+}
+.k-toc-item{
+    min-width: 300px;
+}
+.k-mdui-headroom-unpinned-top{
+    box-shadow: none!important;
+    -webkit-transform: translate3d(0,-100%,0)!important;
+    transform: translate3d(0,400%,0)!important;
+}
+.k-page-col{
+    margin-left: 13.333333%;transition: all 0.6s ease-in-out;
+}
+@media screen and (max-width: 600px){
+    .k-posts-list{
+        padding-top: 0;
+    }
+    .k-page-col{
+    margin-left: 0;
+    }
+}

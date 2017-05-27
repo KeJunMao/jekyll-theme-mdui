@@ -108,6 +108,9 @@ body,header,#toc-card{
 .k-friend{
     text-decoration: none;
 }
+#disqus_thread{
+    padding: 16px;
+}
 @media screen and (max-width: 600px){
     .k-posts-list{
         padding-top: 0;

@@ -1,5 +1,5 @@
 ---
-layout: null
+layout: compress
 ---
 var cacheName = 'madhur-cache-v1';
 var filesToCache = [

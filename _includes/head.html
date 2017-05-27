@@ -3,16 +3,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="{{site.author}}">
-    <link href="https://ooo.0o0.ooo/2017/05/20/59203d43aec1a.png" rel="shortcut icon">
+    <link href="https://ooo.0o0.ooo/2017/05/27/59294212bc16e.png" rel="shortcut icon">
     <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
     <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
     <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
     <link rel="manifest" href="{{ "/manifest.json" | prepend: site.baseurl }}">
-    <link rel="preload" href="{{ "/assets/css/mdui.min.css" | prepend: site.baseurl }}" as="style" onload="this.rel='stylesheet'">
+    <link rel="preload" href="//cdnjs.cloudflare.com/ajax/libs/mdui/0.2.1/css/mdui.min.css" as="style" onload="this.rel='stylesheet'">
     <link rel="preload" href="{{ "/assets/css/main.css" | prepend: site.baseurl }}" as="style" onload="this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="{{ "/assets/css/mdui.min.css" | prepend: site.baseurl }}"></noscript>
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.css" as="style" onload="this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/mdui/0.2.1/css/mdui.min.css"></noscript>
     <noscript><link rel="stylesheet" href="{{ "/assets/css/main.css" | prepend: site.baseurl }}"></noscript>
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.css"></noscript>
     {% if page.layout == "post" %}
     <link rel="preload" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/default.min.css" as="style" onload="this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/default.min.css"></noscript>

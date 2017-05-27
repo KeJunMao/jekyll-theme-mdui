@@ -1,8 +1,16 @@
-<script src="{{ "/assets/js/main.js" | prepend: site.baseurl }}"></script>
-<script src="{{ "/assets/js/mdui.min.js" | prepend: site.baseurl }}"></script>
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/mdui/0.2.1/js/mdui.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.js"></script>
 <script src="{{ "/assets/js/jquery.scrollToTop.js" | prepend: site.baseurl }}"></script>
-
+<script type="text/javascript">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    setTimeout(function() {
+        NProgress.done();
+    },200);
+</script>
 <script>
     $(function(){
 if ('serviceWorker' in navigator) {
@@ -33,13 +41,13 @@ if ('serviceWorker' in navigator) {
 <script src="{{ "/assets/js/pushpin.js" | prepend: site.baseurl }}"></script>
 <script>
     $(function(){
-$("div.k-page-col").css('margin',0);
+    $("div.k-page-col").css('margin',0);
     hljs.initHighlightingOnLoad();
-       $('#toc').toc({
+    $('#toc').toc({
         'selectors': 'h2',
         'prefix': 'toc',
         'highlightOffset': 64
-      });
+    });
     $("#toc").find("ul").fadeIn(1000);
     var tocBottom = $('.mdui-card-content').offset().top + $('.mdui-card-content').height() - $('#toc-card').height();
     var tocOffset = $('.k-post-media').offset().top;
@@ -50,6 +58,5 @@ $("div.k-page-col").css('margin',0);
       offset: tocOffset
     });
     })
-    
 </script>
 {% endif %}

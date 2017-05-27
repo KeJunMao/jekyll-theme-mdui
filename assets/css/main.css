@@ -94,6 +94,10 @@ text-decoration: none;
 .k-page-col{
     margin-left: 13.333333%;transition: all 0.6s ease-in-out;
 }
+.mdui-row, [class*=mdui-row-] {
+     margin-right: 0; 
+     margin-left: 0; 
+}
 @media screen and (max-width: 600px){
     .k-posts-list{
         padding-top: 0;

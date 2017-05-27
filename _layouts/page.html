@@ -1,5 +1,29 @@
 ---
 layout: default
 ---
-
-{{ content }}
+<div class="mdui-container">
+    <div class="k-posts-list"></div>
+    <div class="mdui-row">
+        <div class="mdui-col-sm-12 k-page-col mdui-col-md-12">
+            <div class="mdui-card">
+                <div class="mdui-card-media k-post-media" style="background-image: url({{page.img}});">
+                    <div class="mdui-card-media-covered mdui-card-media-covered-gradient">
+                        <div class="mdui-card-primary">
+                            <div class="mdui-card-primary-title"><a class="mdui-text-color-white-text" href="{{post.url}}">{{page.title}}</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mdui-card-header">
+                    <img class="mdui-card-header-avatar" src="{{site.avatar}}" />
+                    <div class="mdui-card-header-title">{{site.author}}</div>
+                    <div class="mdui-card-header-subtitle">{{ page.date | date: "%b %-d, %Y" }}</div>
+                </div>
+                <div class="mdui-card-content mdui-typo">
+                    {{ content }}
+                </div>
+                {% include disqus.html %}
+            </div>
+        </div>
+    </div>
+    <br>
+</div>

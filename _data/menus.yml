@@ -4,6 +4,9 @@
 - name: TODO
   url: /pages/menus/todo.html
   icon: "&#xe22b;"
+- name: FRIENDS
+  url: /pages/menus/friends.html
+  icon: "&#xe7fd;"
 - name: ABOUT
   url: /pages/menus/about.html
   icon: "&#xe7fd;"

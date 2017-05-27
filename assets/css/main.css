@@ -1,4 +1,6 @@
-
+---
+layout: compress
+---
 .k-container{
     margin: 0 auto;
     padding: 0;
@@ -91,18 +93,31 @@ text-decoration: none;
     -webkit-transform: translate3d(0,-100%,0)!important;
     transform: translate3d(0,400%,0)!important;
 }
+{% if page.layout == 'post' %}
 .k-page-col{
     margin-left: 13.333333%;transition: all 0.6s ease-in-out;
 }
+{% endif %}
 .mdui-row, [class*=mdui-row-] {
      margin-right: 0; 
      margin-left: 0; 
+}
+body,header,#toc-card{
+    background-color:#eeeeee;
+}
+.k-friend{
+    text-decoration: none;
 }
 @media screen and (max-width: 600px){
     .k-posts-list{
         padding-top: 0;
     }
     .k-page-col{
-    margin-left: 0;
+        margin-left: 0;
+        padding:0;
+    }
+    .mdui-container{
+        width: 100%;
+        padding: 0;
     }
 }

@@ -1,0 +1,39 @@
+- name: Parallel
+  image: https://tva1.sinaimg.cn/crop.0.0.720.720.180/e93df40bjw8epg0k2owhxj20k00k0q3f.jpg
+  url: https://swumao.github.io/
+  describe: 茂同学
+
+- name: viosey
+  image: https://ooo.0o0.ooo/2016/12/23/585d119188d4f.png
+  url: https://blog.viosey.com/
+  describe: 一生想做自由 Geek
+
+- name: Halyul
+  image: https://cn.gravatar.com/userimage/113938008/e65085ec5e08a13de79873206f0c76fa.png?size=200
+  url: https://halyul.com/
+  describe: Material Design爱好者
+
+- name: neoFelhz
+  image: https://ooo.0o0.ooo/2016/12/22/585bc334c107f.png
+  url: https://nfz.moe/
+  describe: 拾穗者的故事
+
+- name: 滑稽
+  image: https://q1.qlogo.cn/headimg_dl?bs=1106996185&dst_uin=1106996185&spec=100&url_enc=0&referer=bu_interface&term_type=PC
+  url: https://huaji8.top
+  describe: 拼命想抓住一些东西
+
+- name:  冰凌胧月的后宫
+  image: https://cdn.moe0pic.moe0.cn/avatar.png
+  url: https://imiku.me
+  describe: Welcome to disturb
+
+- name:  Elias's Cave
+  image: http://meniny.cn/img/default_s.jpg
+  url: http://meniny.cn
+  describe: Welcome
+
+- name: FoamValue
+  image: http://www.foamvalue.com/favicon.ico
+  url: http://www.foamvalue.com
+  describe: 暂时还没想好

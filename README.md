@@ -2,7 +2,7 @@
 
 A Jekyll theme based on mdui
 
-[demo](https://blog.kejun.sapce)
+[demo](https://blog.kejun.space)
 
 ## Installation
 

@@ -111,6 +111,9 @@ body,header,#toc-card{
 #disqus_thread{
     padding: 16px;
 }
+#load-disqus{
+    margin-top: 27px;
+}
 @media screen and (max-width: 600px){
     .k-posts-list{
         padding-top: 0;

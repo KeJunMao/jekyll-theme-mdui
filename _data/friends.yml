@@ -1,3 +1,8 @@
+- name: MDUI
+  image: 
+  url: https://www.mdui.org/
+  describe: 一套用于开发 Material Design 网页的前端框架
+
 - name: Parallel
   image: https://tva1.sinaimg.cn/crop.0.0.720.720.180/e93df40bjw8epg0k2owhxj20k00k0q3f.jpg
   url: https://swumao.github.io/
@@ -37,3 +42,13 @@
   image: http://www.foamvalue.com/favicon.ico
   url: http://www.foamvalue.com
   describe: 暂时还没想好
+
+- name: PDC
+  image: https://ooo.0o0.ooo/2017/05/27/59298fa627ed2.jpg
+  url: http://pdcicons.ml
+  describe: 不会开发的开发者
+
+- name: Mysaku
+  image: https://ooo.0o0.ooo/2017/05/27/59298f4a24dd2.jpg
+  url: http://miku01qaq.xyz
+  describe: Naive少年

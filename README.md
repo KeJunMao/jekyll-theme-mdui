@@ -2,6 +2,8 @@
 
 A Jekyll theme based on mdui
 
+[demo](https://blog.kejun.sapce)
+
 ## Installation
 
 Add this line to your Jekyll site's `Gemfile`:

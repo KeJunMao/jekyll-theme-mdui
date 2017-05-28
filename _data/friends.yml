@@ -41,7 +41,7 @@
 - name:  Elias's Cave
   image: http://meniny.cn/assets/images/icons/Chair/logo.png
   url: http://meniny.cn
-  describe: Welcome
+  describe: A Developer's Faux Pas
 
 - name: FoamValue
   image: http://www.foamvalue.com/favicon.ico
@@ -57,6 +57,11 @@
   image: https://ooo.0o0.ooo/2017/05/27/59298f4a24dd2.jpg
   url: http://miku01qaq.xyz
   describe: Naive少年
+
+- name: Little_Qiu
+  image: https://cos.littleservice.cn/blog/dc3bba42.jpg
+  url: https://www.littleqiu.net
+  describe: 一个什么都会一点但是也只会一点的渣渣。
 
 - name: 南山梓人
   image: https://ooo.0o0.ooo/2017/05/28/592a95732197c.jpg

@@ -3,10 +3,10 @@
   icon: home
 - name: CATEGORY
   url: /pages/menus/category.html
-  icon: "&#xe22b;"
+  icon: "&#xe8ee;"
 - name: TAGS
   url: /pages/menus/tags.html
-  icon: "&#xe22b;"
+  icon: "&#xe893;"
 - name: TODO
   url: /pages/menus/todo.html
   icon: "&#xe22b;"

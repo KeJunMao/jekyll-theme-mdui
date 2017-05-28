@@ -208,7 +208,7 @@ body,header,#toc-card{
     white-space: nowrap;
     transition: .6s;
     opacity: .85;
-    float: left;
+    display: inline-block;
     color: #363636;
 }
 .k-tagcloud:hover{

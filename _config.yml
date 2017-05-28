@@ -9,6 +9,8 @@ paginate: 5
 paginate_path: "/blog/page:num/"
 
 disqus_shortname: "kejun"
+
+google_analytics: UA-96199161-3
 gems:
   - jekyll-sitemap
   - jekyll-paginate

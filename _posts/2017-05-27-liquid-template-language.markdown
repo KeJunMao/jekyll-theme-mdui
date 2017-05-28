@@ -3,7 +3,7 @@ layout: post
 title:  "Liquid 模板语言"
 date:   2017-05-27 16:18:06 +0800
 categories: Living
-tags: Liquid
+tags: Liquid jekyll
 img: https://ooo.0o0.ooo/2017/05/27/5929360544b21.jpg
 ---
 
@@ -29,6 +29,36 @@ img: https://ooo.0o0.ooo/2017/05/27/5929360544b21.jpg
  ```
 {% endraw %}
 
+
+## 标签云
+
+> 效果就是本博客的tag，此外还需要配合js。
+
+这个讲真，真的好累...
+
+```liquid{% raw %}
+{% capture tags %}
+  {% for tag in site.tags %}
+    {{ tag[0] }}
+  {% endfor %}
+{% endcapture %}
+
+{% assign sortedtags = tags | split:' ' | sort %}
+
+{% for tag in sortedtags %}
+  {% assign index = site.tags[tag] | size %}
+  {% assign fontsize = 14 %}
+  {% assign color = 125 %}
+  {% for i in (1..index) %}
+  {% capture fontsize %}{{fontsize | plus:1.5}}{% endcapture %}
+  {% endfor %}
+  {% for i in (1..index) %}
+  {% capture color %}{{ color | minus :15}}{% endcapture %}
+  {% endfor %}
+      <a id="{{ tag }}"  style="font-size:{{fontsize}}px;color:rgb({{color}},{{color}},{{color}})">{{ tag }}</a>
+{% endfor %}
+```
+{% endraw %}
 
 ## 有用的站点
 

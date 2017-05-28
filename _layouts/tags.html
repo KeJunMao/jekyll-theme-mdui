@@ -1,0 +1,33 @@
+---
+layout: default
+---
+
+{% capture tags %}
+  {% for tag in site.tags %}
+    {{ tag[0] }}
+  {% endfor %}
+{% endcapture %}
+
+{% assign sortedtags = tags | split:' ' | sort %}
+
+
+<div class="k-container">
+  <div class="k-posts-list"></div>
+{% for tag in sortedtags %}
+  {% assign index = site.tags[tag] | size %}
+  {% assign fontsize = 14 %}
+  {% assign color = 125 %}
+  {% for i in (1..index) %}
+  {% capture fontsize %}{{fontsize | plus:1.5}}{% endcapture %}
+  {% endfor %}
+  {% for i in (1..index) %}
+  {% capture color %}{{ color | minus :15}}{% endcapture %}
+  {% endfor %}
+      <a id="{{ tag }}" class="k-tagcloud mdui-ripple mdui-hoverable" style="font-size:{{fontsize}}px;color:rgb({{color}},{{color}},{{color}})">{{ tag }}</a>
+{% endfor %}
+<div class="mdui-row">
+  <div class="mdui-col-sm-12">
+    <div id="taglist"></div>
+  </div>
+</div>
+</div>

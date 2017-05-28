@@ -1,12 +1,18 @@
 - name: HOME
   url: /
   icon: home
+- name: CATEGORY
+  url: /pages/menus/category.html
+  icon: "&#xe22b;"
+- name: TAGS
+  url: /pages/menus/tags.html
+  icon: "&#xe22b;"
 - name: TODO
   url: /pages/menus/todo.html
   icon: "&#xe22b;"
 - name: FRIENDS
   url: /pages/menus/friends.html
-  icon: "&#xe7fd;"
+  icon: "&#xe8a3;"
 - name: ABOUT
   url: /pages/menus/about.html
   icon: "&#xe7fd;"

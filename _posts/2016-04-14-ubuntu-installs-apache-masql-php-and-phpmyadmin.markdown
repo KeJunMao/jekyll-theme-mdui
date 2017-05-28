@@ -2,7 +2,7 @@
 layout: post
 title:  "Ubuntu安装Apache，MySQL，PHP以及phpMyAdmin"
 date:   2016-04-14 10:24:49 +0800
-categories: Living
+categories: technology
 tags: ubuntu apache mysql php phpmyadmin
 img: https://ooo.0o0.ooo/2017/05/27/59292b1243dc9.jpg
 ---

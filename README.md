@@ -166,6 +166,18 @@ gems: # paginate gem
 ```
 Replace it with your logo:`assets/images/touch`
 
+### _post
+
+Add the following format to your posts:
+
+```liquid
+{% include tips.html content="protips" %}
+{% include note.html content="note" %}
+{% include warn.html content="warnings" %}
+```
+
+[demo](https://blog.kejun.space/living/2017/05/29/jekyll-theme-mdui.html)
+
 ## TODO
 
 [TODO](https://blog.kejun.space/pages/menus/todo.html)

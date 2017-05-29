@@ -1,6 +1,9 @@
 - name: HOME
   url: /
   icon: home
+- name: SEARCH
+  url: /pages/menus/search.html
+  icon: home
 - name: CATEGORY
   url: /pages/menus/category.html
   icon: "&#xe8ee;"

@@ -2,6 +2,9 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/mdui/0.2.1/js/mdui.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.js"></script>
 <script src="{{ "/assets/js/jquery.scrollToTop.js" | prepend: site.baseurl }}"></script>
+{% if page.layout =='search' %}
+<script src="{{ "/assets/js/jquery.typeahead.min.js" | prepend: site.baseurl }}"></script>
+{% endif %}
 <script type="text/javascript">
     NProgress.configure({
         showSpinner: true
@@ -26,13 +29,13 @@
 }
 </script>
 <script>
-    $(function(){
-if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register("{{ "/sw.js" | relative_url }}").then(function() {
-      console.log("Service Worker Registered");
-    });
-  }
-        Array.prototype.forEach.call(document.querySelectorAll(".mdui-card-media"), function(a) {
+$(function(){
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register("{{ "/sw.js" | relative_url }}").then(function() {
+            console.log("Service Worker Registered");
+        });
+    }
+    Array.prototype.forEach.call(document.querySelectorAll(".mdui-card-media"), function(a) {
         var b = a.querySelector("a");
         if (!b) {
             return
@@ -45,8 +48,38 @@ if ('serviceWorker' in navigator) {
             location.href = c
         })
     });
+
     $("#toTop").scrollToTop();
-    })
+    {% if page.layout =='search' %}
+    var names = new Array();
+    var urls = new Array(); 
+    $.getJSON("/search.json").done(function(data){
+            for (var index in data){
+                var item = data[index];
+                names[index] = item.title;
+                urls[names[index]] = item.url
+            }
+            $.typeahead({
+                input: '.js-typeahead-country_v1',
+                order: "desc",
+                source: {
+                    data: names
+                },
+               selector: {
+                    container: "typeahead__container",
+                    result: " mdui-card k-search-card",
+                    list: "mdui-list",
+                    item: "mdui-list-item"
+                },
+                callback: {
+                    onClick: function (node,a,item,event){
+                        window.location.href = urls[item.display];
+                    },
+                }
+            });
+      });
+      {% endif %}
+});
 </script>
 
 {% if page.layout == "tags" %}

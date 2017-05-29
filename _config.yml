@@ -24,3 +24,4 @@ exclude:
   - jekyll-theme-mdui.gemspec
   - LICENSE.txt
   - README.md
+  - vendor

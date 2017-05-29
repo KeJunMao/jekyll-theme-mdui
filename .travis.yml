@@ -1,0 +1,7 @@
+language: ruby
+cache: bundler
+sudo: false
+rvm: 2.2
+
+install: gem install bundler && bundle install
+script: bundle exec jekyll build && gem build jekyll-theme-mdui.gemspec

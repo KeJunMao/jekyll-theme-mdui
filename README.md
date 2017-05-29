@@ -4,6 +4,14 @@ A Jekyll theme based on mdui
 
 [demo](https://blog.kejun.space)
 
+[![Version](https://img.shields.io/badge/version-0.1.0-green.svg?style=flat-square)]()
+[![Jekyll](https://img.shields.io/badge/Jekyll-3.4+-green.svg?style=flat-square)](https://jekyllrb.com/)
+
+[![Build Status](https://img.shields.io/travis/KeJunMao/jekyll-theme-mdui.svg?style=flat-square)](https://travis-ci.org/KeJunMao/jekyll-theme-mdui)
+[![Gem](https://img.shields.io/gem/dt/jekyll-theme-mdui.svg?style=flat-square)](https://rubygems.org/gems/jekyll-theme-mdui/)
+
+[![Author](https://img.shields.io/badge/author-KeJun-blue.svg?style=flat-square)](https://blog.kejun.space)
+
 ## Installation
 
 We have two ways to install themes.

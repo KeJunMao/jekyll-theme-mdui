@@ -207,7 +207,6 @@ body,header,#toc-card{
     text-decoration: none;
     white-space: nowrap;
     transition: .6s;
-    opacity: .85;
     display: inline-block;
     color: #363636;
 }

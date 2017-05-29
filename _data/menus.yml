@@ -3,7 +3,7 @@
   icon: home
 - name: SEARCH
   url: /pages/menus/search.html
-  icon: home
+  icon: search
 - name: CATEGORY
   url: /pages/menus/category.html
   icon: "&#xe8ee;"

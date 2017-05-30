@@ -66,11 +66,21 @@ $(function(){
   function k_getTags(e){
       var tags = "";
     for (x in e){
-        if (e[x].tag){
-            tags += e[x].tag+" ";
-        }  
+        tags += e[x].tag+" ";
     }
     return tags;
+  }
+  function k_getFiletitle(e){
+    var title = e.toLowerCase().split(" ");
+    var newtitle = "";
+    for (x in title){
+        if (parseInt(x)+1 == title.length){
+            newtitle += title[x];
+        }else{
+            newtitle += title[x]+"-";
+        }
+    }
+    return newtitle;
   }
     var textFile = null,
         makeTextFile = function (text) {
@@ -93,9 +103,10 @@ $(function(){
         categories = k_getCategores($("input[name='group1']:checked"));
         date = k_getDate($('input[name=date]').val(),true);
         title = $('input[name=title]').val();
+        filecontent = "---\nlayout: post\ntitle: "+title+"\ndate: "+date+"\ncategories: "+categories+"\ntags: "+tags+"\nimg: "+img+"\n---\n"+simplemde.value();
+        title = k_getFiletitle(title);
         filename = k_getDate($('input[name=date]').val(),false)+'-'+title+'.markdown';
         $("#downloadlink").attr("download",filename);
-        filecontent = "---\nlayout: post\ntitle: "+title+"\ndate: "+date+"\ncategories: "+categories+"\ntags: "+tags+"\nimg: "+img+"\n---\n"+simplemde.value();
         var link = document.getElementById('downloadlink');
         link.href = makeTextFile(filecontent);
         link.style.display = 'block';

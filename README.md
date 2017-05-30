@@ -96,6 +96,12 @@ gems: # paginate gem
   url: /pages/menus/search.html # path
   icon: search # icon from https://www.mdui.org/docs/material_icon
 ```
+Default does not display the editor.If you want the editor to appear in the menu:
+```yml
+- name: Editor # name
+  url: /pages/editor.html # path
+  icon: edit # icon from https://www.mdui.org/docs/material_icon
+```
 * sns.yml
 ```yml
 - name: bilibili # name,supported:bilibili,facebook,github,gplus,instagram,linkedin,telegram,tumblr,twitter,weibo,zhihu
@@ -198,6 +204,7 @@ If you use the first method to install, you need to download the following files
 * sw.js
 * search.json
 * feed.xml
+* mainifest.json
 * _data/friends.yml
 * _data/menus.yml
 * _data/sns.yml

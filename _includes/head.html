@@ -22,7 +22,8 @@
     {% if page.layout == "editor" %}
     <link rel="preload" href="{{ "/assets/css/pickerdata.css" | prepend: site.baseurl }}" as="style" onload="this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="{{ "/assets/css/pickerdata.css" | prepend: site.baseurl }}"></noscript>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css">
+    <link rel="preload" href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css" as="style" onload="this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css"></noscript>
     {% endif %}
     <script> 
 		/*! loadCSS. [c]2017 Filament Group, Inc. MIT License */

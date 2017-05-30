@@ -9,6 +9,8 @@ layout: compress
     {% include main.html %}
     {% include footer.html %}
     {% include script.html %}
+    {% if site.google_analytics != null %}
     {% include analytics.html %}
+    {% endif %}
     </body>
 </html>

@@ -21,7 +21,9 @@ layout: default
                 <div class="mdui-card-content mdui-typo">
                     {{ content }}
                 </div>
+                {% if site.disqus_shortname != null %}
                 {% include disqus.html %}
+                {% endif %}
             </div>
         </div>
         <div class="mdui-col-md-3 mdui-hidden-sm-down">

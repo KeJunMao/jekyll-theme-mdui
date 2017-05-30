@@ -6,7 +6,7 @@ categories: Living
 tags: mdui jekyll theme editor 
 img: https://ooo.0o0.ooo/2017/05/30/592d41ed710a5.jpg
 ---
-静态博客在线编辑文章不是梦。
+静态博客在线攥写文章不是梦。
 
 ## 功能
 

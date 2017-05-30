@@ -5,6 +5,107 @@
 {% if page.layout =='search' %}
 <script src="{{ "/assets/js/jquery.typeahead.min.js" | prepend: site.baseurl }}"></script>
 {% endif %}
+{% if page.layout =='editor' %}
+<script src="{{ "/assets/js/pickerdata.js" | prepend: site.baseurl }}"></script>
+<script src="{{ "/assets/js/chips.js" | prepend: site.baseurl }}"></script>
+<script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
+<script>
+$(function(){
+    $('.datepicker').pickadate({
+        selectMonths: true,
+        selectYears: 15 
+    });
+    
+    $('input:radio[name="group1"]').on("click",function(){
+        var categories = $('input:radio[name="group1"]:checked').val();
+        if (categories ==="radio_custom"){
+            
+        }
+    });
+     $('.chips').material_chip();
+  $('.chips-initial').material_chip({
+    data: [],
+  });
+  $('.chips-placeholder').material_chip({
+    placeholder: 'Enter a tag',
+    secondaryPlaceholder: '+Tag',
+  });
+  $("#imgurl").blur(function(){
+      var text = $("#imgurl").val().toLowerCase();
+    if (text.indexOf("jpg") >= 0 || text.indexOf("jpeg") >= 0 || text.indexOf("png") >= 0 || text.indexOf("gif") >= 0 || text.indexOf("svg") >= 0 || text.indexOf("webp") >= 0){
+        $("#img").attr('src',$("#imgurl").val());
+    }
+  });
+  var simplemde = new SimpleMDE({
+      autosave: {
+			enabled: true,
+			unique_id: "newposts",
+		}
+  });
+  function k_getDate(e,t){
+    var date = new Date(e);
+    var Y = date.getFullYear() + '-';
+    var M = date.getMonth()+1 + '-';
+    var D = date.getDate();
+    if(t=== true){
+        var h = date.getHours() + ':';
+        var m = date.getMinutes() + ':';
+        var s = date.getSeconds() + ' +0800';
+        return Y+M+D+' '+h+m+s;
+    }else{
+        return Y+M+D;
+    }
+  };
+  function k_getCategores(e){
+      if (e.val() == "radio_custom"){
+          return $("input[name='radio_custom']").val();
+      }else{
+          return e.val();
+      }
+  }
+  function k_getTags(e){
+      var tags = "";
+    for (x in e){
+        if (e[x].tag){
+            tags += e[x].tag+" ";
+        }  
+    }
+    return tags;
+  }
+    var textFile = null,
+        makeTextFile = function (text) {
+            var data = new Blob([text], {
+                type: 'text/plain'
+            });
+            if (textFile !== null) {
+                window.URL.revokeObjectURL(textFile);
+            }
+
+            textFile = window.URL.createObjectURL(data);
+
+            return textFile;
+        };
+    var create = document.getElementById('create');
+    create.addEventListener('click', function () {
+        var filename,filecontent,title,date,categories,tags,img;
+        img = $('input[name=img]').val();
+        tags = k_getTags($('.chips-initial').material_chip('data'));
+        categories = k_getCategores($("input[name='group1']:checked"));
+        date = k_getDate($('input[name=date]').val(),true);
+        title = $('input[name=title]').val();
+        filename = k_getDate($('input[name=date]').val(),false)+'-'+title+'.markdown';
+        $("#downloadlink").attr("download",filename);
+        filecontent = "---\nlayout: post\ntitle: "+title+"\ndate: "+date+"\ncategories: "+categories+"\ntags: "+tags+"\nimg: "+img+"\n---\n"+simplemde.value();
+        var link = document.getElementById('downloadlink');
+        link.href = makeTextFile(filecontent);
+        link.style.display = 'block';
+    }, false);
+    $("#downloadlink").click(function(){
+        $(this).hide();
+    })
+});
+</script>
+{% endif %}
 <script type="text/javascript">
     NProgress.configure({
         showSpinner: true

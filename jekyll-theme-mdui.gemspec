@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.homepage      = "https://github.com/KeJunMao/jekyll-theme-mdui.git"
   spec.license       = "MIT"
 
-  spec.files         = `git ls-files -z`.split("\x0").select { |f| f.match(%r{^(assets/css|assets/js|sw.js|tags.json|search.json|_layouts|_includes|LICENSE|README)}i) }
+  spec.files         = `git ls-files -z`.split("\x0").select { |f| f.match(%r{^(assets/css|assets/js|_layouts|_includes|LICENSE|README)}i) }
 
   spec.add_runtime_dependency "jekyll", "~> 3.4"
   spec.add_runtime_dependency 'jekyll-paginate', '~> 1.1'

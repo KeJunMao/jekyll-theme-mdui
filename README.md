@@ -204,6 +204,7 @@ If you use the first method to install, you need to download the following files
 * _data/friends.yml
 * _data/menus.yml
 * _data/sns.yml
+* assets/images/touch/*
 * pages/*
 
 How to use? See Usage.

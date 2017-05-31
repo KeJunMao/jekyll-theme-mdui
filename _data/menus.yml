@@ -10,12 +10,9 @@
 - name: TAGS
   url: /pages/menus/tags.html
   icon: "&#xe893;"
-- name: TODO
-  url: /pages/menus/todo.html
-  icon: "&#xe22b;"
 - name: FRIENDS
   url: /pages/menus/friends.html
   icon: "&#xe8a3;"
-- name: ABOUT
-  url: /pages/menus/about.html
-  icon: "&#xe7fd;"
+- name: EDITOR
+  url: /pages/editor.html
+  icon: "edit"

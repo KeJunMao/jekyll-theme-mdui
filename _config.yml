@@ -1,6 +1,6 @@
-title: "KeJun blog"
+title: "Jekyll-Theme-MDUI"
 description: "A Jekyll theme based on MDUI"
-url: https://blog.kejun.space/
+url: 
 baseurl: 
 author: "KeJun"
 avatar: "https://ooo.0o0.ooo/2017/05/26/5928368d409dd.png"
@@ -8,12 +8,13 @@ lang: "zh-CN"
 paginate: 5
 paginate_path: "/blog/page:num/"
 
-disqus_shortname: "kejun"
+disqus_shortname: ""
 
-google_analytics: UA-96199161-3
+google_analytics: ""
 gems:
   - jekyll-sitemap
   - jekyll-paginate
+  - jekyll-feed
 
 exclude:
   - package.json

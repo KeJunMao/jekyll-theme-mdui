@@ -201,6 +201,9 @@ Add the following format to your posts:
 If you use the first method to install, you need to download the following files to your jekyll website root directory Or create a new file,And replace it with your own information:
 
 * mainifest.json
+* sw.js
+* search.json
+* tags.json
 * _data/friends.yml
 * _data/menus.yml
 * _data/sns.yml

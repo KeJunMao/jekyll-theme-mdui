@@ -2,6 +2,7 @@
 <div class="mdui-divider"></div>
     {% if site.disqus_proxy == false %}
     <button id="load-disqus" class="mdui-btn mdui-btn-block mdui-center" onclick="disqus.load();" data="{{ site.disqus_shortname }}">阅读评论 「请确保 Disqus 可以正常加载」</button>
+    <div id="disqus_thread"></div>
     {% endif %}
 {% if site.disqus_proxy %}
 <div class="mdui-divider"></div>

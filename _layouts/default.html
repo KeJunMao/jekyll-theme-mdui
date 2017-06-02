@@ -12,6 +12,8 @@ layout: compress
     {% if site.google_analytics != "" %}
     {% include analytics.html %}
     {% endif %}
+    {% if site.disqus_proxy %}
     {% include test.html %}
+    {% endif %}
     </body>
 </html>

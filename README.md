@@ -4,7 +4,7 @@ A Jekyll theme based on mdui
 
 [demo](https://blog.kejun.space)
 
-[![Version](https://img.shields.io/badge/version-0.2.1-green.svg?style=flat-square)]()
+[![Version](https://img.shields.io/badge/version-0.2.3-green.svg?style=flat-square)]()
 [![Jekyll](https://img.shields.io/badge/Jekyll-3.4+-green.svg?style=flat-square)](https://jekyllrb.com/)
 
 [![Build Status](https://img.shields.io/travis/KeJunMao/jekyll-theme-mdui.svg?style=flat-square)](https://travis-ci.org/KeJunMao/jekyll-theme-mdui)

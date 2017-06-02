@@ -8,7 +8,10 @@ lang: "zh-CN"
 paginate: 5
 paginate_path: "/blog/page:num/"
 
-disqus_shortname: ""
+disqus_shortname: "kejun"
+disqus_proxy: true
+disqus_proxy_url: "http://disqus.kejun.space"
+disqus_api_key: "a5jdpCqGkFzT4bFTKwrkTNqSUfTrz9pnxHOb9ZUro32WYpgAf2MnlLyikTGkKmiQ"
 
 google_analytics: ""
 gems:

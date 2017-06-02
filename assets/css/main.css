@@ -216,6 +216,9 @@ body,header,#toc-card{
     background: #fafafa;
 }
 
+.input .mdui-textfield{
+    width: 100%;
+}
 @media screen and (max-width: 600px){
     .k-posts-list{
         padding-top: 0;

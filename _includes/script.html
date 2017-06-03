@@ -1,6 +1,6 @@
-<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/mdui/0.2.1/js/mdui.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.js"></script>
+<script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/mdui/0.2.1/js/mdui.min.js"></script>
+<script src="https://cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
 <script src="{{ "/assets/js/jquery.scrollToTop.js" | prepend: site.baseurl }}"></script>
 {% if page.layout =='search' %}
 <script src="{{ "/assets/js/jquery.typeahead.min.js" | prepend: site.baseurl }}"></script>
@@ -8,7 +8,7 @@
 {% if page.layout =='editor' %}
 <script src="{{ "/assets/js/pickerdata.js" | prepend: site.baseurl }}"></script>
 <script src="{{ "/assets/js/chips.js" | prepend: site.baseurl }}"></script>
-<script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
+<script src="https://cdn.bootcss.com/simplemde/1.11.2/simplemde.min.js"></script>
 <script>
 $(function(){
     $('.datepicker').pickadate({
@@ -230,7 +230,7 @@ $(function(){
 {% endif %}
 
 {% if page.layout == "post" %}
-<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.11.0/highlight.min.js"></script>
 <script src="{{ "/assets/js/toc.min.js" | prepend: site.baseurl }}"></script>
 <script src="{{ "/assets/js/pushpin.js" | prepend: site.baseurl }}"></script>
 <script>

@@ -1,6 +1,12 @@
 ---
 layout: compress
 ---
+
+body{
+    transition: opacity .5s;
+    opacity: 1!important;
+}
+
 .k-container{
     margin: 0 auto;
     padding: 0;

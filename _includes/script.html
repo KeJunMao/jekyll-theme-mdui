@@ -235,6 +235,7 @@ $(function(){
 <script src="{{ "/assets/js/pushpin.js" | prepend: site.baseurl }}"></script>
 <script>
     $(function(){
+    $('.mdui-card-content').find('a').attr('target','_blank');
     $("div.k-page-col").css('margin',0);
     hljs.initHighlightingOnLoad();
     $('#toc').toc({

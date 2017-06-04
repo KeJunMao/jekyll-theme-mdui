@@ -3,7 +3,7 @@ layout: compress
 ---
 
 body{
-    transition: opacity .5s;
+    transition: opacity .2s;
     opacity: 1!important;
 }
 

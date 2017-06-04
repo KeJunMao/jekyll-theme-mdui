@@ -10,8 +10,8 @@ paginate_path: "/blog/page:num/"
 
 disqus_shortname: "kejun"
 disqus_proxy: false
-disqus_proxy_url: "http://disqus.kejun.space"
-disqus_api_key: "a5jdpCqGkFzT4bFTKwrkTNqSUfTrz9pnxHOb9ZUro32WYpgAf2MnlLyikTGkKmiQ"
+disqus_proxy_url: ""
+disqus_api_key: ""
 
 google_analytics: ""
 gems:

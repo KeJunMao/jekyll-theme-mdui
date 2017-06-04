@@ -4,7 +4,7 @@ A Jekyll theme based on mdui
 
 [demo](https://blog.kejun.space)
 
-[![Version](https://img.shields.io/badge/version-0.2.3-green.svg?style=flat-square)]()
+[![Version](https://img.shields.io/badge/version-0.2.4-green.svg?style=flat-square)]()
 [![Jekyll](https://img.shields.io/badge/Jekyll-3.4+-green.svg?style=flat-square)](https://jekyllrb.com/)
 [![Gem](https://img.shields.io/gem/dt/jekyll-theme-mdui.svg?style=flat-square)](https://rubygems.org/gems/jekyll-theme-mdui/)
 
@@ -17,6 +17,8 @@ A Jekyll theme based on mdui
 ## Installation
 
 We have two ways to install themes.
+
+But,**We recommend you use the second ways.**
 
 ### First ways
 
@@ -51,7 +53,7 @@ bundle install
 jekyll s -w
 ```
 
-Or direct clone:
+Or **direct clone**:
 
 ```shell
 git clone https://github.com/KeJunMao/jekyll-theme-mdui.git
@@ -75,7 +77,10 @@ lang: "zh-CN" # lang
 paginate: 5 # paginate
 paginate_path: "/blog/page:num/" # paginate path
 
-disqus_shortname: "" # Your disqus shortname
+disqus_shortname: "" # Your disqus 
+disqus_proxy: false # disqus proxy(Do not use)
+disqus_proxy_url: "" # (Do not use)
+disqus_api_key: "" # (Do not use)
 
 google_analytics: "" # Your google analytics ID
 
@@ -196,11 +201,12 @@ Add the following format to your posts:
 
 ## TODO
 
-[TODO](https://blog.kejun.space/pages/menus/todo.html)
+...
 
 ## Note
 
-If you use the first method to install, you need to download the following files to your jekyll website root directory Or create a new file,And replace it with your own information:
+### file
+If you use the first ways to install, you need to download the following files to your jekyll website root directory Or create a new file,And replace it with your own information:
 
 * mainifest.json
 * sw.js
@@ -213,6 +219,12 @@ If you use the first method to install, you need to download the following files
 * pages/*
 
 How to use? See Usage.
+
+### service workers
+
+If you use the first ways to install, You will not be able to use service workers!!!!
+
+Why? See `sw.js` content.
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/hello. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.

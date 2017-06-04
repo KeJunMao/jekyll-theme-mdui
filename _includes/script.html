@@ -165,7 +165,7 @@ $(function(){
     {% if page.layout =='search' %}
     var names = new Array();
     var urls = new Array(); 
-    $.getJSON("/search.json").done(function(data){
+    $.getJSON("{{ "/search.json" | relative_url }}").done(function(data){
             for (var index in data){
                 var item = data[index];
                 names[index] = item.title;
@@ -205,7 +205,7 @@ $(function(){
         if(tagid!=null){
     $.ajax({
         type: "GET",
-        url:"/tags.json",
+        url:"{{ "/tags.json" | relative_url }}",
         dataType:"json",
         success: function(data){
             var content = "<ul class='mdui-list'>";

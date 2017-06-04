@@ -8,12 +8,12 @@ layout: default
       <div class="mdui-card-media k-post-media" style="background-image: url({{post.img}});">
         <div class="mdui-card-media-covered mdui-card-media-covered-gradient">
           <div class="mdui-card-primary">
-            <div class="mdui-card-primary-title"><a class="mdui-text-color-white-text" href="{{post.url}}">{{post.title}}</a></div>
+            <div class="mdui-card-primary-title"><a class="mdui-text-color-white-text" href="{{post.url| prepend: site.baseurl}}">{{post.title}}</a></div>
           </div>
         </div>
       </div>
       <div class="mdui-card-content mdui-text-color-black-secondary">
-        {{ post.excerpt | strip_html}} <a class="mdui-typo" href="{{post.url}}">阅读更多</a>
+        {{ post.excerpt | strip_html}} <a class="mdui-typo" href="{{post.url | prepend: site.baseurl}}">阅读更多</a>
       </div>
       <div class="mdui-divider"></div>
       <div class="mdui-card-header">

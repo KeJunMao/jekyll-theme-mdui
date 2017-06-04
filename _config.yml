@@ -1,7 +1,8 @@
 title: "Jekyll-Theme-MDUI"
 description: "A Jekyll theme based on MDUI"
 url: 
-baseurl: 
+baseurl: ""
+icon: "https://ooo.0o0.ooo/2017/05/27/59294212bc16e.png"
 author: "KeJun"
 avatar: "https://ooo.0o0.ooo/2017/05/26/5928368d409dd.png"
 lang: "zh-CN"

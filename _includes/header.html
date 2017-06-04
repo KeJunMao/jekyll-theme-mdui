@@ -5,7 +5,7 @@
         <div class="mdui-toolbar-spacer"></div>
         <div class="mdui-hidden-xs-down">
         {% for menu in site.data.menus %}
-        <a href="{{menu.url}}" class="mdui-btn {% if menu.url == page.url %}mdui-list-item-active{% endif %}">{{menu.name}}</a>
+        <a href="{{menu.url | prepend: site.baseurl }}" class="mdui-btn {% if menu.url  == page.url %}mdui-list-item-active{% endif %}">{{menu.name}}</a>
         {% endfor %}
         </div>
     </div>
@@ -13,7 +13,7 @@
 <div class="mdui-drawer mdui-drawer-close" id="k-menu">
     <ul class="mdui-list">
         {% for menu in site.data.menus %}
-        <a href="{{menu.url}}" class="mdui-list-item mdui-ripple {% if menu.url == page.url %}mdui-list-item-active{% endif %}">
+        <a href="{{menu.url | prepend: site.baseurl }}" class="mdui-list-item mdui-ripple {% if menu.url == page.url %}mdui-list-item-active{% endif %}">
             <i class="mdui-list-item-icon mdui-icon material-icons">{{menu.icon}}</i>
             <div class="mdui-list-item-content">{{menu.name}}</div>
         </a>

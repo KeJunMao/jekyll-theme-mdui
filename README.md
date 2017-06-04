@@ -8,7 +8,7 @@ A Jekyll theme based on mdui
 [![Jekyll](https://img.shields.io/badge/Jekyll-3.4+-green.svg?style=flat-square)](https://jekyllrb.com/)
 [![Gem](https://img.shields.io/gem/dt/jekyll-theme-mdui.svg?style=flat-square)](https://rubygems.org/gems/jekyll-theme-mdui/)
 
-[![Code Climate](https://img.shields.io/codeclimate/github/kabisaict/flow.svg?style=flat-square)](https://codeclimate.com/github/KeJunMao/jekyll-theme-mdui/)
+[![Code Climate](https://img.shields.io/codeclimate/github/KeJunMao/jekyll-theme-mdui.svg?style=flat-square)](https://codeclimate.com/github/KeJunMao/jekyll-theme-mdui/)
 [![Build Status](https://img.shields.io/travis/KeJunMao/jekyll-theme-mdui.svg?style=flat-square)](https://travis-ci.org/KeJunMao/jekyll-theme-mdui)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg?style=flat-square)](http://commitizen.github.io/cz-cli/)
 

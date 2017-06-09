@@ -109,7 +109,7 @@ text-decoration: none;
      margin-left: 0; 
 }
 body,header,#toc-card{
-    background-color:#eeeeee;
+    background-color:{{site.data.site.background.purecolor}};
 }
   body {
     display: flex;

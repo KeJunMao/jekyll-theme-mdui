@@ -4,7 +4,7 @@ layout: default
 <div class="k-container">
   <div class="k-posts-list">
     {% for post in paginator.posts %}
-    <div class="mdui-card k-list-card mdui-shadow-1">
+    <div class="mdui-card k-list-card mdui-shadow-{{site.data.site.card.card_shadow}} {% if site.data.site.card.card_hoverable == true%}mdui-hoverable{% endif %}">
       <div class="mdui-card-media k-post-media" style="background-image: url({{post.img}});">
         <div class="mdui-card-media-covered mdui-card-media-covered-gradient">
           <div class="mdui-card-primary">
@@ -17,7 +17,7 @@ layout: default
       </div>
       <div class="mdui-divider"></div>
       <div class="mdui-card-header">
-        <img class="mdui-card-header-avatar" src="{{site.avatar}}" />
+        <img class="mdui-card-header-avatar" src="{{site.data.site.img.avatar}}" />
         <div class="mdui-card-header-title">{{site.author}}</div>
         <div class="mdui-card-header-subtitle">{{ post.date | date: "%b %-d, %Y" }}</div>
       </div>

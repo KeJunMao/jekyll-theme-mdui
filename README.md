@@ -67,22 +67,14 @@ jekyll s -w
 ### _config
 
 ```yml
-title: "My blog" # Your site title
-description: "This is my blog." # Your site description
+title: "Jekyll-Theme-MDUI" # Your site title
+description: "A Jekyll theme based on MDUI" # Your site description
 url: # Your site url
 baseurl: # baseurl
-author: "My" # Your name
-avatar: "https://myAvatar.png" # Your avatar
-lang: "zh-CN" # lang
+author: "KeJun" # Your name
+
 paginate: 5 # paginate
 paginate_path: "/blog/page:num/" # paginate path
-
-disqus_shortname: "" # Your disqus 
-disqus_proxy: false # disqus proxy(Do not use)
-disqus_proxy_url: "" # (Do not use)
-disqus_api_key: "" # (Do not use)
-
-google_analytics: "" # Your google analytics ID
 
 gems: # paginate gem 
   - jekyll-paginate
@@ -111,57 +103,43 @@ Default does not display the editor.If you want the editor to appear in the menu
 ```
 * sns.yml
 ```yml
-- name: bilibili # name,supported:bilibili,facebook,github,gplus,instagram,linkedin,telegram,tumblr,twitter,weibo,zhihu
+- name: bilibili # name
   url:  # url , if it is empty, it is not enabled
 ```
+Supported:bilibili,facebook,github,gplus,instagram,linkedin,telegram,tumblr,twitter,weibo,zhihu
 
-
-### search.json
-
-```json
----
----
-[
-  {% for post in site.posts %}
-    {
-      "title"    : "{{ post.title | escape }}",
-      "url"      : "{{ site.baseurl }}{{ post.url }}"
-    } {% unless forloop.last %},{% endunless %}
-  {% endfor %}
-]
+* site.yml
+```yml
+head: 
+   favicon: "https://ooo.0o0.ooo/2017/05/27/59294212bc16e.png" # 网站的favicon
+   high_res_favicon: "https://ooo.0o0.ooo/2017/06/08/5939484dc618e.png" # 高清favicon
+   apple_touch_icon: "https://ooo.0o0.ooo/2017/06/08/5939484dc618e.png" # ios主屏按钮图标
+   keywords: "blog jekyll mdui theme" # 页面关键字
+uiux:
+   android_chrome_color: "#607D8B" # 安卓 Chrome 浏览器的地址栏颜色。
+   nprogress_color: "#29d" # 页面加载时顶部加载进度条的颜色。
+   nprogress_buffer: 200 # 页面加载时顶部加载进度条的缓冲时间。
+background: 
+   purecolor: "#eeeeee" # 背景颜色
+img: 
+   avatar: "https://ooo.0o0.ooo/2017/05/26/5928368d409dd.png" # 你的头像设置。
+card: # 首页卡片
+   card_shadow: 1 # 卡片阴影 0-24,0为不显示
+   card_hoverable: false # 悬浮时加深阴影
+disqus:
+   disqus_shortname: "kejun" # Your disqus 
+   disqus_proxy: false
+   disqus_proxy_url: "" # disqus proxy(Do not use)
+   disqus_api_key: "" # (Do not use)
+google_analytics: "" # (Do not use)
+lang: "zh-CN"  # lang
 ```
 
-### tags.json
-```json
----
----
-{% capture tags %}
-  {% for tag in site.tags %}
-    {{ tag[0] }}
-  {% endfor %}
-{% endcapture %}
-{% assign sortedtags = tags | split:' ' | sort %}
-[
-  {% for tag in sortedtags %}
-    {
-      "id"    : "{{ tag | escape}}",
-      "post": [
-          {% for post in site.tags[tag] %}
-         {
-            "title": "{{ post.title | escape }}",
-            "excerpt": "{{ post.excerpt | strip_html | escape | strip_newlines}}",
-            "url": "{{ site.baseurl }}{{ post.url }}"
-         } {% unless forloop.last %},{% endunless %}
-      {% endfor %}]
-    } {% unless forloop.last %},{% endunless %}
-  {% endfor %}
-]
-```
 ### manifest.json
 ```json
 {
   "name": "KeJun BLOG",
-  "short_name": "KeJun",
+  "short_name": "KeJun", 
   "icons": [{
         "src": "assets/images/touch/icon-128x128.png",
         "sizes": "128x128",

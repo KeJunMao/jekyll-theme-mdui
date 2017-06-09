@@ -1,0 +1,23 @@
+head: 
+   favicon: "https://ooo.0o0.ooo/2017/05/27/59294212bc16e.png" # 网站的favicon
+   high_res_favicon: "https://ooo.0o0.ooo/2017/06/08/5939484dc618e.png" # 高清favicon
+   apple_touch_icon: "https://ooo.0o0.ooo/2017/06/08/5939484dc618e.png" # ios主屏按钮图标
+   keywords: "blog jekyll mdui theme" # 页面关键字
+uiux:
+   android_chrome_color: "#607D8B" # 安卓 Chrome 浏览器的地址栏颜色。
+   nprogress_color: "#29d" # 页面加载时顶部加载进度条的颜色。
+   nprogress_buffer: 200 # 页面加载时顶部加载进度条的缓冲时间。
+background: 
+   purecolor: "#eeeeee" # 背景颜色
+img: 
+   avatar: "https://ooo.0o0.ooo/2017/05/26/5928368d409dd.png" # 你的头像设置。
+card: # 首页卡片
+   card_shadow: 1 # 卡片阴影 0-24,0为不显示
+   card_hoverable: false # 悬浮时加深阴影
+disqus:
+   disqus_shortname: "kejun"
+   disqus_proxy: false
+   disqus_proxy_url: ""
+   disqus_api_key: ""
+google_analytics: ""
+lang: "zh-CN"

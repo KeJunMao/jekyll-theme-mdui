@@ -2,16 +2,16 @@
   url: /
   icon: home
 - name: SEARCH
-  url: /pages/menus/search.html
+  url: /pages/search.html
   icon: search
 - name: CATEGORY
-  url: /pages/menus/category.html
+  url: /pages/category.html
   icon: "&#xe8ee;"
 - name: TAGS
-  url: /pages/menus/tags.html
+  url: /pages/tags.html
   icon: "&#xe893;"
 - name: FRIENDS
-  url: /pages/menus/friends.html
+  url: /pages/friends.html
   icon: "&#xe8a3;"
 - name: EDITOR
   url: /pages/editor.html

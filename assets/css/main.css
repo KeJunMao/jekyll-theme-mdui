@@ -2,6 +2,11 @@
 layout: compress
 ---
 
+#k-qrcode{
+    padding-bottom: 0px;
+    width: 215px;
+}
+
 body{
     transition: opacity .2s;
     opacity: 1!important;

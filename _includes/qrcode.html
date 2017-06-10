@@ -1,0 +1,20 @@
+{% if  site.data.site.lang == 'zh-CN' %}
+{% assign lang = site.data.lang[site.data.site.lang] %}
+{% else %}
+{% assign lang = site.data.lang.en-US %}
+{% endif %}
+    <button class="mdui-btn mdui-btn-icon" mdui-tooltip="{content: '{{lang.post.qrcode }}', delay: 100}" mdui-menu="{target: '#k-qrcode',align:'right',covered:false}"><i class="mdui-icon material-icons">devices other</i></button>
+    <ul  class="mdui-menu mdui-menu-cascade" id="k-qrcode">
+        <li class="mdui-menu-item">
+            <a class="mdui-text-center" href="javascript:;" class="mdui-ripple">{{lang.post.qrcodeContent}}</a>
+        </li>
+        {% if  site.data.site.lang == 'zh-CN' %}
+        <li class="mdui-menu-item">
+            <img class="mdui-center" src="https://pan.baidu.com/share/qrcode?w=200&h=200&url={{page.url | absolute_url |url_encode}}" alt="">
+        </li>
+        {% else %}
+        <li class="mdui-menu-item">
+            <img class="mdui-center" src="https://chart.googleapis.com/chart?chs=210x210&cht=qr&chl={{page.url | absolute_url |url_encode}}" alt="">
+        </li>
+        {% endif %}
+    </ul>

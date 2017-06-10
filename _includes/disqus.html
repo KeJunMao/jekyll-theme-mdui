@@ -1,8 +1,17 @@
+{% if  site.data.site.lang == 'zh-CN' %}
+{% assign lang = site.data.lang[site.data.site.lang] %}
+{% else %}
+{% assign lang = site.data.lang.en-US %}
+{% endif %}
 {% if site.data.site.disqus.disqus_shortname != "" %}
 <div class="mdui-divider"></div>
     {% if site.data.site.disqus.disqus_proxy == false %}
-    <button id="load-disqus" class="mdui-btn mdui-btn-block mdui-center" onclick="disqus.load();" data="{{ site.data.site.disqus.disqus_shortname }}">阅读评论 「请确保 Disqus 可以正常加载」</button>
+    {% if site.data.site.disqus.disqus_button == true %}
+    <button id="load-disqus" class="mdui-btn mdui-btn-block mdui-center" onclick="disqus.load();" data="{{ site.data.site.disqus.disqus_shortname }}">{{lang.post.comments_load_button}}</button>
     <div id="disqus_thread"></div>
+    {% else %}
+    <div id="disqus_thread"></div>
+    {% endif %}
     {% endif %}
 {% if site.data.site.disqus.disqus_proxy %}
 <div class="mdui-divider"></div>

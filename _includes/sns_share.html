@@ -1,0 +1,43 @@
+{% if  site.data.site.lang == 'zh-CN' %}
+{% assign lang = site.data.lang[site.data.site.lang] %}
+{% else %}
+{% assign lang = site.data.lang.en-US %}
+{% endif %}
+    <button class="mdui-btn mdui-btn-icon" mdui-tooltip="{content: '{{lang.share.share }}', delay: 100}" mdui-menu="{target: '#k-sns_share',align:'right',covered:false}"><i class="mdui-icon material-icons">&#xe80d;</i></button>
+    <ul class="mdui-menu" id="k-sns_share">
+        {% if site.data.site.sns_share.weibo == true %}
+        <li class="mdui-menu-item">
+            <a href="http://service.weibo.com/share/share.php?appkey=&title={{page.title}}&url={{page.url | absolute_url }}&pic=&searchPic=false&style=simple" target="_blank" class="mdui-ripple">{{lang.share.toWeibo }}</a>
+        </li>
+        {% endif %}
+        {% if site.data.site.sns_share.twitter == true %}
+        <li class="mdui-menu-item">
+            <a href="https://twitter.com/intent/tweet?text={{page.title}}&url={{page.url | absolute_url }}&via={{site.author}}" target="_blank" class="mdui-ripple">{{lang.share.toTwitter }}</a>
+        </li>
+        {% endif %}
+        {% if site.data.site.sns_share.facebook == true %}
+        <li class="mdui-menu-item">
+            <a href="https://www.facebook.com/sharer/sharer.php?u={{page.url | absolute_url }}" target="_blank" class="mdui-ripple">{{lang.share.toFacebook }}</a>
+        </li>
+        {% endif %}
+        {% if site.data.site.sns_share.googleplus == true %}
+        <li class="mdui-menu-item">
+            <a href="https://plus.google.com/share?url={{page.url | absolute_url }}" target="_blank" class="mdui-ripple">{{lang.share.toGoogleplus }}</a>
+        </li>
+        {% endif %}
+        {% if site.data.site.sns_share.linkedin == true %}
+        <li class="mdui-menu-item">
+            <a href="https://www.linkedin.com/shareArticle?mini=true&url={{page.url | absolute_url }}&title={{page.title}}" target="_blank" class="mdui-ripple">{{lang.share.toLinkedin }}</a>
+        </li>
+        {% endif %}
+        {% if site.data.site.sns_share.qq == true %}
+        <li class="mdui-menu-item">
+            <a href="http://connect.qq.com/widget/shareqq/index.html?site={{site.title}}&title={{page.title}}&summary={{ page.excerpt | strip_html}}&pics={{site.data.site.head.favicon | absolute_url }}&url={{page.url | absolute_url }}" target="_blank" class="mdui-ripple">{{lang.share.toQq }}</a>
+        </li>
+        {% endif %}
+        {% if site.data.site.sns_share.telegram == true %}
+        <li class="mdui-menu-item">
+            <a href="javascript:;" target="_blank" class="mdui-ripple">{{lang.share.toTelegram }}</a>
+        </li>
+        {% endif %}
+    </ul>

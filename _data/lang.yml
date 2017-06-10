@@ -1,0 +1,31 @@
+zh-CN:
+   post:
+      continue: "阅读全文"
+      qrcode: "二维码"
+      qrcodeContent: "在其它设备中阅读本文章"
+      comments_load_button: "阅读评论 「请确保 Disqus 可以正常加载」"
+   share:
+      share: "分享"
+      toWeibo: "分享到 微博"
+      toTwitter: "分享到 Twitter"
+      toFacebook: "分享到 Facebook"
+      toGoogleplus: "分享到 G+"
+      toLinkedin: "分享到 Linkedin"
+      toQq: "分享到 QQ"
+      toTelegram: "分享到 Telegram"
+
+en-US:
+   post:
+      continue: "Read more"
+      qrcode: "QR Code"
+      qrcodeContent: "Read this article on other devices"
+      comments_load_button: "Read Comments"
+   share:
+      share: "Share "
+      toWeibo: "Share to Weibo"
+      toTwitter: "Share to Twitter"
+      toFacebook: "Share to Facebook"
+      toGoogleplus: "Share to G+"
+      toLinkedin: "Share to Linkedin"
+      toQq: "Share to QQ"
+      toTelegram: "Share to Telegram"

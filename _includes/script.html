@@ -82,7 +82,7 @@ $(function(){
 <!--/* search-script-end */-->
 <!--/* post-script-start */-->
 {% if page.layout == "post" or page.layout == "page"%}
-
+{% if site.data.site.disqus.disqus_button == true  %}
 <script>
 /* Disqus */
 var disqus = {
@@ -100,6 +100,22 @@ var disqus = {
     }
 };
 </script>
+{% else %}
+<script>
+    function disqus(){
+        var disqus_shortname = '{{ site.data.site.disqus.disqus_shortname }}';
+        if(typeof DISQUS !== 'object') {
+            (function () {
+                var s = document.createElement('script'); s.async = true;
+                s.type = 'text/javascript';
+                s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+            }());
+        }
+    }
+    disqus();
+</script>
+{% endif %}
 {% endif %}
 
 {% if page.layout == "post" %}

@@ -2,7 +2,9 @@
 <script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://cdn.bootcss.com/mdui/0.2.1/js/mdui.min.js"></script>
 <script src="https://cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
-<script src="{{ "/assets/js/jquery.scrollToTop.js" | prepend: site.baseurl }}"></script>
+<script>
+    (function($){$.fn.scrollToTop=function(options){var config={"speed":800};if(options){$.extend(config,{"speed":options})}return this.each(function(){var $this=$(this);$(window).scroll(function(){if($(this).scrollTop()>100){$this.fadeIn()}else{$this.fadeOut()}});$this.click(function(e){e.preventDefault();$("body, html").animate({scrollTop:0},config.speed)})})};$.fn.scrollBodyToTop=function(options){var config={"speed":800};if(options){$.extend(config,{"speed":options})}return this.each(function(){var $this=$(this);$(".placeholder").scroll(function(){if($(this).scrollTop()>100){$this.fadeIn()}else{$this.fadeOut()}});$this.click(function(e){e.preventDefault();$(".placeholder").animate({scrollTop:0},config.speed)})})}})(jQuery);
+</script>
 <script type="text/javascript">
 /* NProgress */
 NProgress.configure({
@@ -46,6 +48,18 @@ $(function(){
 });
 </script>
 <!--/* global-script-end */-->
+<!--/* home-script-start */-->
+{% if page.layout =="home" %}
+<script src="https://cdn.bootcss.com/jquery_lazyload/1.9.7/jquery.lazyload.min.js"></script>
+<script>
+$(function() {
+    $(".k-post-media").lazyload({
+        effect : "fadeIn"
+    });
+});
+</script>
+{% endif %}
+<!--/* home-script-end */-->
 <!--/* search-script-start */-->
 {% if page.layout =='search' %}
 <script src="{{ "/assets/js/jquery.typeahead.min.js" | prepend: site.baseurl }}"></script>

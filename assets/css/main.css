@@ -8,7 +8,7 @@ layout: compress
 }
 
 body{
-    transition: opacity .2s;
+    transition: opacity .5s!important;
     opacity: 1!important;
 }
 
@@ -26,7 +26,7 @@ body{
     margin-bottom: 45px;
 }
 .k-post-media{
-    cursor: pointer;max-height: 245px;min-height:245px;background-position: 50% 50%;background-size: cover; background-color: #448aff;
+    cursor: pointer;max-height: 245px;min-height:245px;background-position: 50% 50%;background-size: cover; background-color: white;
 }
 .k-post-media .mdui-card-primary-title a{
 text-decoration: none;

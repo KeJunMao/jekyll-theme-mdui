@@ -3,21 +3,38 @@ head:
    high_res_favicon: "https://ooo.0o0.ooo/2017/06/08/5939484dc618e.png" #  the favicon using high quality format
    apple_touch_icon: "https://ooo.0o0.ooo/2017/06/08/5939484dc618e.png" # the iOS Home button icon
    keywords: "blog jekyll mdui theme" #  the site keywords
+
 uiux:
    android_chrome_color: "#eeeeee" #  the color of the Chrome address bar
    nprogress_color: "#29d" #  the color of the top loading progress bar
    nprogress_buffer: 200 # the top loading progress bar buffers
+
 background: 
    purecolor: "#eeeeee" # the background color
+
 img: 
    avatar: "https://ooo.0o0.ooo/2017/05/26/5928368d409dd.png" # your avatar
+
 card: 
    card_shadow: 1 # card shadow (0-24), 0 is not displayed
    card_hoverable: false # When the hover to deepen the shadow
+
+sns_share: # SNS Share Switch
+   twitter: true
+   facebook: false
+   googleplus: false
+   weibo: true
+   linkedin: false
+   qq: true
+   telegram: true
+
 disqus:
    disqus_shortname: "" # Your disqus 
-   disqus_proxy: false
-   disqus_proxy_url: "" # disqus proxy(Do not use)
+   disqus_button: true # disqus load button
+   disqus_proxy: false # # disqus proxy(Do not use)
+   disqus_proxy_url: "" # (Do not use)
    disqus_api_key: "" # (Do not use)
-google_analytics: "" # (Do not use)
-lang: "zh-CN"  # lang
+
+google_analytics: ""  # google analytics code
+
+lang: "en-US"  # lang

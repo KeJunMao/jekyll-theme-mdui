@@ -22,7 +22,6 @@ var filesToCache = [
 ];
 
 
-// serviceWorker.js
 self.addEventListener('install', function(event) {
     event.waitUntil(
         caches.open(cacheName).then(function(cache) {

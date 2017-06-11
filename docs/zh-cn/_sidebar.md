@@ -3,18 +3,27 @@
   - [定制导航栏](zh-cn/custom-navbar.md)
   - [创建页面](zh-cn/creating-pages.md)
   - [定制 SNS](zh-cn/custom-sns.md)
+  - [](zh-cn/custom-sns.md)
 
 - 配置介绍
   - [站点配置](zh-cn/site-configuration.md)
   - [主题配置](zh-cn/theme-configuration.md)
 
 - 集成服务
-  - [RSS](rss.md)
-  - [站点地图](sitemap.md)
-  - [评论系统](comment.md)
-  - [搜索系统](search.md)
-  - [数据统计与分析](analytics.md)
-  - [在线编辑器](editor.md)
-  - [PWA](pwa.md)
+  - [RSS](zh-cn/rss.md)
+  - [站点地图](zh-cn/sitemap.md)
+  - [评论系统](zh-cn/comment.md)
+  - [搜索系统](zh-cn/search.md)
+  - [数据统计与分析](zh-cn/analytics.md)
+  - [在线编辑器](zh-cn/editor.md)
+  - [PWA](zh-cn/pwa.md)
 
-- [常见问题](common-problem.md)
+- 其他工具
+  - [fastjekyll](zh-cn/fastjekyll.md)
+
+- 开发
+  - [如何贡献](zh-cn/how-contribution.md)
+  - [贡献列表](zh-cn/contribution-list.md)
+  - [使用的技术](zh-cn/used-technology.md)
+  
+- [常见问题](zh-cn/common-problem.md)

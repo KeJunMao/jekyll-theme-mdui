@@ -2,7 +2,7 @@
 
 A Jekyll theme based on mdui
 
-[demo](https://blog.kejun.space)
+[demo](https://blog.kejun.space) or [docs](http://mdui.kejun.space/#/zh-cn/)
 
 [![Version](https://img.shields.io/badge/version-0.4.1-green.svg?style=flat-square)]()
 [![Jekyll](https://img.shields.io/badge/Jekyll-3.4+-green.svg?style=flat-square)](https://jekyllrb.com/)

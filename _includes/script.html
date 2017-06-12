@@ -61,6 +61,63 @@ $(function() {
 {% endif %}
 <!--/* home-script-end */-->
 <!--/* search-script-start */-->
+{% for se in site.data.menus %}
+{% if se.name == "navSearch" %}
+{% if se.switch == true %}
+{% if page.layout !='search' %}
+<script src="{{ "/assets/js/jquery.typeahead.min.js" | prepend: site.baseurl }}"></script>
+{% endif %}
+
+<script>
+    $('.k-navsearch-close').on('click',function(){
+        $('.k-nav-search-card').hide();
+    });
+    $('.k-navsearch-open').on('click',function(){
+        $('.k-nav-search-card').show();
+    });
+    $('#k-menu').on('click',function(e){
+        $('.k-nav-search-card').hide();
+    });
+    $('#k-menu .mdui-textfield').on('click',function(e){
+        e.stopPropagation();
+        $('.k-nav-search-card').show();
+    });
+    $(window).scroll(function() {
+        $('.k-navsearch-close').click();
+    });
+    var names = new Array();
+    var urls = new Array(); 
+    $.getJSON("{{ "/search.json" | relative_url }}").done(function(data){
+            for (var index in data){
+                var item = data[index];
+                names[index] = item.title;
+                urls[names[index]] = item.url
+            }
+            $.typeahead({
+                input: '.k-nav-search',
+                order: "desc",
+                source: {
+                    data: names
+                },
+               selector: {
+                    container: "typeahead__container",
+                    result: " mdui-card k-nav-search-card",
+                    list: "mdui-list",
+                    item: "mdui-list-item"
+                },
+                callback: {
+                    onClick: function (node,a,item,event){
+                        window.location.href = urls[item.display];
+                    },
+                }
+            });
+      });
+</script>
+
+{% endif %}
+{% endif %}
+{% endfor %}
+
 {% if page.layout =='search' %}
 <script src="{{ "/assets/js/jquery.typeahead.min.js" | prepend: site.baseurl }}"></script>
 <script>

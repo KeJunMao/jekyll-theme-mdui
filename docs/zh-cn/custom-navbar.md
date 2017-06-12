@@ -15,6 +15,15 @@
 ```
 > 导航栏的排序取决于 `_data/menus.yml` 中的顺序。你可以改变内容的顺序达到自定义顺序的目的。
 
+### 启用导航栏搜索
+
+要启用导航栏搜索，只需将`name`字段为`navSearch`的`switch`设置为`true`即可：
+
+```yaml
+- name: navSearch
+  switch: true
+```
+
 ## 参数详解
 
 ### name

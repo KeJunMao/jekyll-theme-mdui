@@ -1,7 +1,56 @@
 ---
 layout: compress
 ---
+.k-nav-search-card{
+    position: fixed;
+    width: 268px;
+    z-index: 9999;
+}
 
+#k-menu .typeahead__field{
+    margin: 0 10px;
+}
+#k-menu .k-nav-search-card{
+    width: 240px;
+}
+.mdui-textfield-expandable.mdui-textfield-expanded{
+    width: 300px;
+}
+.k-navsearch-btn{
+    position: relative;
+    display: inline-block;
+    height: 36px;
+    box-sizing: border-box;
+    padding: 0 16px;
+    margin: 0;
+    overflow: hidden;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 36px;
+    color: inherit;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    zoom: 1;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background: 0 0;
+    border: none;
+    border-radius: 2px;
+    outline: 0;
+    -webkit-transition: all .2s cubic-bezier(.4,0,.2,1),box-shadow .2s cubic-bezier(.4,0,1,1);
+    transition: all .2s cubic-bezier(.4,0,.2,1),box-shadow .2s cubic-bezier(.4,0,1,1);
+    will-change: box-shadow;
+    -webkit-user-drag: none;
+}
 .k-post-categories{
     line-height:40px;
 }

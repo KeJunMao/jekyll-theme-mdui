@@ -1,9 +1,6 @@
 - name: HOME
   url: /
   icon: home
-- name: SEARCH
-  url: /pages/menus/search.html
-  icon: search
 - name: CATEGORY
   url: /pages/menus/category.html
   icon: "&#xe8ee;"
@@ -13,6 +10,5 @@
 - name: FRIENDS
   url: /pages/menus/friends.html
   icon: "&#xe8a3;"
-- name: EDITOR
-  url: /pages/editor.html
-  icon: "edit"
+- name: navSearch
+  switch: true

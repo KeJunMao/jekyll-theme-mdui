@@ -24,6 +24,45 @@ $('#nprogress .spinner-icon').css({
 setTimeout(function() {
     NProgress.done();
 },{{site.data.site.uiux.nprogress_buffer}});
+/* Drag Out Menu */
+var inst = new mdui.Drawer('#k-menu');
+var drawer = document.getElementById('k-menu');
+drawer.addEventListener('opened.mdui.drawer', function () {
+    $('#k-menu').removeClass('mdui-drawer-open');
+    $('#k-menu').css('transform','translateX(0)');
+    $('.mdui-overlay').on('click',function(){
+        $('#k-menu').css('transform',"");
+    });
+});
+drawer.addEventListener('closed.mdui.drawer', function () {
+     $("body").unbind("touchend");
+     $("body").unbind("touchmove");
+     $('#k-menu').css('transform',"");
+});
+$('body').on('touchstart',function(e){
+    var touch = e.targetTouches[0];
+    if (touch.pageX < 15){
+        console.log(touch.pageX);
+        var touchstartX = touch.pageX;
+        $('body').on('touchmove',function(e){
+                if (e.targetTouches[0].pageX < 240-touchstartX){
+                    var touch = e.targetTouches[0];
+                    var x = touch.pageX - 240 + touchstartX;
+                    $('#k-menu').css('transform',"translateX("+x+"px)");
+                    $('body').on('touchend',function(){
+                        if (x >= -120){
+                            $('#k-menu').css('transform',"");
+                            inst.open();
+                        }
+                        if (x < -120){
+                            $('#k-menu').css('transform',"");
+                            inst.close();
+                        }
+                    });
+                }
+        });
+    }
+});
 /* serviceWorker */
 $(function(){
     if ('serviceWorker' in navigator) {

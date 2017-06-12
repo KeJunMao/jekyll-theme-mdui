@@ -1,6 +1,6 @@
 # Jekyll Theme MDUI
 
-> 基于 MDUi 的 Jekyll 主题
+> 基于 MDUI 的 Jekyll 主题
 
 ## 是什么
 

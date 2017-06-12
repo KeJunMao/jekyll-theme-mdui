@@ -1,0 +1,18 @@
+{% if  site.data.site.lang == 'zh-CN' %}
+{% assign lang = site.data.lang[site.data.site.lang] %}
+{% else %}
+{% assign lang = site.data.lang.en-US %}
+{% endif %}
+          {% for ta in site.pages %}
+          {% if ta.layout == "tags" %}
+          {% assign tag = ta.url %}
+          {% endif %}
+          {% endfor %}
+    <button class="mdui-btn mdui-btn-icon" mdui-tooltip="{content: '{{lang.post.tags }}', delay: 100}" mdui-menu="{target: '#k-page-tag',align:'right',covered:false}"><i class="mdui-icon material-icons">bookmark</i></button>
+    <ul  class="mdui-menu" id="k-page-tag">
+        {% for t in page.tags %}
+        <li class="mdui-menu-item">
+            <a class="mdui-text-center" href="{{tag | prepend: site.baseurl }}?tag={{t}}" class="mdui-ripple">{{t}}</a>
+        </li>
+        {% endfor %}
+    </ul>

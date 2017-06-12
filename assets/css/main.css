@@ -2,6 +2,10 @@
 layout: compress
 ---
 
+.k-post-categories{
+    line-height:40px;
+}
+
 #k-qrcode{
     padding-bottom: 0px;
     width: 215px;

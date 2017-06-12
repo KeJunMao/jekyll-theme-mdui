@@ -4,6 +4,7 @@ zh-CN:
       qrcode: "二维码"
       qrcodeContent: "在其它设备中阅读本文章"
       comments_load_button: "阅读评论 「请确保 Disqus 可以正常加载」"
+      tags: "标签"
    share:
       share: "分享"
       toWeibo: "分享到 微博"
@@ -20,6 +21,7 @@ en-US:
       qrcode: "QR Code"
       qrcodeContent: "Read this article on other devices"
       comments_load_button: "Read Comments"
+      tags: "Tags"
    share:
       share: "Share "
       toWeibo: "Share to Weibo"

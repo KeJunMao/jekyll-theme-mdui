@@ -14,6 +14,10 @@ layout: default
                     </div>
                 </div>
                 <div class="mdui-card-header">
+                    <div class="mdui-card-menu">
+                    {% include qrcode.html %}
+                    {% include sns_share.html %}
+                    </div>
                     <img class="mdui-card-header-avatar" src="{{site.data.site.img.avatar}}" />
                     <div class="mdui-card-header-title">{{site.author}}</div>
                     <div class="mdui-card-header-subtitle">{{ page.date | date: "%b %-d, %Y" }}</div>

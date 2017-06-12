@@ -277,23 +277,24 @@ $(function(){
 {% if page.layout == "tags" %}
 <script>
 $(function(){
-    var tagid;
-    $(".k-tagcloud").on("click",function(e){
-        var $this = $(this);
-        tagid = $this.attr("id");
-        if(tagid!=null){
+function getUrlParam(name) {
+    var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+    var r = window.location.search.substr(1).match(reg);
+    if (r != null) return unescape(r[2]); return null;
+}
+function getTagList(id){
     $.ajax({
         type: "GET",
         url:"{{ "/tags.json" | relative_url }}",
         dataType:"json",
+        cache: true,
         success: function(data){
             var content = "<ul class='mdui-list'>";
             $.each(data,function(i,n){
-                if(n.id === tagid){
+                if(n.id === id){
                    var posts = n.post;
                    $.each(posts,function(i,n){
-                       content+="<li class='mdui-list-item mdui-ripple'><a href='"+n.url+"'><div class='mdui-list-item-content'><div class='mdui-list-item-title mdui-list-item-one-line'>"+n.title+"</div><div class='mdui-list-item-text mdui-list-item-one-line'>"+n.excerpt+"</div>
-            </div></li>";
+                       content+="<li class='mdui-list-item mdui-ripple'><a href='"+n.url+"'><div class='mdui-list-item-content'><div class='mdui-list-item-title mdui-list-item-one-line'>"+n.title+"</div><div class='mdui-list-item-text mdui-list-item-one-line'>"+n.excerpt+"</div></div></li>";
                    });
                 }
             });
@@ -302,6 +303,17 @@ $(function(){
         }
     })
 }
+var tagid;
+var urltag = getUrlParam("tag");
+if(urltag!=null){
+        getTagList(urltag);
+}
+$(".k-tagcloud").on("click",function(e){
+    var $this = $(this);
+    tagid = $this.attr("id");
+    if(tagid!=null){
+        getTagList(tagid);
+    }
 });
 })
 </script>

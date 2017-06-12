@@ -6,6 +6,7 @@ layout: default
 {% else %}
 {% assign lang = site.data.lang.en-US %}
 {% endif %}
+
 <div class="k-container">
   <div class="k-posts-list">
     {% for post in paginator.posts %}
@@ -22,6 +23,14 @@ layout: default
       </div>
       <div class="mdui-divider"></div>
       <div class="mdui-card-header">
+        <div class="mdui-card-menu mdui-typo">
+          {% for p in site.pages %}
+          {% if p.layout == "category" %}
+          {% assign ca = p.url %}
+          {% endif %}
+          {% endfor %}
+          <a class="k-post-categories" href="{{ca | prepend: site.baseurl }}?category={{post.categories}}">{{post.categories}}</a>
+        </div>
         <img class="mdui-card-header-avatar" src="{{site.data.site.img.avatar}}" />
         <div class="mdui-card-header-title">{{site.author}}</div>
         <div class="mdui-card-header-subtitle">{{ post.date | date: "%b %-d, %Y" }}</div>

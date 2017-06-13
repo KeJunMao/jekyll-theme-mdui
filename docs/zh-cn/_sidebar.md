@@ -8,6 +8,7 @@
 - 配置介绍
   - [站点配置](zh-cn/site-configuration.md)
   - [主题配置](zh-cn/theme-configuration.md)
+  - [萌配置](zh-cn/meng-configuration.md)
 
 - 集成服务
   - [RSS](zh-cn/rss.md)

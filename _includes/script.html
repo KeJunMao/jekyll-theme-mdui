@@ -7,12 +7,22 @@
 </script>
 <!--/* global-meng-script-start */-->
 {% if site.data.site.uiux.meng == true %}
+{% if site.data.meng.console.switch == true %}
+{% if site.data.meng.console.theme_info == true %}
+<script>
+console.info("\n %c © Jekyll Theme MDUI |  Version: 0.4.2 | https://github.com/KeJunMao/jekyll-theme-mdui \n\n", "color: #fff; background: #448aff; padding:5px 0; border-radius: 5px 5px 5px 5px;");
+</script>
+{% endif %}
+<script>
+console.info("\n %c {{site.data.meng.console.text}} \n\n", "color: {{site.data.meng.console.color}}; background: {{site.data.meng.console.background}}; padding:5px 0; border-radius: 5px 5px 5px 5px;");
+</script>
+{% endif %}
 {% if site.data.meng.title.switch == true %}
 <script>
     var defaultTitle = document.title;
     {% if site.data.meng.title.with_default_title == true %}
-    var hiddenText = '{{site.data.meng.title.hidden}}' +' - '+ defaultTitle;
-    var visibleText = '{{site.data.meng.title.visible}}' +' - '+ defaultTitle;
+    var hiddenText = '{{site.data.meng.title.hidden}}' +' '+ defaultTitle;
+    var visibleText = '{{site.data.meng.title.visible}}' +' '+ defaultTitle;
     {% else %}
     var hiddenText = '{{site.data.meng.title.hidden}}';
     var visibleText = '{{site.data.meng.title.visible}}';

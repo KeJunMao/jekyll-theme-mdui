@@ -17,6 +17,7 @@ uiux:
    android_chrome_color: "#eeeeee" #  the color of the Chrome address bar
    nprogress_color: "#29d" #  the color of the top loading progress bar
    nprogress_buffer: 200 # the top loading progress bar buffers
+   meng: false # meng
 
 background: 
    purecolor: "#eeeeee" # the background color
@@ -78,6 +79,10 @@ iOS 主屏按钮图标
 页面加载时顶部加载进度条的颜色。
 #### nprogress_buffer
 页面加载时顶部加载进度条的缓冲时间。
+
+#### meng
+
+是否启用萌选项。死宅真可怕。详情设置点击[这里](zh-cn/meng-configuration)。
 
 ### background
 

@@ -21,7 +21,7 @@
         <div class="mdui-hidden-xs-down">
         {% for menu in site.data.menus %}
         {% if menu.name != "navSearch" %}
-        <a href="{{menu.url | prepend: site.baseurl }}" class="mdui-btn {% if menu.url  == page.url %}mdui-list-item-active{% endif %}">{{menu.name}}</a>
+        <a href="{{menu.url | prepend: site.baseurl }}" class="mdui-btn mdui-ripple {% if menu.url  == page.url %}mdui-list-item-active{% endif %}">{{menu.name}}</a>
         {% endif %}
         {% endfor %}
         {% if navSearch == true %}

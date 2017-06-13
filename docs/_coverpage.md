@@ -1,13 +1,26 @@
-![logo](_media/icon.svg)
+<style>
+  section.cover.show .cover-main{
+    color: #fff;
+  }
+  section.cover.show h1 span{
+    color: #fff!important;
+  }
+  .app-nav a.active{
+    color: white;
+    text-shadow: 0px 0px 2px #000;
+  }
+  .app-nav a{
+    color: white;
+    text-shadow: 0px 0px 2px #000;
+  }
+</style>
+![logo](_media/icon.png)
 
-# docsify
+# Jekyll Theme MDUI
 
-> A magical documentation site generator.
+> Material Design
 
-- Simple and lightweight (~12kb gzipped)
-- Multiple themes
-- Not build static html files
+- Simple
+- Based on MDUI
 
-
-[GitHub](https://github.com/QingWei-Li/docsify/)
-[Get Started](#quick-start)
+![color](#01897b)

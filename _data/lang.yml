@@ -1,4 +1,6 @@
 zh-CN:
+   page:
+      search: "搜索"
    post:
       continue: "阅读全文"
       qrcode: "二维码"
@@ -16,6 +18,8 @@ zh-CN:
       toTelegram: "分享到 Telegram"
 
 en-US:
+   page:
+      search: "Search"
    post:
       continue: "Read more"
       qrcode: "QR Code"

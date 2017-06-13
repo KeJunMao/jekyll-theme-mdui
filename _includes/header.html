@@ -1,3 +1,9 @@
+{% if  site.data.site.lang == 'zh-CN' %}
+{% assign lang = site.data.lang[site.data.site.lang] %}
+{% else %}
+{% assign lang = site.data.lang.en-US %}
+{% endif %}
+
 {% for menu in site.data.menus %}
 {% if menu.name == "navSearch" %}
 {% if menu.switch == true %}
@@ -24,7 +30,7 @@
             <div class="typeahead__container">
                 <div class="typeahead__field">
                     <span class="typeahead__query">
-                        <input class="mdui-textfield-input k-nav-search" type="text" placeholder="Search"/>
+                        <input class="mdui-textfield-input k-nav-search" type="text" placeholder="{{lang.page.search}}"/>
                     </span>
                 </div>
             </div>
@@ -41,7 +47,7 @@
             <div class="typeahead__field">
                 <span class="typeahead__query">
                     <i class="mdui-icon material-icons">&#xe8b6;</i>
-                    <input class="mdui-textfield-input k-nav-search" type="text" placeholder="Search"/>
+                    <input class="mdui-textfield-input k-nav-search" type="text" placeholder="{{lang.page.search}}"/>
                 </span>
             </div>
         </div>

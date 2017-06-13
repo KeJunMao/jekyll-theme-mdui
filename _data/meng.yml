@@ -1,0 +1,11 @@
+title:  # Meng title
+  switch: true # Meng title switch
+  visible: "(*´∇｀*) 被发现啦~" # State is visible text
+  hidden:  "(つェ⊂)看不到我~" # State is hidden text
+  with_default_title: true # with default title
+  reset_time: 1000 # If state is visible , reset default title times(ms)
+
+cursor: # cursor
+  switch: true # cursor switch
+  auto_url: "https://ooo.0o0.ooo/2017/06/12/593ea1901c930.png" # State is auto style
+  pointer_url: "https://ooo.0o0.ooo/2017/06/12/593ea3612fd77.png" # State is pointer style

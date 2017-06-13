@@ -3,7 +3,7 @@
   - [定制导航栏](zh-cn/custom-navbar.md)
   - [创建页面](zh-cn/creating-pages.md)
   - [定制 SNS](zh-cn/custom-sns.md)
-  - [](zh-cn/custom-sns.md)
+  - [更新主题](zh-cn/update-theme.md)
 
 - 配置介绍
   - [站点配置](zh-cn/site-configuration.md)
@@ -20,6 +20,9 @@
 
 - 其他工具
   - [fastjekyll](zh-cn/fastjekyll.md)
+  - [color tool](https://material.io/color/#!/?view.left=0&view.right=0)
+  - [Material icons](https://material.io/icons/)
+  - [MDUI 文档](https://www.mdui.org/docs/)
 
 - 开发
   - [如何贡献](zh-cn/how-contribution.md)

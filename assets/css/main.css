@@ -196,6 +196,20 @@ body,header,#toc-card{
     opacity: .7;
 }
 
+{% if site.data.site.uiux.meng == true %}
+{% if site.data.meng.cursor.switch == true %}
+body{
+    cursor:url({{site.data.meng.cursor.auto_url}}), auto;
+}
+a{
+    cursor:url({{site.data.meng.cursor.pointer_url}}), pointer;
+}
+.k-post-media{
+    cursor:url({{site.data.meng.cursor.pointer_url}}), pointer;
+}
+{% endif %}
+{% endif %}
+
 {% for sns in site.data.sns %}
 {% if sns.name =='bilibili' and sns.url != null %}
 .k-bilibili{

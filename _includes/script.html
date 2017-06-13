@@ -5,6 +5,36 @@
 <script>
     (function($){$.fn.scrollToTop=function(options){var config={"speed":800};if(options){$.extend(config,{"speed":options})}return this.each(function(){var $this=$(this);$(window).scroll(function(){if($(this).scrollTop()>100){$this.fadeIn()}else{$this.fadeOut()}});$this.click(function(e){e.preventDefault();$("body, html").animate({scrollTop:0},config.speed)})})};$.fn.scrollBodyToTop=function(options){var config={"speed":800};if(options){$.extend(config,{"speed":options})}return this.each(function(){var $this=$(this);$(".placeholder").scroll(function(){if($(this).scrollTop()>100){$this.fadeIn()}else{$this.fadeOut()}});$this.click(function(e){e.preventDefault();$(".placeholder").animate({scrollTop:0},config.speed)})})}})(jQuery);
 </script>
+<!--/* global-meng-script-start */-->
+{% if site.data.site.uiux.meng == true %}
+{% if site.data.meng.title.switch == true %}
+<script>
+    var defaultTitle = document.title;
+    {% if site.data.meng.title.with_default_title == true %}
+    var hiddenText = '{{site.data.meng.title.hidden}}' +' - '+ defaultTitle;
+    var visibleText = '{{site.data.meng.title.visible}}' +' - '+ defaultTitle;
+    {% else %}
+    var hiddenText = '{{site.data.meng.title.hidden}}';
+    var visibleText = '{{site.data.meng.title.visible}}';
+    {% endif %}
+    var resetTime = {{site.data.meng.title.reset_time}};
+    document.addEventListener("visibilitychange", function() {
+	    if(document.visibilityState == "hidden" ){
+            document.title = hiddenText;
+        }
+        if(document.visibilityState == "visible"){
+            document.title = visibleText;
+            setTimeout(function(){
+                if(document.visibilityState == "visible"){
+                    document.title = defaultTitle;
+                }
+            },resetTime);
+        }
+    }, false);
+</script>
+{% endif %}
+{% endif %}
+<!--/* global-meng-script-end */-->
 <script type="text/javascript">
 /* NProgress */
 NProgress.configure({

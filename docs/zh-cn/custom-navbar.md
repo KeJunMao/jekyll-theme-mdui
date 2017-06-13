@@ -17,7 +17,7 @@
 
 ### 启用导航栏搜索
 
-要启用导航栏搜索，只需将`name`字段为`navSearch`的`switch`设置为`true`即可：
+要启用导航栏搜索，只需将`_data/menus.yml`文件的`name`字段为`navSearch`的`switch`设置为`true`即可：
 
 ```yaml
 - name: navSearch
@@ -26,11 +26,13 @@
 
 ## 参数详解
 
-### name
+### 菜单
+
+#### name
 
 定义名称，名称会显示在导航栏中。
 
-### url
+#### url
 
 定义文件路径。
 
@@ -42,6 +44,16 @@ url: /pages/test.html
 
 则需在jekyll网站根目录新建一个pages文件夹，并创建一个test.html。
 
-### icon
+#### icon
 
 定义图标，图标会在移动端的侧边栏显示。
+
+### 导航栏搜索
+
+#### name
+
+必需，请勿更改
+
+#### switch
+
+开关，`true`为启用。

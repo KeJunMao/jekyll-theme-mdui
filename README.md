@@ -18,7 +18,7 @@
 
 ## General
 
-[![Version](https://img.shields.io/badge/version-0.4.5-green.svg?style=flat-square)]()
+[![Version](https://img.shields.io/badge/version-0.4.7-green.svg?style=flat-square)]()
 [![Jekyll](https://img.shields.io/badge/Jekyll-3.4+-green.svg?style=flat-square)](https://jekyllrb.com/)
 [![Gem](https://img.shields.io/gem/dt/jekyll-theme-mdui.svg?style=flat-square)](https://rubygems.org/gems/jekyll-theme-mdui/)
 
@@ -40,13 +40,13 @@
 
 ## Docs
 
-[Docs](http://mdui.kejun.space/#/)
+[Docs](http://mdui.kejun.space/#/)(!!!Need Help!!!)
 
 [中文文档](http://mdui.kejun.space/#/zh-cn/)
 
 ## TODO
 
-- [ ] Editor - Online preview
+- [ ] Editor - Online preview (!!!Need Help!!!)
 - [ ] Category - Better style
 - [ ] Site style - More custom options
 
@@ -62,6 +62,7 @@ File Required or Optional:
 |tags.json|Optional|If you use the tags page, it is required.|
 |_data/friends.yml|Optional|If you use the friends page, it is required.|
 |_data/sns.yml|Optional|It is footer sns,if you want userd, it is required.|
+|_data/meng.yml|Optional|It is Meng option,if you want userd, it is required.|
 |_data/site.yml|Required|It is theme config.|
 |_data/lang.yml|Required|It is language config.|
 |_data/menus.yml|Required|It is site menus config.|

@@ -10,7 +10,7 @@
 {% if site.data.meng.console.switch == true %}
 {% if site.data.meng.console.theme_info == true %}
 <script>
-console.info("\n %c © Jekyll Theme MDUI |  Version: 0.4.5 | https://github.com/KeJunMao/jekyll-theme-mdui \n\n", "color: #fff; background: #448aff; padding:5px 0; border-radius: 5px 5px 5px 5px;");
+console.info("\n %c © Jekyll Theme MDUI |  Version: 0.4.7 | https://github.com/KeJunMao/jekyll-theme-mdui \n\n", "color: {{site.data.meng.console.color}}; background:{{site.data.meng.console.background}}; padding:5px 0; border-radius: 5px 5px 5px 5px;");
 </script>
 {% endif %}
 <script>
@@ -275,82 +275,38 @@ var disqus = {
 {% if site.data.site.uiux.meng == true %}
 {% if site.data.meng.header.switch == true%}
 <script>
-    const REG_HEX = /(^#?[0-9A-F]{6}$)|(^#?[0-9A-F]{3}$)/i;
-
-/*
- * rgb字符串解析
- * accepts: #333 #accded (without # is also fine)
- * not accept yet: rgb(), rgba()
- */
-var rgbToHex = function(rgb) {
-    var color = rgb.toString().match(/\d+/g);
-    var hex = "#";
-    for (var i = 0; i < 3; i++) {
-        hex += ("0" + Number(color[i]).toString(16)).slice(-2);
-    }
-    return hex;
-};
-function parseRGB(str){
-    if(typeof str === 'string' && REG_HEX.test(str) ){
-        str = str.replace('#', '');
-        let arr;
-        if(str.length === 3){
-            arr = str.split('').map(c => (c+c));
-        }
-        else if(str.length === 6){
-            arr = str.match(/[a-zA-Z0-9]{2}/g);
-        }
-        else{
-            throw new Error('wrong color format');
-        }
-        return arr.map((c) => parseInt(c, 16));
-    }
-    throw new Error('color should be string');
-}
-
-/*
- * rgb value to hsl 色相(H)、饱和度(S)、明度(L)
- */
-function rgbToHsl(rgbStr){
-    let [r, g, b] = parseRGB(rgbStr);
-    r /= 255, g /= 255, b /= 255;
-    let max = Math.max(r, g, b), min = Math.min(r, g, b);
-    let h, s, l = (max + min) / 2;
-
-    if(max == min){
-        h = s = 0; 
-    }else{
-        let d = max - min;
-        s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
-        switch(max){
-            case r: h = (g - b) / d + (g < b ? 6 : 0); break;
-            case g: h = (b - r) / d + 2; break;
-            case b: h = (r - g) / d + 4; break;
-        }
-        h /= 6;
-    }
-    return [h, s, l];
-}
-
-/*
- * 判断颜色属于深色还是浅色
- */
-function isColorDarkOrLight(rgbStr){
-    var color = rgbToHex(rgbStr);
-    let [h, s, l] = rgbToHsl(color);
-    return (l > 0.5)? 'light' : 'dark';
-}
 var appVersion = navigator.appVersion;
-
 if (appVersion.indexOf('Mobile') > 0){
     var isMobile = true;
 }
-if (isMobile){
-    var s = document.createElement('script'); s.async = true;
-    s.type = 'text/javascript';
-    s.src = '{{ "/assets/js/rgbaster.min.js" | prepend: site.baseurl }}';
-    (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-}
+    {% if page.themecolor == null %}
+    var pagethemecolorid = '{{page.id | remove:"/"}}ThemeColor';
+    var headertextcolor;
+    if (!localStorage[pagethemecolorid]){
+        if (isMobile){
+            var s = document.createElement('script'); s.async = true;
+            s.type = 'text/javascript';
+            s.src = '{{ "/assets/js/rgbaster.min.js" | prepend: site.baseurl }}';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }
+    }else{
+        if (isMobile){
+            headerthemecolor = localStorage[pagethemecolorid];
+            headertextcolor = localStorage[pagethemecolorid+'text'];
+            $('header').css('background-color',headerthemecolor);
+            $("meta[name='theme-color']").attr('content', headerthemecolor);
+            $('header').css('color',headertextcolor);
+        }
+    }
+    {% else %}
+    headerthemecolor = {{page.themecolor}};
+    headertextcolor = {{page.themetextcolor}};
+    if (isMobile){
+        $('header').css('background-color',headerthemecolor);
+        $("meta[name='theme-color']").attr('content', headerthemecolor);
+        $('header').css('color',headertextcolor);
+    }
+    {% endif %}
 </script>
 {% endif %}
 {% endif %}

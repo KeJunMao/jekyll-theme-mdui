@@ -19,3 +19,15 @@ console: # Meng console info
 
 header: # Meng header color + theme-color
   switch: true
+
+background: # Meng background
+  switch: true
+  background_img: "https://ooo.0o0.ooo/2017/06/13/593fd8dacf986.jpg"
+  transparent_header: true
+  transparent_footer: true
+  text_color: '#fff'
+
+card: # Meng card
+  switch: true
+  background_color: 'rgba(255, 255, 255, 0.5)'
+  card_img_opacity: '0.8'

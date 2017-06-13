@@ -2,6 +2,7 @@
   - [快速开始](zh-cn/quickstart.md)
   - [定制导航栏](zh-cn/custom-navbar.md)
   - [创建页面](zh-cn/creating-pages.md)
+  - [攥写文章](zh-cn/creating-posts.md)
   - [定制 SNS](zh-cn/custom-sns.md)
   - [更新主题](zh-cn/update-theme.md)
 

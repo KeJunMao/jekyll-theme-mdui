@@ -1,0 +1,69 @@
+# 攥写文章
+
+要攥写文章只要在`_post`文件夹内新建文件即可。
+
+## 如何使用
+
+### 必须
+
+我们期望你的文章必须包含以下头信息：
+
+```yaml
+---
+layout: post
+title:  "Ubuntu安装Apache，MySQL，PHP以及phpMyAdmin"
+date:   2016-04-14 10:24:49 +0800
+categories: technology
+tags: ubuntu apache mysql php phpmyadmin
+img: https://ooo.0o0.ooo/2017/05/27/59292b1243dc9.jpg
+---
+```
+
+### 可选
+
+当启用[萌](/zh-cn/meng-configuration)选项时,为你的文章添加如下头信息会改善渲染速度：
+
+```yaml
+---
+themecolor: "#fff"
+themetextcolor: "#000"
+---
+```
+
+## 参数详解
+
+### 必须
+
+#### layout
+
+要使用的布局，必须为`post`
+
+#### title
+
+文章标题
+
+#### date
+
+文章创建日期
+
+#### categories
+
+文章所属分类
+
+#### tags
+
+文章包含的标签，使用空格分开多个标签。
+
+#### img
+
+文章头部图像
+
+### 可选
+
+#### themecolor
+
+移动端的header背景颜色和theme-color
+
+#### themetextcolor
+
+移动端的header文本颜色

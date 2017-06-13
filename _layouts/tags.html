@@ -10,9 +10,16 @@ layout: default
 
 {% assign sortedtags = tags | split:' ' | sort %}
 
-
+<div class="k-posts-list"></div>
+{% if site.data.site.uiux.meng == true %}
+  {% if site.data.meng.background.switch == true %}
+    <div class="k-container mdui-card">
+  {% else %}
+    <div class="k-container">
+  {% endif %}
+{% else %}
 <div class="k-container">
-  <div class="k-posts-list"></div>
+{% endif %}
 {% for tag in sortedtags %}
   {% assign index = site.tags[tag] | size %}
   {% assign fontsize = 14 %}

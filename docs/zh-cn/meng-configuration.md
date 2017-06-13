@@ -34,6 +34,18 @@ console: # Meng console info
 
 header: # Meng header color + theme-color
   switch: true
+
+background: # Meng background
+  switch: true
+  background_img: "https://ooo.0o0.ooo/2017/06/13/593fd8dacf986.jpg"
+  transparent_header: true
+  transparent_footer: true
+  text_color: '#fff'
+
+card: # Meng card
+  switch: true
+  background_color: 'rgba(255, 255, 255, 0.5)'
+  card_img_opacity: '0.8'
 ```
 
 ## 参数详解
@@ -109,3 +121,41 @@ header: # Meng header color + theme-color
 #### switch
 
 开关
+
+### background
+
+萌背景
+
+#### switch
+
+开关
+
+#### background_img
+
+图像地址
+
+#### transparent_header
+
+是否透明header
+
+#### transparent_footer
+
+是否透明footer
+
+#### text_color
+
+文本颜色
+
+### card
+萌卡片
+
+#### switch
+开关
+
+#### background_color
+
+卡片颜色，配合萌背景，使用rgba可做出透明效果。
+
+#### card_img_opacity
+
+卡片图片透明度

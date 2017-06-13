@@ -208,6 +208,47 @@ a{
     cursor:url({{site.data.meng.cursor.pointer_url}}), pointer;
 }
 {% endif %}
+{% if site.data.meng.background.switch == true %}
+body{
+    background-image: url({{site.data.meng.background.background_img}});
+    background-size: cover;
+    background-position: 50% 50%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+#toc-card{
+    background-color:transparent;
+}
+#toc a{
+    color: {{site.data.meng.background.text_color}};
+}
+{% if site.data.meng.background.transparent_header == true %}
+header{
+    background-color:rgba(0, 0, 0, 0);
+    color: {{site.data.meng.background.text_color}};
+}
+{% endif %}
+{% if site.data.meng.background.transparent_footer == true %}
+footer .mdui-card{
+    color: {{site.data.meng.background.text_color}};
+    background-color:rgba(0, 0, 0, 0);
+}
+{% endif %}
+{% endif %}
+{% if site.data.meng.card.switch ==true %}
+ .k-list-card{
+     background-color:{{site.data.meng.card.background_color}};
+ }
+ .k-container.mdui-card{
+     background-color:{{site.data.meng.card.background_color}};
+ }
+ .k-friend .mdui-card{
+     background-color:{{site.data.meng.card.background_color}};
+ }
+ .k-post-media{
+    opacity: {{site.data.meng.card.card_img_opacity}};
+ }
+{% endif %}
 {% endif %}
 
 {% for sns in site.data.sns %}

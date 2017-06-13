@@ -16,3 +16,6 @@ console: # Meng console info
   text: "Copyright © 2017 Jekyll-Theme-MDUI" # text
   color: "#fff" # text color
   background: "#448aff" # background color
+
+header: # Meng header color + theme-color
+  switch: true

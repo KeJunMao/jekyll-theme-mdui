@@ -31,6 +31,9 @@ console: # Meng console info
   text: "Copyright © 2017 Jekyll-Theme-MDUI" # text
   color: "#fff" # text color
   background: "#448aff" # background color
+
+header: # Meng header color + theme-color
+  switch: true
 ```
 
 ## 参数详解
@@ -98,3 +101,11 @@ console: # Meng console info
 #### background
 
 背景颜色
+
+### header
+
+动态chrome状态栏、hearder颜色
+
+#### switch
+
+开关

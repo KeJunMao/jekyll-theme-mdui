@@ -12,5 +12,10 @@ layout: compress
     {% if site.data.site.google_analytics != "" %}
     {% include analytics.html %}
     {% endif %}
+    {% if site.data.site.uiux.meng == true%}
+    {% if site.data.meng.live2d.switch == true %}
+    {% include live2d.html %}
+    {% endif %}
+    {% endif %}
     </body>
 </html>

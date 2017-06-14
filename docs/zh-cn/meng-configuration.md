@@ -46,6 +46,16 @@ card: # Meng card
   switch: true
   background_color: 'rgba(255, 255, 255, 0.5)'
   card_img_opacity: '0.8'
+
+live2d: # live2d ,see https://github.com/EYHN/hexo-helper-live2d
+  switch: true
+  model: "/assets/live2d/koharu/koharu.model.json" # model.json path
+  drag: true # is drag ?
+  width: 130 # canvas width
+  height: 190 # canvas height
+  bottom: 100 # canvas bottom
+  leftOrRight: "right" # left or right
+  offset: 10 # offset
 ```
 
 ## 参数详解
@@ -159,3 +169,40 @@ card: # Meng card
 #### card_img_opacity
 
 卡片图片透明度
+
+### live2d
+
+为你的博客添加色气满满的live2d吧！
+
+该功能使用[EYHN/hexo-helper-live2d](https://github.com/EYHN/hexo-helper-live2d/)开源项目。
+
+#### switch
+开关
+
+#### model
+
+模型json路径
+
+#### drag
+
+是否允许拖拽
+
+#### width
+
+canvas 宽度
+
+#### height
+
+canvas 高度
+
+#### bottom
+
+底部偏移
+
+#### leftOrRight
+
+左对齐或右对齐
+
+#### offset
+
+左对齐或右对齐的偏移

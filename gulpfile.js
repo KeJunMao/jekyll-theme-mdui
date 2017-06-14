@@ -17,16 +17,16 @@ gulp.task('css', () => {
 });
 
 gulp.task('jekyll', () => {
-  const jekyll = child.spawn('jekyll', ['build',
-    '--watch',
-    '--incremental',
-    '--drafts'
-  ]);
+  const jekyll = child.exec('jekyll b -w');
 
   const jekyllLogger = (buffer) => {
-    buffer.toString()
-      .split(/\n/)
-      .forEach((message) => gutil.log('Jekyll: ' + message));
+    buffer = buffer.toString();
+    buffer = buffer.split(/\n/)
+    buffer.forEach(function(message){
+      if (message!=""){
+        gutil.log('Jekyll: ' + message)
+      }
+    })
   };
 
   jekyll.stdout.on('data', jekyllLogger);
@@ -41,8 +41,6 @@ gulp.task('serve', () => {
       baseDir: siteRoot
     }
   });
-
-  gulp.watch(cssFiles, ['css']);
 });
 
-gulp.task('default', ['css', 'jekyll', 'serve']);
+gulp.task('default', ['jekyll', 'serve']);

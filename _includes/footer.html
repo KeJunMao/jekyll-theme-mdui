@@ -2,7 +2,7 @@
     <div class="mdui-card">
         <div class="mdui-card-content mdui-shadow-0 mdui-p-a-5">
             <div class="mdui-container">
-                <div class="mdui-row-sm-3">
+                <div class="mdui-row-sm-3 k-footer-sns">
                     <div class="mdui-col">
                         <div class="mdui-row">
                             {% for sns in site.data.sns %}
@@ -19,7 +19,10 @@
                     </div>
                     <div class="mdui-col mdui-text-center mdui-typo">
                         <div>Powered by <a href="https://jekyllrb.com">Jekyll</a></div>
-                        <div>Theme <a href="https://github.com/KeJunMao/jekyll-theme-mdui">jekyll-theme-mdui</a></div>
+                        <div>Theme <a href="https://github.com/KeJunMao/jekyll-theme-mdui">Jekyll Theme MDUI</a></div>
+                        {% if site.data.site.deploy == "coding" %}
+                        <div><p class="mdui-m-b-0">Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a></p></div>
+                        {% endif %}
                     </div>
                 </div>
             </div>

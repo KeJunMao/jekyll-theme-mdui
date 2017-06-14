@@ -28,11 +28,14 @@ MDUI 是一个优秀的前端框架，采用 Material Design 设计。
 * 在线编辑器
 * 快速插入提示
 * 快速分享到社交网络
+* 二次元 二次元 二次元
 
 ## 谁在用
 
 [KeJun](https://blog.kejun.space/) - 二次元智障
 
 [Miku01QAQ](http://blog.miku01qaq.xyz/) - Naive少年
+
+[m0dulo](https://m0dulo.xyz) - 隐宅
 
 你可以新建一个 pull request 来添加你的博客到这里。

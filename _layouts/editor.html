@@ -1,8 +1,17 @@
 ---
 layout: default
 ---
+
+<div class="k-posts-list"></div>
+{% if site.data.site.uiux.meng == true %}
+  {% if site.data.meng.background.switch == true %}
+    <div style="padding:16px" class="mdui-container k-editorcontainer mdui-card">
+  {% else %}
+    <div class="mdui-container k-editorcontainer">
+  {% endif %}
+{% else %}
 <div class="mdui-container k-editorcontainer">
-    <div class="k-posts-list"></div>
+{% endif %}
     <h3>Title</h3>
     <div class="mdui-textfield">
         <input class="mdui-textfield-input" type="text" name=title maxlength="100"/>

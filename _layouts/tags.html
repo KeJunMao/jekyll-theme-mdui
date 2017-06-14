@@ -20,6 +20,9 @@ layout: default
 {% else %}
 <div class="k-container">
 {% endif %}
+<div class="mdui-card-content">
+  
+
 {% for tag in sortedtags %}
   {% assign index = site.tags[tag] | size %}
   {% assign fontsize = 14 %}
@@ -32,6 +35,7 @@ layout: default
   {% endfor %}
       <a id="{{ tag }}" class="k-tagcloud mdui-ripple mdui-hoverable" style="font-size:{{fontsize}}px;color:rgb({{color}},{{color}},{{color}})">{{ tag }}</a>
 {% endfor %}
+</div>
 <div class="mdui-row">
   <div class="mdui-col-sm-12">
     <div id="taglist"></div>

@@ -45,6 +45,8 @@ disqus:
 google_analytics: ""  # google analytics code
 
 lang: "en-US"  # lang
+
+deploy: "coding"
 ```
 
 ## 参数详解
@@ -164,3 +166,7 @@ google analytics
 ### lang
 
 站点语言
+
+### deploy
+
+如果你是coding银牌会员，并使用coding pages ，将该值设为`"coding"`,便可以关闭跳转页。

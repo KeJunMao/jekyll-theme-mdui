@@ -4,17 +4,8 @@ const browserSync = require('browser-sync').create();
 const gulp = require('gulp');
 const concat = require('gulp-concat');
 const gutil = require('gulp-util');
-const sass = require('gulp-sass');
 
 const siteRoot = '_site';
-const cssFiles = '_css/**/*.?(s)css';
-
-gulp.task('css', () => {
-  gulp.src(cssFiles)
-    .pipe(sass())
-    .pipe(concat('all.css'))
-    .pipe(gulp.dest('assets'));
-});
 
 gulp.task('jekyll', () => {
   const jekyll = child.exec('jekyll b -w');
@@ -43,4 +34,18 @@ gulp.task('serve', () => {
   });
 });
 
-gulp.task('default', ['jekyll', 'serve']);
+gulp.task('docs',() =>{
+  const docs = child.exec('docsify serve docs');
+  const docsifyLog = (buffer) => {
+    buffer = buffer.toString();
+    buffer = buffer.split(/\n/)
+    buffer.forEach(function(message){
+      if (message!=""){
+        gutil.log('Docsify: ' + message)
+      }
+    });
+  }
+
+  docs.stdout.on('data', docsifyLog);
+})
+gulp.task('default', ['jekyll', 'serve', 'docs']);

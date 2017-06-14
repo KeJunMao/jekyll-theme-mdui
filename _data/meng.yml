@@ -22,12 +22,22 @@ header:
 
 background: # Meng background
   switch: true
-  background_img: "https://ooo.0o0.ooo/2017/06/13/593fd8dacf986.jpg"
+  background_img: "https://ooo.0o0.ooo/2017/06/14/5940a9b8e4c21.jpg"
   transparent_header: true
-  transparent_footer: true
-  text_color: '#fff'
+  transparent_footer: false
+  text_color: '#000'
 
 card: # Meng card
   switch: true
   background_color: 'rgba(255, 255, 255, 0.5)'
   card_img_opacity: '0.8'
+
+live2d: # live2d ,see https://github.com/EYHN/hexo-helper-live2d
+  switch: true
+  model: "/assets/live2d/koharu/koharu.model.json" # model.json path
+  drag: true # is drag ?
+  width: 130 # canvas width
+  height: 190 # canvas height
+  bottom: 100 # canvas bottom
+  leftOrRight: "right" # left or right
+  offset: 10 # offset

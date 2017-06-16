@@ -36,6 +36,7 @@ live2d: # live2d ,see https://github.com/EYHN/hexo-helper-live2d
   switch: true
   model: "/assets/live2d/koharu/koharu.model.json" # model.json path
   drag: true # is drag ?
+  in_mobile: false
   width: 130 # canvas width
   height: 190 # canvas height
   bottom: 100 # canvas bottom

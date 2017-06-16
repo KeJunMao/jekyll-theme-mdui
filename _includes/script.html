@@ -82,6 +82,7 @@ drawer.addEventListener('closed.mdui.drawer', function () {
 $('body').on('touchstart',function(e){
     var touch = e.targetTouches[0];
     if (touch.pageX < 15){
+        $('body').addClass('mdui-locked');
         var touchstartX = touch.pageX;
         $('body').on('touchmove',function(e){
                 if (e.targetTouches[0].pageX < 240-touchstartX){
@@ -95,6 +96,7 @@ $('body').on('touchstart',function(e){
                         }
                         if (x < -120){
                             $('#k-menu').css('transform',"");
+                            $('body').removeClass('mdui-locked');
                             inst.close();
                         }
                     });
@@ -276,6 +278,7 @@ var disqus = {
 {% if site.data.meng.header.switch == true%}
 <script>
 var appVersion = navigator.appVersion;
+var isMobile;
 if (appVersion.indexOf('Mobile') > 0){
     var isMobile = true;
 }

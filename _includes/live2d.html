@@ -44,6 +44,18 @@
     }
 startDrag("#live2dcanvas");
 {% endif %}
+{% if live2d.in_mobile == false %}
+var isMobile;
+var appVersion = navigator.appVersion;
+if (appVersion.indexOf('Mobile') > 0){
+    var isMobile = true;
+}
+if(!isMobile){
+    loadlive2d("live2dcanvas", '{{live2d.model  | prepend: site.baseurl }}');
+}
+{% else %}
 loadlive2d("live2dcanvas", '{{live2d.model  | prepend: site.baseurl }}');
+{% endif %}
+
 </script>
 

@@ -33,7 +33,7 @@ card: # Meng card
   card_img_opacity: '0.8'
 
 live2d: # live2d ,see https://github.com/EYHN/hexo-helper-live2d
-  switch: true
+  switch: false
   model: "/assets/live2d/koharu/koharu.model.json" # model.json path
   drag: true # is drag ?
   width: 130 # canvas width
@@ -41,3 +41,12 @@ live2d: # live2d ,see https://github.com/EYHN/hexo-helper-live2d
   bottom: 100 # canvas bottom
   leftOrRight: "right" # left or right
   offset: 10 # offset
+
+aplayer:
+  switch: true
+  button_color: "#1abc9c"
+  music:
+    title: 'Faded'
+    author: 'Alan Walker'
+    url: 'http://m8.music.126.net/20170618215000/dc8c95cbe8484fa26a3c70609b7be3f6/ymusic/0bec/75a9/a09c/e37e93fe58eac7ae44df445d2f8874f0.mp3'
+    pic: 'http://p4.music.126.net/8dzD62VK8jLDbhEqkmpIAg==/18277181788626198.jpg?param=130y130'

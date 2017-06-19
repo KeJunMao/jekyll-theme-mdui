@@ -1,0 +1,25 @@
+  {% if paginator.total_pages > 1 %}
+  <div class="mdui-row-xs-3">
+    <div class="mdui-col">
+        {% if paginator.previous_page %}
+        <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="mdui-btn mdui-btn-icon "><i class="mdui-icon material-icons">arrow_back</i></a>
+        {% else %}
+        <button disabled class="mdui-btn mdui-btn-icon "><i class="mdui-icon material-icons">arrow_back</i></button> 
+        {% endif%}
+    </div>
+
+    <div class="mdui-col  mdui-text-center">
+      <p style="width:100%">{{paginator.page}}/{{paginator.total_pages}}</p>
+    </div>
+
+    <div class="mdui-col">
+      {% if paginator.next_page %}
+        <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="mdui-btn mdui-btn-icon mdui-float-right"><i class="mdui-icon material-icons">arrow_forward</i></a>
+        {% else %}
+        <button disabled class="mdui-btn mdui-btn-icon mdui-float-right"><i class="mdui-icon material-icons">arrow_forward</i></button>
+        {% endif %}
+    </div>
+
+  </div>
+</div>
+{% endif %}

@@ -3,6 +3,12 @@
 {% else %}
 {% assign lang = site.data.lang.en-US %}
 {% endif %}
+<style>
+#k-qrcode{
+    padding-bottom: 0px;
+    width: 215px;
+}
+</style>
     <button class="mdui-btn mdui-btn-icon" mdui-tooltip="{content: '{{lang.post.qrcode }}', delay: 100}" mdui-menu="{target: '#k-qrcode',align:'right',covered:false}"><i class="mdui-icon material-icons">devices other</i></button>
     <ul  class="mdui-menu mdui-menu-cascade" id="k-qrcode">
         <li class="mdui-menu-item">

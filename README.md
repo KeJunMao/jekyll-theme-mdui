@@ -18,7 +18,7 @@
 
 ## General
 
-[![Version](https://img.shields.io/badge/version-0.4.8-green.svg?style=flat-square)]()
+[![Version](https://img.shields.io/badge/version-0.4.9-green.svg?style=flat-square)]()
 [![Jekyll](https://img.shields.io/badge/Jekyll-3.4+-green.svg?style=flat-square)](https://jekyllrb.com/)
 [![Gem](https://img.shields.io/gem/dt/jekyll-theme-mdui.svg?style=flat-square)](https://rubygems.org/gems/jekyll-theme-mdui/)
 
@@ -46,8 +46,8 @@
 
 ## TODO
 
-- [ ] Editor - Online preview (!!!Need Help!!!)
 - [ ] Category - Better style
+- [ ] Tags - Better style
 - [ ] Site style - More custom options
 
 ## Note

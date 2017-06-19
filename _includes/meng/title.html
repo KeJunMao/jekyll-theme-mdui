@@ -1,0 +1,24 @@
+<script>
+    
+    {% if site.data.meng.title.with_default_title == true %}
+    var hiddenText = '{{site.data.meng.title.hidden}}' +' '+ defaultTitle;
+    var visibleText = '{{site.data.meng.title.visible}}' +' '+ defaultTitle;
+    {% else %}
+    var hiddenText = '{{site.data.meng.title.hidden}}';
+    var visibleText = '{{site.data.meng.title.visible}}';
+    {% endif %}
+    var resetTime = {{site.data.meng.title.reset_time}};
+    document.addEventListener("visibilitychange", function() {
+	    if(document.visibilityState == "hidden" ){
+            document.title = hiddenText;
+        }
+        if(document.visibilityState == "visible"){
+            document.title = visibleText;
+            setTimeout(function(){
+                if(document.visibilityState == "visible"){
+                    document.title = defaultTitle;
+                }
+            },resetTime);
+        }
+    }, false);
+</script>

@@ -1,0 +1,100 @@
+{% capture tags %}
+  {% for tag in site.tags %}
+    {{ tag[0] }}
+  {% endfor %}
+{% endcapture %}
+
+{% assign sortedtags = tags | split:' ' | sort %}
+
+<style>
+    .k-tagcloud{
+    padding: 1px 9px;
+    margin: 9px 1px;
+    line-height: 40px;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: .6s;
+    display: inline-block;
+    color: #363636;
+}
+.k-tagcloud:hover{
+    transition: .6s;
+    opacity: 1;
+    background: #fafafa;
+}
+</style>
+<div class="k-posts-list"></div>
+{% if site.data.site.uiux.meng == true %}
+  {% if site.data.meng.background.switch == true %}
+    <div class="mdui-card">
+  {% else %}
+    <div class="">
+  {% endif %}
+{% else %}
+<div class="">
+{% endif %}
+<div class="mdui-card-content">
+  
+
+{% for tag in sortedtags %}
+  {% assign index = site.tags[tag] | size %}
+  {% assign fontsize = 14 %}
+  {% assign color = 125 %}
+  {% for i in (1..index) %}
+  {% capture fontsize %}{{fontsize | plus:1.5}}{% endcapture %}
+  {% endfor %}
+  {% for i in (1..index) %}
+  {% capture color %}{{ color | minus :15}}{% endcapture %}
+  {% endfor %}
+      <a id="{{ tag }}" class="k-tagcloud mdui-ripple mdui-hoverable" style="font-size:{{fontsize}}px;color:rgb({{color}},{{color}},{{color}})">{{ tag }}</a>
+{% endfor %}
+</div>
+<div class="mdui-row">
+  <div class="mdui-col-sm-12">
+    <div id="taglist"></div>
+  </div>
+</div>
+</div>
+
+<script>
+$(function(){
+function getUrlParam(name) {
+    var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+    var r = window.location.search.substr(1).match(reg);
+    if (r != null) return unescape(r[2]); return null;
+}
+function getTagList(id){
+    $.ajax({
+        type: "GET",
+        url:"{{ "/tags.json" | relative_url }}",
+        dataType:"json",
+        cache: true,
+        success: function(data){
+            var content = "<ul class='mdui-list'>";
+            $.each(data,function(i,n){
+                if(n.id === id){
+                   var posts = n.post;
+                   $.each(posts,function(i,n){
+                       content+="<li class='mdui-list-item mdui-ripple'><a href='"+n.url+"'><div class='mdui-list-item-content'><div class='mdui-list-item-title mdui-list-item-one-line'>"+n.title+"</div><div class='mdui-list-item-text mdui-list-item-one-line'>"+n.excerpt+"</div></div></li>";
+                   });
+                }
+            });
+            content += "</ul>";
+            $('#taglist').html(content)
+        }
+    })
+}
+var tagid;
+var urltag = getUrlParam("tag");
+if(urltag!=null){
+        getTagList(urltag);
+}
+$(".k-tagcloud").on("click",function(e){
+    var $this = $(this);
+    tagid = $this.attr("id");
+    if(tagid!=null){
+        getTagList(tagid);
+    }
+});
+})
+</script>

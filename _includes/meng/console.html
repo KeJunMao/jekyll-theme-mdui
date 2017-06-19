@@ -1,0 +1,10 @@
+{% if site.data.meng.console.switch == true %}
+{% if site.data.meng.console.theme_info == true %}
+<script>
+console.info("\n %c © Jekyll Theme MDUI |  Version: 0.4.9 | https://github.com/KeJunMao/jekyll-theme-mdui \n\n", "color: {{site.data.meng.console.color}}; background:{{site.data.meng.console.background}}; padding:5px 0; border-radius: 5px 5px 5px 5px;");
+</script>
+{% endif %}
+<script>
+console.info("\n %c {{site.data.meng.console.text}} \n\n", "color: {{site.data.meng.console.color}}; background: {{site.data.meng.console.background}}; padding:5px 0; border-radius: 5px 5px 5px 5px;");
+</script>
+{% endif %}

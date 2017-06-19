@@ -1,0 +1,35 @@
+{% if site.data.meng.background.switch == true %}
+<style>
+body{
+    background-image: url({{site.data.meng.background.background_img}});
+    background-size: cover;
+    background-position: 50% 50%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+#toc-card{
+    background-color:transparent;
+}
+#toc a{
+    color: {{site.data.meng.background.text_color}};
+}
+</style>
+
+{% if site.data.meng.background.transparent_header == true %}
+<style>
+header{
+    background-color:rgba(0, 0, 0, 0);
+    color: {{site.data.meng.background.text_color}};
+}
+</style>
+
+{% endif %}
+{% if site.data.meng.background.transparent_footer == true %}
+<style>
+footer .mdui-card{
+    color: {{site.data.meng.background.text_color}};
+    background-color:rgba(0, 0, 0, 0);
+}
+</style>
+{% endif %}
+{% endif %}

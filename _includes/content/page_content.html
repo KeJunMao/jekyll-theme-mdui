@@ -1,0 +1,51 @@
+<style>
+
+.k-post-media {
+    display:block
+    cursor: pointer;
+    max-height: 245px;
+    min-height: 245px;
+    background-position: 50% 50%;
+    background-size: cover;
+    background-color: white;
+}
+.k-post-media .mdui-card-primary-title a {
+    text-decoration: none;
+}
+</style>
+<div id="postpage" class="mdui-container">
+    <div class="k-posts-list"></div>
+    <div class="mdui-row">
+        <div class="mdui-col-sm-12 k-page-col mdui-col-md-9">
+            <div class="mdui-card">
+                <div class="mdui-card-media k-post-media" style="background-image: url({{page.img}});">
+                    <div class="mdui-card-media-covered mdui-card-media-covered-gradient">
+                        <div class="mdui-card-primary">
+                            <div class="mdui-card-primary-title"><a class="mdui-text-color-white-text">{{page.title}}</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mdui-card-header">
+                    <div class="mdui-card-menu">
+                    {% include content/component/qrcode.html %}
+                    {% include content/component/page_tags.html %}
+                    {% include content/component/sns_share.html %}
+                    </div>
+                    <img class="mdui-card-header-avatar" src="{{site.data.site.img.avatar}}" />
+                    <div class="mdui-card-header-title">{{site.author}}</div>
+                    <div class="mdui-card-header-subtitle">{{ page.date | date: "%b %-d, %Y" }}</div>
+                </div>
+                <div class="mdui-card-content mdui-typo">
+                    {{ content }}
+                </div>
+                {% include comment/disqus.html %}
+            </div>
+        </div>
+        <div class="mdui-col-md-3 mdui-hidden-sm-down">
+            {% include content/component/toc.html %}
+        </div>
+    </div>
+    <br>
+    <script>
+</script>
+</div>

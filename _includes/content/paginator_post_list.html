@@ -1,0 +1,66 @@
+{% if  site.data.site.lang == 'zh-CN' %}
+{% assign lang = site.data.lang[site.data.site.lang] %}
+{% else %}
+{% assign lang = site.data.lang.en-US %}
+{% endif %}
+<style>
+  .k-list-card{
+    margin-bottom: 45px;
+  }
+.k-post-media {
+    display:block
+    cursor: pointer;
+    max-height: 245px;
+    min-height: 245px;
+    background-position: 50% 50%;
+    background-size: cover;
+    background-color: white;
+}
+.k-post-media .mdui-card-primary-title a {
+    text-decoration: none;
+}
+.k-post-categories {
+    line-height: 40px;
+}
+</style>
+  <div class="k-posts-list">
+    {% for post in paginator.posts %}
+    <div class="mdui-card k-list-card mdui-shadow-{{site.data.site.card.card_shadow}} {% if site.data.site.card.card_hoverable == true%}mdui-hoverable{% endif %}">
+      <div class="mdui-card-media mdui-ripple k-post-media" style="background-image:url({{post.img}})" src="{{post.img}}">
+        <div class="mdui-card-media-covered mdui-card-media-covered-gradient">
+          <div class="mdui-card-primary">
+            <div class="mdui-card-primary-title"><a class="mdui-text-color-white-text" href="{{post.url| prepend: site.baseurl}}#">{{post.title}}</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="mdui-card-content mdui-text-color-black-secondary mdui-typo">
+        {{ post.excerpt | strip_html}} <a href="{{post.url | prepend: site.baseurl}}">{{lang.post.continue}}</a>
+      </div>
+      <div class="mdui-divider"></div>
+      <div class="mdui-card-header">
+        <div class="mdui-card-menu mdui-typo">
+          {% for p in site.pages %}
+          {% if p.layout == "category" %}
+          {% assign ca = p.url %}
+          {% endif %}
+          {% endfor %}
+          <a class="k-post-categories" href="{{ca | prepend: site.baseurl }}?category={{post.categories}}">{{post.categories}}</a>
+        </div>
+        <img class="mdui-card-header-avatar" src="{{site.data.site.img.avatar}}" />
+        <div class="mdui-card-header-title">{{site.author}}</div>
+        <div class="mdui-card-header-subtitle">{{ post.date | date: "%b %-d, %Y" }}</div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  <script>
+    Array.prototype.forEach.call(document.querySelectorAll(".mdui-card-media"), function(a) {
+        var b = a.querySelector("a");
+        if (!b) {
+            return
+        }
+        a.addEventListener("click", function() {
+            b.click();
+        })
+    });
+  </script>

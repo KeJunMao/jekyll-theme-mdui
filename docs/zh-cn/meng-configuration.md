@@ -56,6 +56,15 @@ live2d: # live2d ,see https://github.com/EYHN/hexo-helper-live2d
   bottom: 100 # canvas bottom
   leftOrRight: "right" # left or right
   offset: 10 # offset
+
+aplayer:
+  switch: true
+  button_color: "#1abc9c"
+  music:
+    title: 'Faded'
+    author: 'Alan Walker'
+    url: 'http://m8.music.126.net/20170618215000/dc8c95cbe8484fa26a3c70609b7be3f6/ymusic/0bec/75a9/a09c/e37e93fe58eac7ae44df445d2f8874f0.mp3'
+    pic: 'http://p4.music.126.net/8dzD62VK8jLDbhEqkmpIAg==/18277181788626198.jpg?param=130y130'
 ```
 
 ## 参数详解
@@ -206,3 +215,24 @@ canvas 高度
 #### offset
 
 左对齐或右对齐的偏移
+
+### aplayer
+aplayer 播放器
+
+#### switch
+开关
+
+#### button_color
+
+按钮颜色
+
+#### music
+音乐信息
+* title
+名称
+* author
+作者
+* url
+音乐链接
+* pic
+封面图

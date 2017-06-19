@@ -1,14 +1,11 @@
 - name: HOME
   url: /
   icon: home
-- name: CATEGORY
-  url: /pages/menus/category.html
-  icon: "&#xe8ee;"
 - name: TAGS
-  url: /pages/menus/tags.html
+  url: /tags/
   icon: "&#xe893;"
 - name: FRIENDS
-  url: /pages/menus/friends.html
+  url: /friends/
   icon: "&#xe8a3;"
 - name: navSearch
   switch: true

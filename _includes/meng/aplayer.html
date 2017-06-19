@@ -1,0 +1,83 @@
+{% assign aplayer = site.data.meng.aplayer %}
+<style>
+    @media screen and (max-width: 600px){
+        .k-music-card{
+            transform:translateX(-250px)
+        }
+    }
+    .k-music-card{
+        width: 270px;
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+        position: fixed;
+        bottom: 155px;
+        z-index: 999;
+        transition: transform .5s ease;
+    }
+.aplayer{
+    float: left;
+    width: 250px;
+    height: 60px;
+    margin: 0 auto;
+    position: relative;
+    background: rgb(255,255,255);
+    box-sizing: border-box;
+    box-shadow: none;
+}
+.k-music-btn{
+    text-align: center;
+    line-height: 60px;
+    color: #fff;
+    width: 20px;
+    height: 60px;
+    background: {{aplayer.button_color}} none repeat scroll 0% 0%;
+    position: relative;
+    right: 0px;
+    bottom: 0px;
+    box-sizing: border-box;
+    border-left: none;
+    cursor: pointer;
+    display: box-shadow:;
+    float: right;
+}
+</style>
+<div class="k-music-card">
+<div id="player1" class="aplayer"></div>
+<div class="k-music-btn">></div>
+</div>
+
+<script src="http://cdn.bootcss.com/aplayer/1.6.0/APlayer.min.js"></script>
+<script>
+    var ap = new APlayer({
+    element: document.getElementById('player1'),                   
+    narrow: false,                                                    
+    autoplay: true,                                                    
+    showlrc: 0,                                                      
+    mutex: true,                                                       
+    theme: '#e6d0b2',                                                
+    mode: 'random',                                                    
+    preload: 'metadata',                                            
+    listmaxheight: '513px',                                            
+    music: {                                                           
+        title: '{{aplayer.music.title}}',                                         
+        author: '{{aplayer.music.author}}',                         
+        url: '{{aplayer.music.url}}', 
+        pic: '{{aplayer.music.pic}}',  
+        lrc: '[00:00.00]lrc here\n[00:01.00]aplayer'                   
+    }
+});
+if($(window).width()<=600){
+    var flag = true;
+}else{
+    var flag = false;
+}
+
+$('.k-music-btn').click(function(){
+    if (flag == false){
+        $('.k-music-card').css('transform','translateX(-250px)');
+        flag = true;
+    }else if(flag == true){
+        $('.k-music-card').css('transform','translateX(0px)');
+        flag = false;
+    }
+})
+</script>

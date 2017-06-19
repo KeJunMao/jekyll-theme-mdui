@@ -1,0 +1,24 @@
+<style>
+.k-friend {
+    text-decoration: none;
+}
+</style>
+<div class="k-posts-list"></div>
+<div class="mdui-container">
+    <div class="mdui-row-sm-2 mdui-row-md-4">
+        {% for f in site.data.friends %}
+        <div class="mdui-col">
+            <a class="k-friend" href="{{f.url}}" target="_blank">
+            <div class="mdui-card mdui-hoverable">
+                <div class="mdui-card-header">
+                    <img class="mdui-card-header-avatar" src="{{f.image}}" />
+                    <div class="mdui-card-header-title">{{f.name}}</div>
+                    <div class="mdui-card-header-subtitle">{{f.describe}}</div>
+                </div>
+            </div>
+            </a>
+            <br>
+        </div>
+        {% endfor %}
+    </div>
+</div>

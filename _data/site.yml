@@ -30,7 +30,7 @@ sns_share: # SNS Share Switch
    telegram: true
 
 disqus:
-   disqus_shortname: "" # Your disqus 
+   disqus_shortname: "kejun" # Your disqus 
    disqus_button: true # disqus load button
    disqus_proxy: false # # disqus proxy(Do not use)
    disqus_proxy_url: "" # (Do not use)

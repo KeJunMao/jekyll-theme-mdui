@@ -2,6 +2,19 @@
 layout: default
 ---
 <div class="k-container">
+    <div class="k-posts-list"></div>
+    {% if site.data.site.uiux.meng == true %}
+    {% if site.data.meng.head_card.switch == true %}
+            {% assign num = site.data.meng.head_card.offset_level %}
+            {% for i in (1..num) %}
+                <div class="head_card-offset"></div>
+            {% endfor %}
+        {% if paginator.page == 1 %}
+            {% include meng/head_card.html %}
+        {% endif %}
+    {% endif %}
+    {% endif %}
+
     {% include content/paginator_post_list.html %}
     {% include content/paginator_button.html %}
 </div>

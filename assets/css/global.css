@@ -1,6 +1,20 @@
 ---
 layout: null 
 ---
+
+    {% if site.data.site.uiux.meng == true %}
+    {% if site.data.meng.head_card.switch == true %}
+    .head_card-offset{
+        padding-top: 65px;
+    }
+    @media screen and (max-width: 600px){
+        .head_card-offset{
+            padding-top: 0px;
+        }
+    }
+    {% endif %}
+    {% endif %}
+
 body,header{
     background-color:{{site.data.site.background.purecolor}};
 }

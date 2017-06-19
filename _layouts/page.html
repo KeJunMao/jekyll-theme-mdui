@@ -1,5 +1,12 @@
 ---
 layout: default
 ---
-
+    {% if site.data.site.uiux.meng == true %}
+    {% if site.data.meng.head_card.switch == true %}
+            {% assign num = site.data.meng.head_card.offset_level %}
+            {% for i in (1..num) %}
+                <div class="head_card-offset"></div>
+            {% endfor %}
+    {% endif %}
+    {% endif %}
 {% include content/page_content_no_toc.html %}

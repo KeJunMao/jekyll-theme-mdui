@@ -63,8 +63,15 @@ aplayer:
   music:
     title: 'Faded'
     author: 'Alan Walker'
-    url: 'http://m8.music.126.net/20170618215000/dc8c95cbe8484fa26a3c70609b7be3f6/ymusic/0bec/75a9/a09c/e37e93fe58eac7ae44df445d2f8874f0.mp3'
+    url: 'test.mp3'
     pic: 'http://p4.music.126.net/8dzD62VK8jLDbhEqkmpIAg==/18277181788626198.jpg?param=130y130'
+
+head_card:
+  switch: true
+  left_img: "https://ooo.0o0.ooo/2017/06/19/5947b272d418b.jpg"
+  left_text: "『 · 如果真爱有颜色 』"
+  right_img: "https://ooo.0o0.ooo/2017/06/08/5939484dc618e.png"
+  offset_level: 2
 ```
 
 ## 参数详解
@@ -236,3 +243,22 @@ aplayer 播放器
 音乐链接
 * pic
 封面图
+
+### head_card
+头卡片
+
+#### switch
+开关
+
+#### left_img
+左边卡片图片
+
+#### left_text
+左边卡片文本
+
+#### right_img
+右边卡片图片（64x64）
+
+#### offset_level
+
+首页，文章页，自定义页距离顶部的偏移。（移动端默认为0）

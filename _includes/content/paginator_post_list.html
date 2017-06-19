@@ -23,7 +23,6 @@
     line-height: 40px;
 }
 </style>
-  <div class="k-posts-list">
     {% for post in paginator.posts %}
     <div class="mdui-card k-list-card mdui-shadow-{{site.data.site.card.card_shadow}} {% if site.data.site.card.card_hoverable == true%}mdui-hoverable{% endif %}">
       <div class="mdui-card-media mdui-ripple k-post-media" style="background-image:url({{post.img}})" src="{{post.img}}">
@@ -52,7 +51,6 @@
       </div>
     </div>
     {% endfor %}
-  </div>
   <script>
     Array.prototype.forEach.call(document.querySelectorAll(".mdui-card-media"), function(a) {
         var b = a.querySelector("a");

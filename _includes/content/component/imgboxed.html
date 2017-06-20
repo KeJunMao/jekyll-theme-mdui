@@ -1,0 +1,305 @@
+<style>
+img[data-action="zoom"] {
+  cursor: pointer;
+  cursor: -webkit-zoom-in;
+  cursor: -moz-zoom-in;
+}
+.zoom-img,
+.zoom-img-wrap {
+  position: relative;
+  z-index: 1001;
+  -webkit-transition: all 300ms;
+       -o-transition: all 300ms;
+          transition: all 300ms;
+}
+img.zoom-img {
+  cursor: pointer;
+  cursor: -webkit-zoom-out;
+  cursor: -moz-zoom-out;
+}
+.zoom-overlay {
+  z-index: 1000;
+  background: #292929;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  filter: "alpha(opacity=0)";
+  opacity: 0;
+  -webkit-transition:      opacity 300ms;
+       -o-transition:      opacity 300ms;
+          transition:      opacity 300ms;
+}
+.zoom-overlay-open .zoom-overlay {
+  filter: "alpha(opacity=100)";
+  opacity: 1;
+}
+
+</style>
+
+<script>
+$(function(){
+    $('.mdui-typo img').attr('data-action','zoom');
+})
++function ($) {
+  'use strict';
+  function transitionEnd() {
+    var el = document.createElement('bootstrap');
+
+    var transEndEventNames = {
+      WebkitTransition : 'webkitTransitionEnd',
+      MozTransition    : 'transitionend',
+      OTransition      : 'oTransitionEnd otransitionend',
+      transition       : 'transitionend'
+    };
+
+    for (var name in transEndEventNames) {
+      if (el.style[name] !== undefined) {
+        return { end: transEndEventNames[name] }
+      }
+    };
+
+    return false 
+  }
+
+  $.fn.emulateTransitionEnd = function (duration) {
+    var called = false;
+    var $el = this;
+    $(this).one('bsTransitionEnd', function () { called = true });
+    var callback = function () { if (!called) $($el).trigger($.support.transition.end) };
+    setTimeout(callback, duration);
+    return this
+  };
+
+  $(function () {
+    $.support.transition = transitionEnd();
+
+    if (!$.support.transition) return;
+
+    $.event.special.bsTransitionEnd = {
+      bindType: $.support.transition.end,
+      delegateType: $.support.transition.end,
+      handle: function (e) {
+        if ($(e.target).is(this)) return e.handleObj.handler.apply(this, arguments);
+      }
+    }
+  });
+}(jQuery);
+
++function ($) { "use strict";
+
+  function ZoomService () {
+    this._activeZoom            =
+    this._initialScrollPosition =
+    this._initialTouchPosition  =
+    this._touchMoveListener     = null;
+
+    this._$document = $(document);
+    this._$window   = $(window);
+    this._$body     = $(document.body);
+  }
+
+  ZoomService.prototype.listen = function () {
+    if (!imgzoom){
+        this._$body.on('click', '[data-action="zoom"]', $.proxy(this._zoom, this))
+    }
+    imgzoom = true;
+  };
+
+  ZoomService.prototype._zoom = function (e) {
+    var target = e.target;
+
+    if (!target || target.tagName != 'IMG') return;
+
+    if (e.metaKey) return window.open(e.target.src, '_blank');
+
+    if (target.width >= (window.innerWidth - Zoom.OFFSET)) return;
+
+    this._activeZoomClose(true);
+
+    this._activeZoom = new Zoom(target);
+    this._activeZoom.zoomImage();
+
+    this._$window.on('scroll.zoom', $.proxy(this._scrollHandler, this));
+
+    this._$document.on('click.zoom', $.proxy(this._clickHandler, this));
+    this._$document.on('keyup.zoom', $.proxy(this._keyHandler, this));
+    this._$document.on('touchstart.zoom', $.proxy(this._touchStart, this));
+
+    e.stopPropagation();
+  };
+
+  ZoomService.prototype._activeZoomClose = function (forceDispose) {
+    if (!this._activeZoom) return;
+
+    if (forceDispose) {
+      this._activeZoom.dispose();
+    } else {
+      this._activeZoom.close();
+    }
+
+    this._$window.off('.zoom');
+    this._$document.off('.zoom');
+
+    this._activeZoom = null;
+  };
+
+  ZoomService.prototype._scrollHandler = function (e) {
+    if (this._initialScrollPosition === null) this._initialScrollPosition = window.scrollY;
+    var deltaY = this._initialScrollPosition - window.scrollY;
+    if (Math.abs(deltaY) >= 40) this._activeZoomClose();
+  };
+
+  ZoomService.prototype._keyHandler = function (e) {
+    if (e.keyCode == 27) this._activeZoomClose();
+  };
+
+  ZoomService.prototype._clickHandler = function (e) {
+    e.stopPropagation();
+    e.preventDefault();
+    this._activeZoomClose();
+  };
+
+  ZoomService.prototype._touchStart = function (e) {
+    this._initialTouchPosition = e.touches[0].pageY;
+    $(e.target).on('touchmove.zoom', $.proxy(this._touchMove, this));
+  };
+
+  ZoomService.prototype._touchMove = function (e) {
+    if (Math.abs(e.touches[0].pageY - this._initialTouchPosition) > 10) {
+      this._activeZoomClose();
+      $(e.target).off('touchmove.zoom');
+    }
+  };
+
+
+  function Zoom (img) {
+    this._fullHeight      =
+    this._fullWidth       =
+    this._overlay         =
+    this._targetImageWrap = null;
+
+    this._targetImage = img;
+
+    this._$body = $(document.body);
+  }
+
+  Zoom.OFFSET = 80;
+  Zoom._MAX_WIDTH = 2560;
+  Zoom._MAX_HEIGHT = 4096;
+
+  Zoom.prototype.zoomImage = function () {
+    var img = document.createElement('img');
+    img.onload = $.proxy(function () {
+      this._fullHeight = Number(img.height);
+      this._fullWidth = Number(img.width);
+      this._zoomOriginal();
+    }, this);
+    img.src = this._targetImage.src;
+  };
+
+  Zoom.prototype._zoomOriginal = function () {
+    this._targetImageWrap           = document.createElement('div');
+    this._targetImageWrap.className = 'zoom-img-wrap';
+
+    this._targetImage.parentNode.insertBefore(this._targetImageWrap, this._targetImage);
+    this._targetImageWrap.appendChild(this._targetImage);
+
+    $(this._targetImage)
+      .addClass('zoom-img')
+      .attr('data-action', 'zoom-out');
+    
+    $('.k-postcontent').css('overflow','visible');
+
+    this._overlay           = document.createElement('div');
+    this._overlay.className = 'zoom-overlay';
+
+    document.body.appendChild(this._overlay);
+
+    this._calculateZoom();
+    this._triggerAnimation();
+  };
+
+  Zoom.prototype._calculateZoom = function () {
+    this._targetImage.offsetWidth ;
+
+    var originalFullImageWidth  = this._fullWidth;
+    var originalFullImageHeight = this._fullHeight;
+
+    var scrollTop = window.scrollY;
+
+    var maxScaleFactor = originalFullImageWidth / this._targetImage.width;
+
+    var viewportHeight = (window.innerHeight - Zoom.OFFSET);
+    var viewportWidth  = (window.innerWidth - Zoom.OFFSET);
+
+    var imageAspectRatio    = originalFullImageWidth / originalFullImageHeight;
+    var viewportAspectRatio = viewportWidth / viewportHeight;
+
+    if (originalFullImageWidth < viewportWidth && originalFullImageHeight < viewportHeight) {
+      this._imgScaleFactor = maxScaleFactor;
+
+    } else if (imageAspectRatio < viewportAspectRatio) {
+      this._imgScaleFactor = (viewportHeight / originalFullImageHeight) * maxScaleFactor;
+
+    } else {
+      this._imgScaleFactor = (viewportWidth / originalFullImageWidth) * maxScaleFactor;
+    }
+  };
+
+  Zoom.prototype._triggerAnimation = function () {
+    this._targetImage.offsetWidth ;
+
+    var imageOffset = $(this._targetImage).offset();
+    var scrollTop   = window.scrollY;
+
+    var viewportY = scrollTop + (window.innerHeight / 2);
+    var viewportX = (window.innerWidth / 2);
+
+    var imageCenterY = imageOffset.top + (this._targetImage.height / 2);
+    var imageCenterX = imageOffset.left + (this._targetImage.width / 2);
+
+    this._translateY = viewportY - imageCenterY;
+    this._translateX = viewportX - imageCenterX;
+
+    $(this._targetImage).css('transform', 'scale(' + this._imgScaleFactor + ')');
+    $(this._targetImageWrap).css('transform', 'translate(' + this._translateX + 'px, ' + this._translateY + 'px) translateZ(0)');
+
+    this._$body.addClass('zoom-overlay-open');
+  };
+
+  Zoom.prototype.close = function () {
+    this._$body
+      .removeClass('zoom-overlay-open')
+      .addClass('zoom-overlay-transitioning');
+
+    $(this._targetImage).css('transform', '');
+    $(this._targetImageWrap).css('transform', '');
+
+    $(this._targetImage)
+      .one($.support.transition.end, $.proxy(this.dispose, this))
+      .emulateTransitionEnd(300);
+  };
+
+  Zoom.prototype.dispose = function () {
+    if (this._targetImageWrap && this._targetImageWrap.parentNode) {
+      $(this._targetImage)
+        .removeClass('zoom-img')
+        .attr('data-action', 'zoom');
+    
+        $('.k-postcontent').css('overflow','hidden');
+
+      this._targetImageWrap.parentNode.replaceChild(this._targetImage, this._targetImageWrap);
+      this._overlay.parentNode.removeChild(this._overlay);
+
+      this._$body.removeClass('zoom-overlay-transitioning');
+    }
+  };
+
+  new ZoomService().listen();
+
+}(jQuery);
+
+</script>

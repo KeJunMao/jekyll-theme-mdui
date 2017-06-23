@@ -49,6 +49,7 @@
 - [ ] Category - Better style
 - [ ] Tags - Better style
 - [ ] Site style - More custom options
+- [x] Editor
 
 ## Note
 

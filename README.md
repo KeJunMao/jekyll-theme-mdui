@@ -50,6 +50,12 @@
 - [ ] Tags - Better style
 - [ ] Site style - More custom options
 - [x] Editor
+- [ ] Posts - Last update date 
+- [ ] Posts - Reading time 
+- [ ] Posts - Code highlighting 
+- [ ] Meng -  Immersive status bar from image
+- [ ] Comment - Add More
+- [ ] Analytics - Add More
 
 ## Note
 

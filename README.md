@@ -62,8 +62,8 @@ File Required or Optional:
 |search.json|Optional|If you use the search page, it is required.|
 |tags.json|Optional|If you use the tags page, it is required.|
 |_data/friends.yml|Optional|If you use the friends page, it is required.|
-|_data/sns.yml|Optional|It is footer sns,if you want userd, it is required.|
-|_data/meng.yml|Optional|It is Meng option,if you want userd, it is required.|
+|_data/sns.yml|Optional|It is footer sns,if you want used, it is required.|
+|_data/meng.yml|Optional|It is Meng option,if you want used, it is required.|
 |_data/site.yml|Required|It is theme config.|
 |_data/lang.yml|Required|It is language config.|
 |_data/menus.yml|Required|It is site menus config.|

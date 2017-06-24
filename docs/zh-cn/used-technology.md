@@ -67,6 +67,32 @@ Add the Sseexxyyy live2d to your hexo!
 
 [Github](https://github.com/EYHN/hexo-helper-live2d) - [官网](https://huaji8.top/post/live2d-plugin-2.0/)
 
+### marked
+
+A full-featured markdown parser and compiler, written in JavaScript. Built for speed.
+
+[Github](https://github.com/chjj/marked)
+
+### APlayer
+
+Wow, such a beautiful html5 music player
+
+[Github](https://github.com/DIYgod/APlayer) - [官网](https://aplayer.js.org/)
+
+### History.js 
+
+History.js gracefully supports the HTML5 History/State APIs (pushState, replaceState, onPopState) in all browsers.
+
+[Github](https://github.com/browserstate/history.js) - [官网](http://browserstate.github.io/history.js/demo/)
+
+## 文档
+
+### docsify
+
+A magical documentation site generator.
+
+[Github](https://github.com/QingWei-Li/docsify/) - [官网](https://docsify.js.org/#/)
+
 ## 其他
 
 我们参考(盗取)了下面项目的代码
@@ -82,3 +108,9 @@ Add the Sseexxyyy live2d to your hexo!
 Material Design theme for hexo.
 
 [Github](https://github.com/viosey/hexo-theme-material) - [官网](https://material.viosey.com/)
+
+### Jekyll-AJAX
+
+This basic Jekyll site enables dynamic content loading via AJAX with all the necessary HTML5 History support.
+
+[Github](https://github.com/joelhans/Jekyll-AJAX)

@@ -36,6 +36,12 @@ disqus:
    disqus_proxy_url: "" # (Do not use)
    disqus_api_key: "" # (Do not use)
 
+prism:
+  themes: prism-okaidia
+  components: 
+    - bash 
+  plugins: 
+
 google_analytics: ""  # google analytics code
 
 lang: "en-US"  # lang

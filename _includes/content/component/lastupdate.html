@@ -1,0 +1,29 @@
+<style>
+.k-lastupdate{
+    color: #000000;
+    background: #ffffc0;
+    border-left: 5px solid #fff000;
+    cursor: default;
+}
+.k-lastupdate:hover{
+    background: #ffffc0;
+}
+.k-lastupdate:active{
+    background: #ffffc0 !important;
+}
+</style>
+
+<a class="mdui-btn mdui-btn-block k-lastupdate" id="k-difference"  href="javascript:;">本文最后更新于0天前，文中所描述的信息可能已发生改变，请谨慎使用。</a>
+<script>
+var date1=Date.parse($('.k-page-date').attr('date'));
+var date2=new Date();
+var date3=date2.getTime()-date1;
+
+var days=Math.floor(date3/(24*3600*1000));
+
+if (days>= 100){
+    $('#k-difference').html("本文最后更新于"+days+"天前，文中所描述的信息可能已发生改变，请谨慎使用。");
+}else{
+    $('#k-difference').hide();
+}
+</script>

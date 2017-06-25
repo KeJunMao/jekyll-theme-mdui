@@ -31,8 +31,10 @@
                     </div>
                     <img class="mdui-card-header-avatar" src="{{site.data.site.img.avatar}}" />
                     <div class="mdui-card-header-title">{{site.author}}</div>
-                    <div class="mdui-card-header-subtitle">{{ page.date | date: "%b %-d, %Y" }}</div>
+                    <div class="mdui-card-header-subtitle k-page-date" date="{% if page.lastupdate != null %}{{page.lastupdate | date: "%b %-d, %Y"}}{% else %}{{page.date | date: "%b %-d, %Y"}}{% endif %}">{{ page.date | date: "%b %-d, %Y" }}</div>
                 </div>
+                {% include content/component/readtime.html %}
+                {% include content/component/lastupdate.html %}
                 <div class="mdui-card-content mdui-typo">
                     {{ content }}
                 </div>
@@ -41,6 +43,5 @@
         </div>
     </div>
     <br>
-    <script>
-</script>
 </div>
+{% include content/component/highlight.html %}

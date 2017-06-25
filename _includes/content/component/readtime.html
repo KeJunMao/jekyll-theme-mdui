@@ -1,0 +1,21 @@
+<style>
+.k-readtime{
+    color: #000000;
+    background: #c0ffee;
+    border-left: 5px solid #00ffd8;
+    cursor: default;
+}
+.k-readtime:hover{
+    background: #c0ffee;
+}
+.k-readtime:active{
+    background: #c0ffee !important;
+}
+</style>
+
+{% assign words = content | number_of_words %}
+{% if words < 360 %}
+<a class="mdui-btn mdui-btn-block k-readtime"  href="javascript:;">阅读本文需要1分钟</a>
+{% else %}
+<a class="mdui-btn mdui-btn-block k-readtime"  href="javascript:;">阅读本文需要{{ words | divided_by:180 }}分钟</a>
+{% endif %}

@@ -11,8 +11,8 @@
 ```yaml
 ---
 layout: post
-title:  "Ubuntu安装Apache，MySQL，PHP以及phpMyAdmin"
-date:   2016-04-14 10:24:49 +0800
+title: "Ubuntu安装Apache，MySQL，PHP以及phpMyAdmin"
+date: 2016-04-14 10:24:49 +0800
 categories: technology
 tags: ubuntu apache mysql php phpmyadmin
 img: https://ooo.0o0.ooo/2017/05/27/59292b1243dc9.jpg
@@ -29,6 +29,16 @@ themecolor: "#fff"
 themetextcolor: "#000"
 ---
 ```
+
+文章最后更新日期
+
+```yaml
+---
+lastupdate: 2017-06-25 12:24:49 +0800
+---
+```
+
+当文章的创建日期于用户访问的日期相差100天时，将提示用户“本文最后更新于x天前，文中所描述的信息可能已发生改变，请谨慎使用。”，如果有`lastupdate`字段，则将计算用户访问日期于该字段的天数差。
 
 ## 参数详解
 

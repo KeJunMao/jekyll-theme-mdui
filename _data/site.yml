@@ -20,6 +20,8 @@ card:
    card_shadow: 1 # card shadow (0-24), 0 is not displayed
    card_hoverable: false # When the hover to deepen the shadow
 
+many_authors: false
+
 sns_share: # SNS Share Switch
    twitter: true
    facebook: false
@@ -35,6 +37,12 @@ disqus:
    disqus_proxy: false # # disqus proxy(Do not use)
    disqus_proxy_url: "" # (Do not use)
    disqus_api_key: "" # (Do not use)
+
+prism:
+  themes: prism-okaidia
+  components: 
+    - bash 
+  plugins: 
 
 google_analytics: ""  # google analytics code
 

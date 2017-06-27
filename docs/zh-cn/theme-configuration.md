@@ -29,6 +29,8 @@ card:
    card_shadow: 1 # card shadow (0-24), 0 is not displayed
    card_hoverable: false # When the hover to deepen the shadow
 
+many_authors: false
+
 sns_share: # SNS Share Switch
    twitter: true
    facebook: false
@@ -41,6 +43,12 @@ sns_share: # SNS Share Switch
 disqus:
    disqus_shortname: "" # Your disqus 
    disqus_button: true # disqus load button
+
+prism:
+  themes: prism-okaidia
+  components: 
+    - bash 
+  plugins: 
 
 google_analytics: ""  # google analytics code
 
@@ -114,6 +122,9 @@ iOS 主屏按钮图标
 
 悬停是否加深阴影
 
+## many_authors
+
+是否启用多作者，若启用，请参阅[多作者](zh-cn/many_authors.md)。
 
 ### sns_share
 
@@ -158,6 +169,32 @@ disqus评论系统
 #### disqus_button
 
 是否显示加载Disqus按钮，这有助于改善处在公开、平等、有序的网络审查地区的浏览者的体验。
+
+### prism
+代码高亮插件
+
+#### themes
+
+prism 主题。
+
+> 可选值请参阅[Download ▲ Prism](http://prismjs.com/download.html).
+
+
+#### components
+
+高亮语言，已集成 HTML,CSS,JavaScript.
+
+> 可选值请参阅[Download ▲ Prism](http://prismjs.com/download.html).
+
+!> 这是一个数组
+
+#### plugins
+
+prism 插件
+
+> 可选值请参阅[Download ▲ Prism](http://prismjs.com/download.html).
+
+!> 这是一个正在开发的功能，该值为数组。
 
 ### google_analytics
 

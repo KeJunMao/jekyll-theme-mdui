@@ -20,6 +20,8 @@ card:
    card_shadow: 1 # card shadow (0-24), 0 is not displayed
    card_hoverable: false # When the hover to deepen the shadow
 
+many_authors: false
+
 sns_share: # SNS Share Switch
    twitter: true
    facebook: false

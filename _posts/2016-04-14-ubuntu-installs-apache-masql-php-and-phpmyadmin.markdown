@@ -5,6 +5,7 @@ date:   2016-04-14 10:24:49 +0800
 categories: technology
 tags: ubuntu apache mysql php phpmyadmin
 img: https://ooo.0o0.ooo/2017/05/27/59292b1243dc9.jpg
+author: test
 ---
 
 还原了服务器，于是重装，顺路记录下来，路过的朋友们可以借鉴，LAMP Go!

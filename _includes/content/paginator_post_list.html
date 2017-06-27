@@ -45,8 +45,19 @@
           {% endfor %}
           <a class="k-post-categories" href="{{ca | prepend: site.baseurl }}?category={{post.categories}}">{{post.categories}}</a>
         </div>
+        {% if site.data.site.many_authors == true %}
+        {% if post.author != null %}
+        {% assign author = site.data.authors[post.author] %}
+        <img class="mdui-card-header-avatar" src="{{author.avatar}}" />
+        <div class="mdui-card-header-title">{{author.name}}</div>
+        {% else %}
         <img class="mdui-card-header-avatar" src="{{site.data.site.img.avatar}}" />
         <div class="mdui-card-header-title">{{site.author}}</div>
+        {% endif %}
+        {% else %}
+        <img class="mdui-card-header-avatar" src="{{site.data.site.img.avatar}}" />
+        <div class="mdui-card-header-title">{{site.author}}</div>
+        {% endif %}
         <div class="mdui-card-header-subtitle">{{ post.date | date: "%b %-d, %Y" }}</div>
       </div>
     </div>

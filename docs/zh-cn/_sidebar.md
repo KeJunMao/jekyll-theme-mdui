@@ -19,6 +19,7 @@
   - [数据统计与分析](zh-cn/analytics.md)
   - [PWA](zh-cn/pwa.md)
   - [在线编辑器](zh-cn/editor.md)
+  - [多作者](zh-cn/many_authors.md)
 
 - 工具
   - 用户工具

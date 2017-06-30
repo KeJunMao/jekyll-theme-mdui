@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "jekyll-theme-mdui"
-  spec.version       = "0.4.9.8"
+  spec.version       = "0.4.9.9"
   spec.authors       = ["KeJun"]
   spec.email         = ["kejun1997@gmail.com"]
 
@@ -12,7 +12,7 @@ Gem::Specification.new do |spec|
 
   spec.files         = `git ls-files -z`.split("\x0").select { |f| f.match(%r{^(assets/css|assets/js|_layouts|_includes|LICENSE|README)}i) }
 
-  spec.add_runtime_dependency "jekyll", "~> 3.4"
+  spec.add_runtime_dependency "jekyll", "~> 3.5.0"
   spec.add_runtime_dependency 'jekyll-paginate', '~> 1.1'
 
   spec.add_development_dependency "bundler", "~> 1.12"

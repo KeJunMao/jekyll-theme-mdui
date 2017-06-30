@@ -33,7 +33,7 @@ card: # Meng card
   card_img_opacity: '0.8'
 
 live2d: # live2d ,see https://github.com/EYHN/hexo-helper-live2d
-  switch: false
+  switch: true
   model: "/assets/live2d/koharu/koharu.model.json" # model.json path
   drag: true # is drag ?
   in_mobile: false

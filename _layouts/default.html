@@ -14,6 +14,8 @@ layout: compress
         {% if site.data.site.google_analytics != "" %}
         {% include analytics/google.html %}
         {% endif %}
+        {% include component/sw.html %}
+        {% include footer/footer.html %}
         {% if site.data.site.uiux.meng == true%}
             {% if site.data.meng.live2d.switch == true %}
                 {% include meng/live2d.html %}
@@ -37,7 +39,5 @@ layout: compress
                 {% include meng/aplayer.html %}
             {% endif %}
         {% endif %}
-        {% include component/sw.html %}
-        {% include footer/footer.html %}
     </body>
 </html>

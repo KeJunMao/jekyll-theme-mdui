@@ -6,7 +6,7 @@ author: "KeJun"
 paginate: 5
 paginate_path: "/blog/page:num/"
 
-gems:
+plugins:
   - jekyll-sitemap
   - jekyll-paginate
   - jekyll-feed

@@ -10,7 +10,7 @@ paginate_path: "/blog/page:num/"
 # Build settings
 theme: jekyll-theme-mdui
 markdown: kramdown
-gems:
+plugins:
   - jekyll-sitemap
   - jekyll-paginate
   - jekyll-feed

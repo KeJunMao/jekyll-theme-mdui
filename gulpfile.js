@@ -8,7 +8,7 @@ const gutil = require('gulp-util');
 const siteRoot = '_site';
 
 gulp.task('jekyll', () => {
-  const jekyll = child.exec('jekyll b -w');
+  const jekyll = child.exec('bundle exec jekyll b -w');
 
   const jekyllLogger = (buffer) => {
     buffer = buffer.toString();

@@ -12,10 +12,9 @@
     background: #c0ffee !important;
 }
 </style>
-
-{% assign words = content | number_of_words %}
+{% assign words = content | strip_html | strip_newlines | size %}
 {% if words < 360 %}
 <a class="mdui-btn mdui-btn-block k-readtime"  href="javascript:;">阅读本文需要1分钟</a>
 {% else %}
-<a class="mdui-btn mdui-btn-block k-readtime"  href="javascript:;">阅读本文需要{{ words | divided_by:180 }}分钟</a>
+<a class="mdui-btn mdui-btn-block k-readtime"  href="javascript:;">阅读本文需要{{ content | strip_html | strip_newlines | size | divided_by:360 | round}}分钟</a>
 {% endif %}

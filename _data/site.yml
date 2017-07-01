@@ -44,6 +44,8 @@ prism:
     - bash 
   plugins: 
 
+mathjax: true
+
 google_analytics: ""  # google analytics code
 
 lang: "en-US"  # lang

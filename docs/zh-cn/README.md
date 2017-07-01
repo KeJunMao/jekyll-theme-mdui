@@ -13,7 +13,8 @@ MDUI 是一个优秀的前端框架，采用 Material Design 设计。
 ## 特性
 
 * 使用 `Gemfile` ，便于安装/升级
-* 兼容 Github Pages ，和 jekyll 3+
+* 兼容 Github Pages 
+* 永远使用最新版Jekyll
 * 响应式布局
 * Disqus 支持
 * 多语言
@@ -35,8 +36,8 @@ MDUI 是一个优秀的前端框架，采用 Material Design 设计。
 
 [KeJun](https://blog.kejun.space/) - 二次元智障
 
-[Miku01QAQ](http://blog.miku01qaq.xyz/) - Naive少年
+[Miku01QAQ](http://miku01qaq.xyz/blog/) - Naive少年
 
-[m0dulo](https://m0dulo.xyz) - 隐宅
+[m0dulo](https://blog.m0dulo.xyz/) - 隐宅
 
 你可以新建一个 pull request 来添加你的博客到这里。

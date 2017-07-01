@@ -36,6 +36,10 @@ Jekyll 一个可以将纯文本转换成静态网站的工具。本站正是使�
 # Now browse to http://localhost:4000
 ```
 
+$$
+\sum_{i=1}^n x_ie_i
+$$
+
 ## 参考
 
 * [Installation](https://jekyllrb.com/docs/installation/)

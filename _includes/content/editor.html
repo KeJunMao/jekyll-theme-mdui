@@ -1,3 +1,8 @@
+{% if  site.data.site.lang == 'zh-CN' %}
+{% assign lang = site.data.lang[site.data.site.lang] %}
+{% else %}
+{% assign lang = site.data.lang.en-US %}
+{% endif %}
 {% capture categories %}		
 {% for c in site.categories %}		
 {{c[0]}}		
@@ -28,16 +33,16 @@
 <div class="k-container">
 <div class="mdui-dialog" id="frontMatter">
     <div class="mdui-dialog-content">
-      <div class="mdui-dialog-title">Front Matter</div>
-        <h3>Title</h3>
+      <div class="mdui-dialog-title">{{lang.editor.frontmatter.name}}</div>
+        <h3>{{lang.editor.frontmatter.title}}</h3>
         <div class="mdui-textfield">
             <input id="editorTitle" class="mdui-textfield-input" type="text"/>
         </div>
-        <h3>Date</h3>
+        <h3>{{lang.editor.frontmatter.date}}</h3>
         <div class="mdui-textfield">
             <input id="editorDate" class="mdui-textfield-input datepicker" type="date"/>
         </div>
-        <h3>Categories</h3>
+        <h3>{{lang.editor.frontmatter.categories}}</h3>
         <div class="mdui-row-md-4 mdui-row-sm-3">
             {% for c in sortedcategories %}
             <div class="mdui-col">
@@ -58,9 +63,9 @@
                 </div>
             </div>
         </div>
-        <h3>Tags</h3>
+        <h3>{{lang.editor.frontmatter.tags}}</h3>
         <div class="chips chips-initial"></div>
-        <h3>Image</h3>
+        <h3>{{lang.editor.frontmatter.image}}</h3>
         <div class="mdui-textfield">
             <input id="imgurl" class="mdui-textfield-input" type="text" placeholder="imgUrl"> 
         </div>
@@ -69,7 +74,7 @@
 
 <div class="mdui-dialog" id="preview">
     <div class="mdui-dialog-content">
-      <div class="mdui-dialog-title">Preview</div>
+      <div class="mdui-dialog-title">{{lang.editor.preview}}</div>
       <div class="mdui-card k-postcontent">
         <div class="mdui-card-media k-post-media">
           <div class="mdui-card-media-covered mdui-card-media-covered-gradient">
@@ -92,15 +97,15 @@
 
 <div class="mdui-card">
     <div class="mdui-card-content">
-        <h3>Content</h3>
+        <h3>{{lang.editor.content}}</h3>
         <div class="mdui-textfield">
             <textarea id="editorContent" class="mdui-textfield-input" placeholder="Description"></textarea>
         </div>
     </div>
     <div class="mdui-card-actions">
-        <a class="mdui-btn mdui-ripple" mdui-dialog="{target: '#frontMatter'}">Front Matter</a>
-        <a id="previewBtn" class="mdui-btn mdui-ripple" mdui-dialog="{target: '#preview'}">Preview</a>
-        <a id="download" class="mdui-btn mdui-ripple mdui-float-right">Download</a>
+        <a class="mdui-btn mdui-ripple" mdui-dialog="{target: '#frontMatter'}">{{lang.editor.frontmatter.name}}</a>
+        <a id="previewBtn" class="mdui-btn mdui-ripple" mdui-dialog="{target: '#preview'}">{{lang.editor.preview}}</a>
+        <a id="download" class="mdui-btn mdui-ripple mdui-float-right">{{lang.editor.download}}</a>
     </div>
 </div>
 </div>

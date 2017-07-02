@@ -48,6 +48,6 @@ mathjax: true
 
 google_analytics: ""  # google analytics code
 
-lang: "en-US"  # lang
+lang: "zh-CN"  # lang
 
 deploy: "coding" # if you used coding pages

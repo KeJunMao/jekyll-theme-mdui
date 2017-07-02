@@ -1,4 +1,21 @@
 zh-CN:
+   editor: 
+      content: "内容"
+      frontmatter:
+         name: "Front Matter"
+         title: "标题"
+         date: "日期"
+         categories: "分类"
+         tags: "标签"
+         image: "图像"
+      preview: "预览"
+      download: "下载"
+   lastupdate: 
+      one: "本文最后更新于"
+      two: "天前，文中所描述的信息可能已发生改变，请谨慎使用。"
+   readtime: 
+      one: "阅读本文需要"
+      two: "分钟"
    page:
       search: "搜索"
    post:
@@ -18,6 +35,23 @@ zh-CN:
       toTelegram: "分享到 Telegram"
 
 en-US:
+   editor: 
+      content: "Content"
+      frontmatter:
+         name: "Front Matter"
+         title: "Title"
+         date: "Date"
+         categories: "Categories"
+         tags: "Tags"
+         image: "Image"
+      preview: "Preview"
+      download: "Download"
+   lastupdate: 
+      one: "This article was last updated"
+      two: "days ago. Please use caution."
+   readtime: 
+      one: "It takes"
+      two: "minutes to read this article."
    page:
       search: "Search"
    post:

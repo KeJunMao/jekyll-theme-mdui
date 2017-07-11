@@ -40,4 +40,6 @@ MDUI 是一个优秀的前端框架，采用 Material Design 设计。
 
 [m0dulo](https://blog.m0dulo.xyz/) - 隐宅
 
+[BOYANG YAN'S](http://yanboyang.com/)
+
 你可以新建一个 pull request 来添加你的博客到这里。

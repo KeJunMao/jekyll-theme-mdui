@@ -17,7 +17,7 @@ bundle install
 
 ## 本地预览
 
-使用 ` jekyll serve` 运行一个本地服务器，默认访问 http://localhost:4000 
+使用 `bundle exec jekyll s ` 运行一个本地服务器，默认访问 http://localhost:4000 
 
 ```bash
 bundle exec jekyll s 

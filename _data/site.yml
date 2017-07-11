@@ -30,13 +30,18 @@ sns_share: # SNS Share Switch
    linkedin: false
    qq: true
    telegram: true
-
-disqus:
-   disqus_shortname: "kejun" # Your disqus 
-   disqus_button: true # disqus load button
-   disqus_proxy: false # # disqus proxy(Do not use)
-   disqus_proxy_url: "" # (Do not use)
-   disqus_api_key: "" # (Do not use)
+  
+comment:
+  used: livere # disqus,livere
+  # disqus config
+  disqus_shortname: "kejun" # Your disqus 
+  disqus_button: true # disqus load button
+  disqus_proxy: false # # disqus proxy(Do not use)
+  disqus_proxy_url: "" # (Do not use)
+  disqus_api_key: "" # (Do not use)
+  # livere config
+  livere_type: 'city'
+  livere_data_uid: 'MTAyMC8yOTM5Ni81OTY0'
 
 prism:
   themes: prism-okaidia

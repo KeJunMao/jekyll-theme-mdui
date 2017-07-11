@@ -9,11 +9,11 @@
         display: none;
     }
 </style>
-{% if site.data.site.disqus.disqus_shortname != "" %}
+{% if site.data.site.comment.disqus_shortname != "" %}
 <div class="mdui-divider"></div>
-    {% if site.data.site.disqus.disqus_proxy == false %}
-    {% if site.data.site.disqus.disqus_button == true %}
-    <button id="load-disqus" class="mdui-btn mdui-btn-block mdui-center" onclick="disqus.load();" data="{{ site.data.site.disqus.disqus_shortname }}">{{lang.post.comments_load_button}}</button>
+    {% if site.data.site.comment.disqus_proxy == false %}
+    {% if site.data.site.comment.disqus_button == true %}
+    <button id="load-disqus" class="mdui-btn mdui-btn-block mdui-center" onclick="disqus.load();" data="{{ site.data.site.comment.disqus_shortname }}">{{lang.post.comments_load_button}}</button>
     <div id="disqus_thread"></div>
     <script>
 var disqus = {
@@ -45,7 +45,7 @@ var disqus = {
     <div id="disqus_thread"></div>
     <script>
         function disqus(){
-        var disqus_shortname = '{{ site.data.site.disqus.disqus_shortname }}';
+        var disqus_shortname = '{{ site.data.site.comment.disqus_shortname }}';
         if(typeof DISQUS !== 'object') {
             (function () {
                 var s = document.createElement('script'); s.async = true;
@@ -66,7 +66,7 @@ var disqus = {
     </script>
     {% endif %}
     {% endif %}
-{% if site.data.site.disqus.disqus_proxy %}
+{% if site.data.site.comment.disqus_proxy %}
 <div class="mdui-divider"></div>
 <div id="disqusreadonly" style="padding-top: 16px;">
 </div>

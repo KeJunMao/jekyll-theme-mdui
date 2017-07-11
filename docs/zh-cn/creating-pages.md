@@ -18,7 +18,6 @@ layout: tags
 
 ### 友情链接
 
-
 在`pages`文件夹内新建一个`.html`文件，并添加如下头信息：
 
 ```yaml
@@ -28,7 +27,6 @@ layout: friends
 ```
 
 友情链接的数据存储在`_data/friends.yml`文件内，要添加友情链接，只需要按如下格式追加即可：
-
 
 ```yaml
 - name: MDUI

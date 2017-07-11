@@ -1,0 +1,38 @@
+<!-- 来必力City版安装代码 -->
+<script>
+    var livereurl = 'http://' + (document.location.hostname || document.location.host);
+    $(document).delegate('a[href^="/"],a[href^="' + livereurl + '"]', "click", function (e) {
+        $('script[src="https://cdn-city.livere.com/js/embed.dist.js"]').remove();
+    });
+</script>
+<div style="padding:0px 16px;" id="lv-container" data-id="{{site.data.site.comment.livere_type}}" data-uid="{{site.data.site.comment.livere_data_uid}}">
+    <script type="text/javascript">
+        $(function () {
+            (function (d, s) {
+                var j, e = d.getElementsByTagName(s)[0];
+
+                if (typeof LivereTower === 'function') {
+                    return;
+                }
+
+                j = d.createElement(s);
+                j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+                j.async = true;
+
+                e.parentNode.insertBefore(j, e);
+            })(document, 'script');
+            $('script[src="https://cdn-city.livere.com/js/embed.dist.js"]').eq(1).remove();
+            setTimeout(function () {
+                if ($('iframe').length == 2) {
+                    var livereFlag = true;
+                } else {
+                    $('body').find('iframe').eq(2).remove();
+                    $('body').find('iframe').eq(3).remove();
+                    var livereFlag = false;
+                }
+            }, 1000);
+        })
+    </script>
+    <noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
+</div>
+<!-- City版安装代码已完成 -->

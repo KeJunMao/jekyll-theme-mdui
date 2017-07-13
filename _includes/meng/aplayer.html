@@ -79,5 +79,13 @@ $('.k-music-btn').click(function(){
         $('.k-music-card').css('transform','translateX(0px)');
         flag = false;
     }
-})
+});
+    document.addEventListener("visibilitychange", function() {
+	    if(document.visibilityState == "hidden" ){
+           ap.pause();
+        }
+        if(document.visibilityState == "visible"){
+            ap.play();
+        }
+    }, false);
 </script>

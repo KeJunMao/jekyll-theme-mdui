@@ -1,27 +1,54 @@
 # 评论系统
 
-目前，我们主题支持一种评论系统。
+目前，我们主题支持两种评论系统。
+
+* disqus
+* livere
 
 ## 如何使用
 
 ### Disqus
 
-要启用 Disqus 只需在`_data/site.yml`找到 `disqus:` 字段，然后按照参数填入自己的信息即可。
+要启用 Disqus 只需在`_data/site.yml`找到 `comment:`字段并将`used:`设置为`disqus`，然后按照参数填入自己的信息即可。
 
 ```yaml
-disqus:
-   disqus_shortname: "" # Your disqus 
-   disqus_button: true # disqus load button
+comment:
+  used: disqus 
+  # disqus config
+  disqus_shortname: "kejun" # Your disqus 
+  disqus_button: false # disqus load button
+```
+
+### Livere
+
+要启用 Livere 只需在`_data/site.yml`找到 `comment:`字段并将`used:`设置为`livere`，然后按照参数填入自己的信息即可。
+
+```yaml
+comment:
+  used: livere # disqus,livere
+  # livere config
+  livere_type: 'city'
+  livere_data_uid: 'MTAyMC8yOTM5Ni81OTY0'
 ```
 
 ## 参数详解
 
-### Disqus
+### used
 
-#### disqus_shortname
+选择要使用的评论系统。
+
+### disqus_shortname
 
 你的 disuqs shortname
 
-#### disqus_button
+### disqus_button
 
 是否显示加载Disqus按钮，这有助于改善处在公开、平等、有序的网络审查地区的浏览者的体验。
+
+### livere_type
+
+livere版本，默认值为`city`，如果你购买了livere，请填入`premium`。
+
+### livere_data_uid
+
+你的 data_uid。

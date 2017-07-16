@@ -20,6 +20,8 @@ MDUI is an excellent front-end framework designed with Material Design.
 * Responsive layout
 * Disqus support
 * multi-language
+    * zh-cn
+    * en
 * Local search
 * Google Analytics
 * Multiple independent pages
@@ -37,8 +39,6 @@ MDUI is an excellent front-end framework designed with Material Design.
 ## Who is in use
 
 [KeJun](https://blog.kejun.space/) - 二次元智障
-
-[Miku01QAQ](http://miku01qaq.xyz/blog/) - Naive少年
 
 [m0dulo](https://blog.m0dulo.xyz/) - 隐宅
 

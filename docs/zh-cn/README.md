@@ -18,6 +18,8 @@ MDUI 是一个优秀的前端框架，采用 Material Design 设计。
 * 响应式布局
 * Disqus 支持
 * 多语言
+    * 简体中文
+    * 英文
 * 本地搜索
 * Google 分析
 * 多种独立页面
@@ -35,8 +37,6 @@ MDUI 是一个优秀的前端框架，采用 Material Design 设计。
 ## 谁在用
 
 [KeJun](https://blog.kejun.space/) - 二次元智障
-
-[Miku01QAQ](http://miku01qaq.xyz/blog/) - Naive少年
 
 [m0dulo](https://blog.m0dulo.xyz/) - 隐宅
 

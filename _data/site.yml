@@ -41,7 +41,7 @@ comment:
   disqus_api_key: "" # (Do not use)
   # livere config
   livere_type: 'city'
-  livere_data_uid: 'MTAyMC8yOTM5Ni81OTY0'
+  livere_data_uid: ''
 
 prism:
   themes: prism-okaidia

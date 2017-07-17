@@ -1,4 +1,8 @@
 zh-CN:
+   meng:
+      head_card: 
+          rss: "订阅"
+          sitemap: "站点地图"
    editor: 
       content: "内容"
       frontmatter:
@@ -35,6 +39,10 @@ zh-CN:
       toTelegram: "分享到 Telegram"
 
 en-US:
+   meng:
+      head_card: 
+          rss: "RSS"
+          sitemap: "Sitemap"
    editor: 
       content: "Content"
       frontmatter:

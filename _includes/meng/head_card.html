@@ -1,4 +1,9 @@
 {% assign head_card = site.data.meng.head_card %}
+{% if  site.data.site.lang == 'zh-CN' %}
+{% assign lang = site.data.lang[site.data.site.lang].meng.head_card %}
+{% else %}
+{% assign lang = site.data.lang.en-US %}
+{% endif %}
 <style>
     .k-head-card-media{
         display: block cursor: pointer;
@@ -26,7 +31,7 @@
 <div class="mdui-row">
     <div class="mdui-col-sm-8">
         <div class="mdui-card k-list-card mdui-shadow-{{site.data.site.card.card_shadow}} {% if site.data.site.card.card_hoverable == true%}mdui-hoverable{% endif %}">
-            <div class="mdui-card-media mdui-ripple k-head-card-media" style="background-image:url('{{head_card.left_img}}')">
+            <div class="mdui-card-media k-head-card-media" style="background-image:url('{{head_card.left_img}}')">
                 <div class="mdui-card-media-covered mdui-card-media-covered-gradient">
                     <div class="mdui-card-primary">
                         <div class="mdui-card-primary-title"><a class="mdui-text-color-white-text">{{head_card.left_text}}</a></div>
@@ -41,13 +46,22 @@
         </div>
     </div>
     <div class="mdui-col-sm-4">
-        <div class="mdui-card k-list-card mdui-shadow-{{site.data.site.card.card_shadow}} {% if site.data.site.card.card_hoverable == true%}mdui-hoverable{% endif %}">
-            <div class="mdui-card-media mdui-ripple k-head-card-media mdui-valign">
+        <div style="overflow: visible;" class="mdui-card k-list-card mdui-shadow-{{site.data.site.card.card_shadow}} {% if site.data.site.card.card_hoverable == true%}mdui-hoverable{% endif %}">
+            <div class="mdui-card-media k-head-card-media mdui-valign">
                 <img class="k-head-card-img" src="{{head_card.right_img}}" alt="">
             </div>
             <div class="mdui-divider"></div>
             <div class="mdui-card-header k-head-card-content">
-                <div class="mdui-card-header-title">{{site.title}}</div>
+                <div class="mdui-card-header-title mdui-float-left">{{site.title}}</div>
+                <button mdui-menu="{target: '#k-homemenu'}" class="mdui-btn mdui-btn-icon mdui-float-right"><i class="mdui-icon material-icons">&#xe5d4;</i></button>
+                <ul class="mdui-menu" id="k-homemenu">
+                    <li class="mdui-menu-item">
+                        <a target="_blank" href="{{ "/feed.xml" | prepend: site.baseurl }}" class="mdui-ripple">{{lang.rss}}</a>
+                    </li>
+                    <li class="mdui-menu-item">
+                        <a target="_blank" href="{{ "/sitemap.xml" | prepend: site.baseurl }}" class="mdui-ripple">{{lang.sitemap}}</a>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>

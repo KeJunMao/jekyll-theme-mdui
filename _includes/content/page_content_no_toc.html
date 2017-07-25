@@ -17,6 +17,11 @@
     <div class="mdui-row">
         <div class="mdui-col-sm-12 k-page-col">
             <div class="mdui-card k-postcontent">
+                {% if page.img == "" or page.img == null %}
+                <div class="mdui-card-media mdui-ripple k-post-media mdui-valign k-noimg">
+                    <h1><a>{{page.title}}</a></h3>
+                </div>
+                {% else %}
                 <div class="mdui-card-media k-post-media" style="background-image: url({{page.img}});">
                     <div class="mdui-card-media-covered mdui-card-media-covered-gradient">
                         <div class="mdui-card-primary">
@@ -24,6 +29,7 @@
                         </div>
                     </div>
                 </div>
+                {% endif %}
                 <div class="mdui-card-header">
                     <div class="mdui-card-menu">
                     {% include content/component/qrcode.html %}

@@ -14,7 +14,7 @@
     min-height: 245px;
     background-position: 50% 50%;
     background-size: cover;
-    background-color: white;
+    background-color: #303033;
 }
 .k-post-media .mdui-card-primary-title a {
     text-decoration: none;
@@ -22,16 +22,40 @@
 .k-post-categories {
     line-height: 40px;
 }
+.k-noimg{
+  padding-left: 16px;
+}
+.k-noimg h1::before{
+    content: "“";
+}
+.k-noimg h1::after{
+    content: "”";
+}
+.k-noimg h1:before,.k-noimg h1:after{
+    display: block;
+    font-size: 80px;
+    margin-top: 40px;
+}
+.k-noimg a,.k-noimg h1{
+  text-decoration: none;
+  color: white;
+}
 </style>
     {% for post in paginator.posts %}
     <div class="mdui-card k-list-card mdui-shadow-{{site.data.site.card.card_shadow}} {% if site.data.site.card.card_hoverable == true%}mdui-hoverable{% endif %}">
-      <div class="mdui-card-media mdui-ripple k-post-media" style="background-image:url({{post.img}})" src="{{post.img}}">
+      {% if post.img == "" or post.img == null %}
+      <div class="mdui-card-media mdui-ripple k-post-media mdui-valign k-noimg">
+        <h1><a href="{{post.url| prepend: site.baseurl}}">{{post.title}}</a></h3>
+      </div>
+      {% else %}
+      <div class="mdui-card-media mdui-ripple k-post-media" style="background-image:url({{post.img}})">
         <div class="mdui-card-media-covered mdui-card-media-covered-gradient">
           <div class="mdui-card-primary">
-            <div class="mdui-card-primary-title"><a class="mdui-text-color-white-text" href="{{post.url| prepend: site.baseurl}}#">{{post.title}}</a></div>
+            <div class="mdui-card-primary-title"><a class="mdui-text-color-white-text" href="{{post.url| prepend: site.baseurl}}">{{post.title}}</a></div>
           </div>
         </div>
       </div>
+      {% endif %}
       <div class="mdui-card-content mdui-text-color-black-secondary mdui-typo">
         {{ post.excerpt | strip_html}} <a href="{{post.url | prepend: site.baseurl}}">{{lang.post.continue}}</a>
       </div>

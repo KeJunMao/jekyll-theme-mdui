@@ -1,9 +1,10 @@
 # 评论系统
 
-目前，我们主题支持两种评论系统。
+目前，我们主题支持三种评论系统。
 
 * disqus
 * livere
+* gitment
 
 ## 如何使用
 
@@ -31,6 +32,20 @@ comment:
   livere_data_uid: 'MTAyMC8yOTM5Ni81OTY0'
 ```
 
+### Gitment
+
+要启用 Gitment 只需在`_data/site.yml`找到 `comment:`字段并将`used:`设置为`gitment`，然后按照参数填入自己的信息即可。
+
+```yaml
+comment:
+  used: gitment # disqus,livere
+  # gitment config
+  owner: ""
+  repo: ""
+  client_id: ""
+  client_secret: ""
+```
+
 ## 参数详解
 
 ### used
@@ -52,3 +67,7 @@ livere版本，默认值为`city`，如果你购买了livere，请填入`premium
 ### livere_data_uid
 
 你的 data_uid。
+
+### gitment
+
+若使用gitment，请参考[imsun/gitment](https://github.com/imsun/gitment)

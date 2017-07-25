@@ -32,9 +32,9 @@ sns_share: # SNS Share Switch
    telegram: true
   
 comment:
-  used: livere # disqus,livere
+  used: "" # disqus,livere
   # disqus config
-  disqus_shortname: "kejun" # Your disqus 
+  disqus_shortname: "" # Your disqus 
   disqus_button: true # disqus load button
   disqus_proxy: false # # disqus proxy(Do not use)
   disqus_proxy_url: "" # (Do not use)
@@ -42,6 +42,11 @@ comment:
   # livere config
   livere_type: 'city'
   livere_data_uid: ''
+  # gitment config
+  owner: ""
+  repo: ""
+  client_id: ""
+  client_secret: ""
 
 prism:
   themes: prism-okaidia
@@ -55,4 +60,4 @@ google_analytics: ""  # google analytics code
 
 lang: "zh-CN"  # lang
 
-deploy: "coding" # if you used coding pages
+deploy: "" # if you used coding pages

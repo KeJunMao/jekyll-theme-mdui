@@ -1,0 +1,17 @@
+<div style="padding:0px 16px;" id="comments"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+    setTimeout(function () {
+        var gitment = new Gitment({
+            id: '',
+            owner: '{{site.data.site.comment.owner}}',
+            repo: '{{site.data.site.comment.repo}}',
+            oauth: {
+                client_id: '{{site.data.site.comment.client_id}}',
+                client_secret: '{{site.data.site.comment.client_secret}}',
+            },
+        });
+        gitment.render('comments');
+    }, 1000)
+</script>

@@ -84,7 +84,6 @@ function getTagList(id){
         }
     })
 }
-var tagid;
 var urltag = getUrlParam("tag");
 if(urltag!=null){
         getTagList(urltag);
@@ -96,5 +95,6 @@ $(".k-tagcloud").on("click",function(e){
         getTagList(tagid);
     }
 });
+getTagList(tagid)
 })
 </script>

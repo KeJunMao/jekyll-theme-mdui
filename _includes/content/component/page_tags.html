@@ -12,7 +12,7 @@
 <ul  class="mdui-menu" id="k-page-tag">
     {% for t in page.tags %}
     <li class="mdui-menu-item">
-        <a class="mdui-text-center" href="{{tag | prepend: site.baseurl }}?tag={{t}}" class="mdui-ripple">{{t}}</a>
+         <a id="tag_{{t}}" class="mdui-text-center" href="{{tag | prepend: site.baseurl }}" class="mdui-ripple">{{t}}</a> 
     </li>
     {% endfor %}
 </ul>

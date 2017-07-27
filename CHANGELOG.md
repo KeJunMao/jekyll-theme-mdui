@@ -1,5 +1,30 @@
-<a name="0.1.0"></a>
-# 0.1.0 (2017-07-11)
+<a name="0.5.0"></a>
+# [0.5.0](https://github.com/KeJunMao/jekyll-theme-mdui/compare/v0.5.1...v0.5.0) (2017-07-27)
+
+
+
+<a name="0.5.1"></a>
+## [0.5.1](https://github.com/KeJunMao/jekyll-theme-mdui/compare/v0.5.0...v0.5.1) (2017-07-27)
+
+
+### Bug Fixes
+
+* **component:** add totop btn ([0dc7807](https://github.com/KeJunMao/jekyll-theme-mdui/commit/0dc7807))
+* **layout:** fix tags click ([6ddaab7](https://github.com/KeJunMao/jekyll-theme-mdui/commit/6ddaab7))
+* **meng:** add Auto pause ([fdf1cda](https://github.com/KeJunMao/jekyll-theme-mdui/commit/fdf1cda))
+
+
+### Features
+
+* **comment:** add gitment ([6e0e781](https://github.com/KeJunMao/jekyll-theme-mdui/commit/6e0e781))
+* **layout:** add lazyload in home ([565d747](https://github.com/KeJunMao/jekyll-theme-mdui/commit/565d747))
+* **meng:** add button for head card ([2b8dc6f](https://github.com/KeJunMao/jekyll-theme-mdui/commit/2b8dc6f))
+* **post:** add no img post style ([93b12d6](https://github.com/KeJunMao/jekyll-theme-mdui/commit/93b12d6))
+
+
+
+<a name="0.5.0"></a>
+# [Old](https://github.com/KeJunMao/jekyll-theme-mdui/compare/9b638d6...v0.5.0) (2017-07-11)
 
 
 ### Bug Fixes

@@ -16,7 +16,7 @@ MDUI 是一个优秀的前端框架，采用 Material Design 设计。
 * 兼容 Github Pages 
 * 永远使用最新版Jekyll
 * 响应式布局
-* Disqus 支持
+* 多种评论系统支持
 * 多语言
     * 简体中文
     * 英文

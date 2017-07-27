@@ -1,0 +1,14 @@
+<style>
+    .k-mdui-headroom-unpinned-top{
+        box-shadow: none!important;
+    -webkit-transform: translate3d(0,150%,0)!important;
+    transform: translate3d(0,150%,0)!important;
+    }
+</style>
+<button id="toTop" style="display:none;z-index: 1;" mdui-headroom="{unpinnedClass:'k-mdui-headroom-unpinned-top'}" class="mdui-fab mdui-color-white mdui-fab-fixed mdui-ripple"><i class="mdui-icon material-icons">expand_less</i></button>
+<script>
+        (function($){$.fn.scrollToTop=function(options){var config={"speed":800};if(options){$.extend(config,{"speed":options})}return this.each(function(){var $this=$(this);$(window).scroll(function(){if($(this).scrollTop()>100){$this.fadeIn()}else{$this.fadeOut()}});$this.click(function(e){e.preventDefault();$("body, html").animate({scrollTop:0},config.speed)})})};$.fn.scrollBodyToTop=function(options){var config={"speed":800};if(options){$.extend(config,{"speed":options})}return this.each(function(){var $this=$(this);$(".placeholder").scroll(function(){if($(this).scrollTop()>100){$this.fadeIn()}else{$this.fadeOut()}});$this.click(function(e){e.preventDefault();$(".placeholder").animate({scrollTop:0},config.speed)})})}})(jQuery);
+</script>
+<script>
+     $("#toTop").scrollToTop();
+</script>

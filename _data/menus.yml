@@ -1,6 +1,9 @@
 - name: HOME
   url: /
   icon: home
+- name: CATEGORY
+  url: /pages/category.html
+  icon: "&#xe53b;"
 - name: TAGS
   url: /pages/tags.html
   icon: "&#xe893;"

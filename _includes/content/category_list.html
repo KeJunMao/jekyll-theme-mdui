@@ -63,12 +63,12 @@
                 {% assign havedata = true %}
                 {% endif %}
             {% endif %}
-            {% if havedata == false %}
-                <div class="mdui-card-media mdui-ripple k-post-media mdui-valign k-noimg">
-                    <h1><a href="{{ "/category" | prepend: site.baseurl }}/{{category|first}}.html">{{category|first}} <span class="mdui-text-color-blue">({{category | last | size}})</span></a></h3>
-                </div>
-            {% endif %}
         {% endfor %}
+        {% if havedata == false %}
+            <div class="mdui-card-media mdui-ripple k-post-media mdui-valign k-noimg">
+                <h1><a href="{{ "/category" | prepend: site.baseurl }}/{{category|first}}.html">{{category|first}} <span class="mdui-text-color-blue">({{category | last | size}})</span></a></h3>
+            </div>
+        {% endif %}
     </div>
     </div>
 {% endfor %}

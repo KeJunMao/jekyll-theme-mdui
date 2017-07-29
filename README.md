@@ -46,16 +46,17 @@
 
 ## TODO
 
-- [ ] Category - Better style
-- [ ] Tags - Better style
-- [ ] Site style - More custom options
+- [x] Category - Better style
+- [x] Tags - Better style
+- [x] Site style - More custom options
 - [x] Editor
 - [x] Posts - Last update date 
 - [x] Posts - Reading time 
 - [x] Posts - Code highlighting 
-- [ ] Meng -  Immersive status bar from image
-- [ ] Comment - Add More
+- [x] Meng -  Immersive status bar from image
+- [x] Comment - Add More
 - [ ] Analytics - Add More
+- [ ] Fix many bugs
 
 ## Note
 

@@ -3,6 +3,10 @@
 {% else %}
 {% assign lang = site.data.lang.en-US %}
 {% endif %}
+{% assign filename = page.url | replace_first: '/', '' | replace: '/', ''  | replace: '.html', '' | replace: 'category', '' %}
+{{filename}}
+<div class="k-posts-list"></div>
+
 <style>
   .k-list-card{
     margin-bottom: 45px;
@@ -41,7 +45,8 @@
   color: white;
 }
 </style>
-    {% for post in paginator.posts %}
+<div class="k-container">
+    {% for post in site.categories[filename] %}
     <div class="mdui-card k-list-card mdui-shadow-{{site.data.site.card.card_shadow}} {% if site.data.site.card.card_hoverable == true%}mdui-hoverable{% endif %}">
       {% if post.img == "" or post.img == null %}
       <div class="mdui-card-media mdui-ripple k-post-media mdui-valign k-noimg">
@@ -81,8 +86,9 @@
       </div>
     </div>
     {% endfor %}
+    </div>
     {% include content/component/lazyload.html %}
-  <script>
+<script>
     Array.prototype.forEach.call(document.querySelectorAll(".mdui-card-media"), function(a) {
         var b = a.querySelector("a");
         if (!b) {

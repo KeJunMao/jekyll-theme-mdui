@@ -1,6 +1,9 @@
 - name: HOME
   url: /
   icon: home
+- name: CATEGORY
+  url: /category/
+  icon: "&#xe53b;"
 - name: TAGS
   url: /tags/
   icon: "&#xe893;"
@@ -9,6 +12,6 @@
   icon: "&#xe8a3;"
 - name: EDITOR
   url: /editor/
-  icon: "&#xe8a3;"
+  icon: "&#xe150;"
 - name: navSearch
   switch: true

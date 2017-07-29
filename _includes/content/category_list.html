@@ -1,0 +1,87 @@
+<div class="k-posts-list"></div>
+<style>
+  .k-list-card{
+    margin-bottom: 45px;
+  }
+.k-post-media {
+    display:block
+    cursor: pointer;
+    max-height: 245px;
+    min-height: 245px;
+    background-position: 50% 50%;
+    background-size: cover;
+    background-color: #303033;
+}
+.k-post-media .mdui-card-primary-title a {
+    text-decoration: none;
+}
+.k-post-categories {
+    line-height: 40px;
+}
+.k-noimg{
+  padding-left: 16px;
+}
+.k-noimg h1::before{
+    content: "“";
+}
+.k-noimg h1::after{
+    content: "”";
+}
+.k-noimg h1:before,.k-noimg h1:after{
+    display: block;
+    font-size: 80px;
+    margin-top: 40px;
+}
+.k-noimg a,.k-noimg h1{
+  text-decoration: none;
+  color: white;
+  font-size: 24px;
+  font-weight: inherit;
+}
+</style>
+<div class="mdui-row-md-3 mdui-row-sm-2">
+{% for category in site.categories %}
+    <div class="mdui-col">
+    <div class="mdui-card k-list-card mdui-shadow-{{site.data.site.card.card_shadow}} {% if site.data.site.card.card_hoverable == true%}mdui-hoverable{% endif %}">
+        {% assign havedata = false %}
+        {% for catedata in site.data.category %}
+        {% capture catename %}{{category|first}}{% endcapture %}
+            {% if catename == catedata.name %}
+                {% if catedata.img != null %}
+                <div class="mdui-card-media mdui-ripple k-post-media lazy" data-original="{{catedata.img}}" style="background-image:url()">
+                    <div class="mdui-card-media-covered mdui-card-media-covered-gradient">
+                    <div class="mdui-card-primary">
+                        <div class="mdui-card-primary-title"><a class="mdui-text-color-white-text" href="{{ "/category" | prepend: site.baseurl }}/{{category|first}}.html">{{category|first}} <span class="mdui-text-color-blue">({{category | last | size}})</span></a></div>
+                    </div>
+                    </div>
+                </div>
+                {% assign havedata = true %}
+                {% else %}
+                <div class="mdui-card-media mdui-ripple k-post-media mdui-valign k-noimg">
+                    <h1><a href="{{ "/category" | prepend: site.baseurl }}/{{category|first}}.html">{{category|first}} <span class="mdui-text-color-blue">({{category | last | size}})</span></a></h3>
+                </div>
+                {% assign havedata = true %}
+                {% endif %}
+            {% endif %}
+            {% if havedata == false %}
+                <div class="mdui-card-media mdui-ripple k-post-media mdui-valign k-noimg">
+                    <h1><a href="{{ "/category" | prepend: site.baseurl }}/{{category|first}}.html">{{category|first}} <span class="mdui-text-color-blue">({{category | last | size}})</span></a></h3>
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+    </div>
+{% endfor %}
+</div>
+    {% include content/component/lazyload.html %}
+      <script>
+    Array.prototype.forEach.call(document.querySelectorAll(".mdui-card-media"), function(a) {
+        var b = a.querySelector("a");
+        if (!b) {
+            return
+        }
+        a.addEventListener("click", function() {
+            b.click();
+        })
+    });
+  </script>

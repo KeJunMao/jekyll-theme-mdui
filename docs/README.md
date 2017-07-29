@@ -27,6 +27,7 @@ MDUI is an excellent front-end framework designed with Material Design.
 * Multiple independent pages
     * Tag Cloud
     * Links
+    * Category list
 * Pure liquid compression html
 * PWA
 * AJAX

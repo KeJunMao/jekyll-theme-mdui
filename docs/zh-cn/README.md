@@ -25,6 +25,7 @@ MDUI 是一个优秀的前端框架，采用 Material Design 设计。
 * 多种独立页面
     * 标签云
     * 友情链接
+    * 分类列表
 * 纯 Liquid 压缩 html
 * PWA
 * AJAX

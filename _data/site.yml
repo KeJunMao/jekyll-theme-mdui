@@ -47,6 +47,10 @@ comment:
   repo: ""
   client_id: ""
   client_secret: ""
+  #valine config
+  valine_app_id: ''
+  valine_app_key: ''
+  valine_placeholder: "ヾﾉ≧∀≦)o来啊，快活啊!"
 
 prism:
   themes: prism-okaidia

@@ -5,6 +5,7 @@
 * disqus
 * livere
 * gitment
+* Valine
 
 ## 如何使用
 
@@ -45,6 +46,18 @@ comment:
   client_id: ""
   client_secret: ""
 ```
+### Valine
+
+要启用 [Valine](https://xcss.github.io/Valine/) 只需在`_data/site.yml`找到 `comment:`字段并将`used:`设置为`valine`，然后按照参数填入自己的信息即可。
+
+```yaml
+comment:
+  used: valine # disqus,livere
+  # valine config
+  valine_app_id: ''
+  valine_app_key: ''
+  valine_placeholder: "ヾﾉ≧∀≦)o来啊，快活啊!"
+```
 
 ## 参数详解
 
@@ -71,3 +84,10 @@ livere版本，默认值为`city`，如果你购买了livere，请填入`premium
 ### gitment
 
 若使用gitment，请参考[imsun/gitment](https://github.com/imsun/gitment)
+
+### valine_app_id
+Your APP ID
+### valine_app_key
+Your APP KEY
+### valine_placeholder
+留言框占位提示文字

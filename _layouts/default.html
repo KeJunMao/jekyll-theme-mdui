@@ -36,7 +36,9 @@ layout: compress
             {% if site.data.meng.card.switch == true %}
                 {% include meng/card.html %}
             {% endif %}
-            {% if site.data.meng.aplayer.switch == true %}
+            {% if site.data.meng.music_player.player == "cplayer" %}
+                {% include meng/cplayer.html %}
+            {% elsif  site.data.meng.music_player.player == "aplayer"%}
                 {% include meng/aplayer.html %}
             {% endif %}
         {% endif %}

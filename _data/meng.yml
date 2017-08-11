@@ -43,13 +43,13 @@ live2d: # live2d ,see https://github.com/EYHN/hexo-helper-live2d
   leftOrRight: "right" # left or right
   offset: 10 # offset
 
-aplayer:
-  switch: false
+music_player:
+  player: "aplayer" #cplayer or aplayer
   button_color: "#1abc9c"
   music:
     title: 'Faded'
     author: 'Alan Walker'
-    url: ''
+    url: 'http://www.170mv.com/kw/other.web.rh01.sycdn.kuwo.cn/resource/n2/14/71/3899067167.mp3'
     pic: 'http://p4.music.126.net/8dzD62VK8jLDbhEqkmpIAg==/18277181788626198.jpg?param=130y130'
 
 head_card:

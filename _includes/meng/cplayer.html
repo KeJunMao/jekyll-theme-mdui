@@ -1,0 +1,86 @@
+{% assign cplayer = site.data.meng.music_player %}
+<link href="//cdn.bootcss.com/cplayer/2.4.8/cplayer.min.css" rel="stylesheet">
+<style>
+#k-cplayer{
+    position: fixed;
+    bottom: 130px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.117647) 0px 1px 6px, rgba(0, 0, 0, 0.117647) 0px 1px 4px;
+    box-shadow: rgba(0, 0, 0, 0.117647) 0px 1px 6px, rgba(0, 0, 0, 0.117647) 0px 1px 4px;
+    transition: transform .5s ease;
+}
+
+    @media screen and (max-width: 600px){
+        #k-cplayer{
+            transform:translateX(-300px)
+        }
+    }
+
+    c-player .cp-mainbody{
+        box-shadow: none;
+        -webkit-box-shadow:none;
+    }
+    .cp-list-button{
+        display: none !important;
+    }
+    .cp-drop-down-menu.cp-drop-down-menu-info{
+        display: none;
+    }
+    .k-music-btn{
+    text-align: center;
+    line-height: 52px;
+    color: #fff;
+    width: 20px;
+    height: 52px;
+    background: {{cplayer.button_color}} none repeat scroll 0% 0%;
+    position: relative;
+    right: 0px;
+    bottom: 0px;
+    box-sizing: border-box;
+    border-left: none;
+    cursor: pointer;
+    float: right;
+}
+</style>
+<script src="https://cdn.jsdelivr.net/gh/MoePlayer/cPlayer/dist/cplayer.js"></script>
+
+<div id="k-cplayer">
+<div class="k-music-btn">></div>
+</div>
+<script>
+    jQuery(document).ready(function ($) {
+        var player = new cplayer({
+            element: document.getElementById('k-cplayer'),
+            playlist: [{
+                src: '{{cplayer.music.url}}',
+                poster: '{{cplayer.music.pic}}',
+                name: '{{cplayer.music.title}}',
+                artist: '{{cplayer.music.author}}',
+            }, ]
+        });
+if($(window).width()<=600){
+    var flag = true;
+}else{
+    var flag = false;
+}
+
+$('.k-music-btn').click(function(){
+    if (flag == false){
+        $('#k-cplayer').css('transform','translateX(-300px)');
+        flag = true;
+    }else if(flag == true){
+        $('#k-cplayer').css('transform','translateX(0px)');
+        flag = false;
+    }
+});
+    document.addEventListener("visibilitychange", function() {
+	    if(document.visibilityState == "hidden" ){
+           player.pause();
+        }
+        if(document.visibilityState == "visible"){
+            if($(window).width()>600){
+                player.play();
+            }
+        }
+    }, false);
+    })
+</script>

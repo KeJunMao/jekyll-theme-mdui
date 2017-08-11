@@ -79,6 +79,12 @@ Wow, such a beautiful html5 music player
 
 [Github](https://github.com/DIYgod/APlayer) - [官网](https://aplayer.js.org/)
 
+### CPlayer
+
+A beautiful and clean WEB Music Player by HTML5. 
+
+[Github](https://github.com/MoePlayer/cPlayer) - [官网](http://cplayer.js.org/)
+
 ### History.js 
 
 History.js gracefully supports the HTML5 History/State APIs (pushState, replaceState, onPopState) in all browsers.

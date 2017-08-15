@@ -32,7 +32,7 @@ sns_share: # SNS Share Switch
    telegram: true
 
 comment:
-  used: "" # disqus,livere,gitment
+  used: "" # disqus,livere,gitment,valine
   # disqus config
   disqus_shortname: "" # Your disqus 
   disqus_button: true # disqus load button
@@ -47,6 +47,10 @@ comment:
   repo: ""
   client_id: ""
   client_secret: ""
+  #valine config
+  valine_app_id: ''
+  valine_app_key: ''
+  valine_placeholder: "ヾﾉ≧∀≦)o来啊，快活啊!"
 
 prism:
   themes: prism-okaidia
@@ -58,4 +62,8 @@ google_analytics: ""  # google analytics code
 
 lang: "en-US"  # lang
 
-deploy: "coding" # if you used coding pages
+deploy: "" # if you used coding pages
+
+custom_css: "" # Use the assets/css/customCss.css
+
+custom_js: "" # Use the assets/js/customJS.js

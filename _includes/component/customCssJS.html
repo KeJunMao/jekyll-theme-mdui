@@ -1,0 +1,8 @@
+{% if site.data.site.custom_css!=""  %}
+{% assign css = site.data.site.custom_css %}
+{% endif %}
+{% if site.data.site.custom_js!=""  %}
+{% assign js = site.data.site.custom_js %}
+{% endif %}
+<link rel="stylesheet" href="{{ "/assets/css/" | prepend: site.baseurl |append: css }}">
+<script src="{{ "/assets/js/" | prepend: site.baseurl |append: js }}"></script>

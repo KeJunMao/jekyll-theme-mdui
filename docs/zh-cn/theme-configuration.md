@@ -8,10 +8,10 @@
 
 ```yaml
 head: 
-   favicon: "" #  the favicon
-   high_res_favicon: "" #  the favicon using high quality format
-   apple_touch_icon: "" # the iOS Home button icon
-   keywords: "" #  the site keywords
+   favicon: "https://ooo.0o0.ooo/2017/05/27/59294212bc16e.png" #  the favicon
+   high_res_favicon: "https://ooo.0o0.ooo/2017/06/08/5939484dc618e.png" #  the favicon using high quality format
+   apple_touch_icon: "https://ooo.0o0.ooo/2017/06/08/5939484dc618e.png" # the iOS Home button icon
+   keywords: "blog jekyll mdui theme" #  the site keywords
 
 uiux:
    android_chrome_color: "#eeeeee" #  the color of the Chrome address bar
@@ -23,7 +23,7 @@ background:
    purecolor: "#eeeeee" # the background color
 
 img: 
-   avatar: "" # your avatar
+   avatar: "https://ooo.0o0.ooo/2017/05/26/5928368d409dd.png" # your avatar
 
 card: 
    card_shadow: 1 # card shadow (0-24), 0 is not displayed
@@ -39,10 +39,27 @@ sns_share: # SNS Share Switch
    linkedin: false
    qq: true
    telegram: true
-
-disqus:
-   disqus_shortname: "" # Your disqus 
-   disqus_button: true # disqus load button
+  
+comment:
+  used: "" # disqus,livere,gitment
+  # disqus config
+  disqus_shortname: "" # Your disqus 
+  disqus_button: true # disqus load button
+  disqus_proxy: false # # disqus proxy(Do not use)
+  disqus_proxy_url: "" # (Do not use)
+  disqus_api_key: "" # (Do not use)
+  # livere config
+  livere_type: 'city'
+  livere_data_uid: ''
+  # gitment config
+  owner: ""
+  repo: ""
+  client_id: ""
+  client_secret: ""
+  #valine config
+  valine_app_id: ''
+  valine_app_key: ''
+  valine_placeholder: "ヾﾉ≧∀≦)o来啊，快活啊!"
 
 prism:
   themes: prism-okaidia
@@ -50,11 +67,17 @@ prism:
     - bash 
   plugins: 
 
+mathjax: true
+
 google_analytics: ""  # google analytics code
 
-lang: "en-US"  # lang
+lang: "zh-CN"  # lang
 
-deploy: "coding"
+deploy: "" # if you used coding pages
+
+custom_css: "" # Use the assets/css/customCss.css
+
+custom_js: "" # Use the assets/js/customJS.js
 ```
 
 ## 参数详解
@@ -158,17 +181,9 @@ SNS分享开关
 
 开启分享到telegram
 
-### disqus
+### comment
 
-disqus评论系统
-
-#### disqus_shortname
-
-你的disqus shortname
-
-#### disqus_button
-
-是否显示加载Disqus按钮，这有助于改善处在公开、平等、有序的网络审查地区的浏览者的体验。
+[评论系统](zh-cn/comment.md)
 
 ### prism
 代码高亮插件

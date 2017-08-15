@@ -1,8 +1,8 @@
 ---
 layout: compress
 ---
-var cacheName = 'madhur-cache-v1';
-var filesToCache = [
+var CACHE_NAME = 'madhur-cache-v1';
+var urlsToCache = [
     'https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js',
     'https://cdn.bootcss.com/mdui/0.2.1/js/mdui.min.js',
     'https://cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js',
@@ -28,25 +28,51 @@ var filesToCache = [
     {% endfor %}
 ];
 self.addEventListener('install', function(event) {
-    event.waitUntil(
-        caches.open(cacheName).then(function(cache) {
-            return cache.addAll(filesToCache);
-        })
+  event.waitUntil(caches.open(CACHE_NAME).then(function(cache) {
+    return cache.addAll(urlsToCache);
+  }).catch(function(err) {
+    console.log('Cache add error: ', err);
+  }));
+});
+
+self.addEventListener('fetch', function(event) {
+  event.respondWith(
+    caches.match(event.request)
+      .then(function(response) {
+        if (response) {
+          return response;
+        }
+
+        var fetchRequest = event.request.clone();
+
+        return fetch(fetchRequest).then(
+          function(response) {
+            if(!response || response.status !== 200 || response.type !== 'basic') {
+              return response;
+            }
+            var responseToCache = response.clone();
+
+            caches.open(CACHE_NAME)
+              .then(function(cache) {
+                cache.put(event.request, responseToCache);
+              });
+
+            return response;
+          }
+        );
+      })
     );
 });
 
 self.addEventListener('fetch', function(event) {
-    event.respondWith(
-        caches.match(event.request)
-            .then(function(response) {
-                if (response) {
-                    console.log('[*] Serving cached: ' + event.request.url);
-                    return response;
-                }
-
-                console.log('[*] Fetching: ' + event.request.url);
-                return fetch(event.request);
-            }
-        )
-    );
+  event.respondWith(
+    caches.open(CACHE_NAME).then(function(cache) {
+      return fetch(event.request).then(function(response) {
+        cache.put(event.request, response.clone());
+        return response;
+      });
+    }).catch(function() {
+      return caches.match('/offline.html');
+    })
+  );
 });

@@ -37,10 +37,12 @@ MDUI 是一个优秀的前端框架，采用 Material Design 设计。
 
 ## 谁在用
 
-[KeJun](https://blog.kejun.space/) - 二次元智障
+[KeJun](https://blog.kejun.me/) - 二次元智障
 
-[m0dulo](https://blog.m0dulo.xyz/) - 隐宅
+[m0dulo](https://exodus.m0dulo.xyz/) - 隐宅
 
 [BOYANG YAN'S](http://yanboyang.com/)
 
-你可以新建一个 pull request 来添加你的博客到这里。
+[gledos的博客](http://gledos.science) - 没有什么值钱的东西 
+
+你可以新建一个 pull request ,或者联系我，来添加你的博客到这里。

@@ -12,6 +12,7 @@
     cursor: pointer;
     max-height: 245px;
     min-height: 245px;
+    height:245px;
     background-position: 50% 50%;
     background-size: cover;
     background-color: #303033;
@@ -48,7 +49,7 @@
         <h1><a href="{{post.url| prepend: site.baseurl}}">{{post.title}}</a></h3>
       </div>
       {% else %}
-      <div class="mdui-card-media mdui-ripple k-post-media lazy" data-original="{{post.img}}" style="background-image:url()">
+      <div class="mdui-card-media mdui-ripple k-post-media lazy" data-original="{{post.img}}">
         <div class="mdui-card-media-covered mdui-card-media-covered-gradient">
           <div class="mdui-card-primary">
             <div class="mdui-card-primary-title"><a class="mdui-text-color-white-text" href="{{post.url| prepend: site.baseurl}}">{{post.title}}</a></div>

@@ -1,5 +1,23 @@
 <a name="0.5.0"></a>
-# [0.5.0](https://github.com/KeJunMao/jekyll-theme-mdui/compare/v0.5.1...v0.5.0) (2017-07-27)
+# [0.5.0](https://github.com/KeJunMao/jekyll-theme-mdui/compare/v0.5.2...v0.5.0) (2017-08-15)
+
+
+
+<a name="0.5.2"></a>
+## [0.5.2](https://github.com/KeJunMao/jekyll-theme-mdui/compare/v0.5.1...v0.5.2) (2017-08-15)
+
+
+### Bug Fixes
+
+* **layout:** fix category_list in gem install ([597dd32](https://github.com/KeJunMao/jekyll-theme-mdui/commit/597dd32))
+
+
+### Features
+
+* **comment:** add valine comment ([53c27f0](https://github.com/KeJunMao/jekyll-theme-mdui/commit/53c27f0))
+* **layout:** add category_list and category_content ([3489720](https://github.com/KeJunMao/jekyll-theme-mdui/commit/3489720))
+* **meng:** add a new music player ([5c366b8](https://github.com/KeJunMao/jekyll-theme-mdui/commit/5c366b8))
+* **site:** add customCSS and JS ([993cc3a](https://github.com/KeJunMao/jekyll-theme-mdui/commit/993cc3a))
 
 
 

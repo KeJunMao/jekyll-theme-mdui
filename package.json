@@ -1,6 +1,6 @@
 {
   "name": "jekyll-theme-mdui",
-  "version": "0.5.0",
+  "version": "0.5.2",
   "description": "A Jekyll theme based on MDUI",
   "main": "index.js",
   "scripts": {

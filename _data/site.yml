@@ -32,7 +32,7 @@ sns_share: # SNS Share Switch
    telegram: true
   
 comment:
-  used: "" # disqus,livere,gitment
+  used: "valine" # disqus,livere,gitment,valine
   # disqus config
   disqus_shortname: "" # Your disqus 
   disqus_button: true # disqus load button
@@ -48,6 +48,8 @@ comment:
   client_id: ""
   client_secret: ""
   #valine config
+  valine_notify: false #mail notifier
+  valine_verify: false #validation code
   valine_app_id: ''
   valine_app_key: ''
   valine_placeholder: "ヾﾉ≧∀≦)o来啊，快活啊!"

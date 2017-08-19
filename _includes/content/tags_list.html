@@ -34,7 +34,7 @@
 <div class="">
 {% endif %}
 <div class="mdui-card-content">
-  
+{% include content/component/lazyload.html %}
 
 {% for tag in sortedtags %}
   {% assign index = site.tags[tag] | size %}

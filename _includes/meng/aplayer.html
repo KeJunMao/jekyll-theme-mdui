@@ -16,7 +16,6 @@
 .aplayer{
     float: left;
     width: 250px;
-    height: 60px;
     margin: 0 auto;
     position: relative;
     background: rgb(255,255,255);
@@ -25,10 +24,10 @@
 }
 .k-music-btn{
     text-align: center;
-    line-height: 60px;
+    line-height: 66px;
     color: #fff;
     width: 20px;
-    height: 60px;
+    height: 66px;
     background: {{aplayer.button_color}} none repeat scroll 0% 0%;
     position: relative;
     right: 0px;
@@ -57,14 +56,20 @@
     mode: 'random',                                                    
     preload: 'metadata',                                            
     listmaxheight: '513px',                                            
-    music: {                                                           
-        title: '{{aplayer.music.title}}',                                         
-        author: '{{aplayer.music.author}}',                         
-        url: '{{aplayer.music.url}}', 
-        pic: '{{aplayer.music.pic}}',  
-        lrc: '[00:00.00]lrc here\n[00:01.00]aplayer'                   
-    }
+    music:[
+    {% for music in aplayer.music  %}
+        {                                                           
+            title: '{{music.title}}',                                         
+            author: '{{music.author}}',                         
+            url: '{{music.url}}', 
+            pic: '{{music.pic}}',  
+            lrc: '[00:00.00]lrc here\n[00:01.00]aplayer'                   
+        },
+    {% endfor %}
+    ]
 });
+
+$(".aplayer-list").addClass("aplayer-list-hide");
 if($(window).width()<=600){
     var flag = true;
 }else{

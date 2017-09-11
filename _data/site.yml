@@ -64,6 +64,11 @@ mathjax: true
 
 google_analytics: ""  # google analytics code
 
+baidu_site_verification: ""
+google_site_verification: ""
+
+baidu_auto_push: false
+
 lang: "zh-CN"  # lang
 
 deploy: "" # if you used coding pages

@@ -71,6 +71,11 @@ mathjax: true
 
 google_analytics: ""  # google analytics code
 
+baidu_site_verification: ""  # baidu site verification code
+google_site_verification: ""  # google search console verification code
+
+baidu_auto_push: false  # if you used baidu auto push to commit links
+
 lang: "zh-CN"  # lang
 
 deploy: "" # if you used coding pages
@@ -217,7 +222,7 @@ google analytics
 
 ### baidu_site_verification
 
- 百度验证码，用于[百度站长平台](http://zhanzhang.baidu.com)新增站点的验证
+百度验证码，用于[百度站长平台](http://zhanzhang.baidu.com)新增站点的验证
 
 ### google_site_verification
 

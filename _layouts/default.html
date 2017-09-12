@@ -15,6 +15,9 @@ layout: compress
         {% if site.data.site.google_analytics != "" %}
         {% include analytics/google.html %}
         {% endif %}
+        {% if site.data.site.baidu_auto_push == true %}
+        {% include submission/baidu.html %}
+        {% endif %}
         {% include component/sw.html %}
         {% include component/customCssJS.html %}
         {% include footer/footer.html %}

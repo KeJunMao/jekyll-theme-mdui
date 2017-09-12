@@ -215,6 +215,18 @@ prism 插件
 
 google analytics 
 
+### baidu_site_verification
+
+ 百度验证码，用于[百度站长平台](http://zhanzhang.baidu.com)新增站点的验证
+
+### google_site_verification
+
+谷歌验证码，用于Google Search Console新增站点的验证，Google Search Console和Google Analytics配合起来使用更佳
+
+### baidu_auto_push
+
+是否开启百度链接提交自动推送方式，true为开启，false为关闭，开启后在页面被访问时，页面URL将立即被推送给百度，当然你也可以在[百度站长平台](http://zhanzhang.baidu.com)采用主动推送、sitemap推送或手动提交方式
+
 ### lang
 
 站点语言

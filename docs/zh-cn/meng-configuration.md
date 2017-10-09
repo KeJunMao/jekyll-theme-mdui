@@ -57,6 +57,9 @@ live2d: # live2d ,see https://github.com/EYHN/hexo-helper-live2d
   leftOrRight: "right" # left or right
   offset: 10 # offset
 
+animation: # animate.css, see https://github.com/daneden/animate.css
+  switch: true # switch on and you can see the animation
+
 music_player:
   player: "cplayer" #cplayer or aplayer
   button_color: "#1abc9c"
@@ -222,6 +225,16 @@ canvas 高度
 #### offset
 
 左对齐或右对齐的偏移
+
+### animation
+
+开启它你将看到动画效果
+
+该功能使用[animate.css](https://github.com/daneden/animate.css)开源项目。
+
+#### switch
+
+开关
 
 ### music_player
 

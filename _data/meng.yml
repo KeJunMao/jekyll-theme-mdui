@@ -43,6 +43,9 @@ live2d: # live2d ,see https://github.com/EYHN/hexo-helper-live2d
   leftOrRight: "right" # left or right
   offset: 10 # offset
 
+animation: # animate.css, see https://github.com/daneden/animate.css
+  switch: true # switch on and you can see the animation
+
 music_player:
   player: "aplayer" #cplayer or aplayer
   button_color: "#1abc9c"

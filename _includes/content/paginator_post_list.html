@@ -43,7 +43,7 @@
 }
 </style>
     {% for post in paginator.posts %}
-    <div class="mdui-card k-list-card mdui-shadow-{{site.data.site.card.card_shadow}} {% if site.data.site.card.card_hoverable == true%}mdui-hoverable{% endif %}">
+    <div class="animated flipInX" class="mdui-card k-list-card mdui-shadow-{{site.data.site.card.card_shadow}} {% if site.data.site.card.card_hoverable == true%}mdui-hoverable{% endif %}">
       {% if post.img == "" or post.img == null %}
       <div class="mdui-card-media mdui-ripple k-post-media mdui-valign k-noimg">
         <h1><a href="{{post.url| prepend: site.baseurl}}">{{post.title}}</a></h3>

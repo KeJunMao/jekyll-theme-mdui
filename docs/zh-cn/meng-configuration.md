@@ -232,6 +232,8 @@ canvas 高度
 
 该功能使用[animate.css](https://github.com/daneden/animate.css)开源项目。
 
+!> 该功能请尽量不要使用，期待完善吧！
+
 #### switch
 
 开关

@@ -2,6 +2,8 @@
 
 > 基于 MDUI 的 Jekyll 主题
 
+!> 主题磕磕碰碰持续维护了一年，精力有限，无法继续维护。期待 V2 吧！
+
 ## 是什么
 
 Jekyll Theme MDUI 是一个 基于 MDUi 的 Jekyll 主题。
@@ -14,7 +16,7 @@ MDUI 是一个优秀的前端框架，采用 Material Design 设计。
 
 * 使用 `Gemfile` ，便于安装/升级
 * 兼容 Github Pages 
-* 永远使用最新版Jekyll
+* 使用 Jekyll 3.6.2 
 * 响应式布局
 * 多种评论系统支持
 * 多语言
@@ -38,11 +40,5 @@ MDUI 是一个优秀的前端框架，采用 Material Design 设计。
 ## 谁在用
 
 [KeJun](https://blog.kejun.me/) - 二次元智障
-
-[m0dulo](https://exodus.m0dulo.xyz/) - 隐宅
-
-[BOYANG YAN'S](http://yanboyang.com/)
-
-[gledos的博客](http://gledos.science) - 没有什么值钱的东西 
 
 你可以新建一个 pull request ,或者联系我，来添加你的博客到这里。

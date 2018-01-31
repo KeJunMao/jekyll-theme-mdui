@@ -9,8 +9,10 @@
     {% else %}
     <meta name="keywords" content="{{ site.data.site.head.keywords }}">
     {% endif %}
+    {% if site.data.site.uiux.meng == true%}
     {% if site.data.meng.animation.switch == true %}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    {% endif %}
     {% endif %}
     <link rel="shortcut icon" href="{{ site.data.site.head.favicon }}">
     <link rel="icon" sizes="192x192" href="{{ site.data.site.head.high_res_favicon }}">

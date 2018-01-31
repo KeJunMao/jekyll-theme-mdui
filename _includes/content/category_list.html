@@ -42,7 +42,7 @@
 <div class="mdui-row-md-3 mdui-row-sm-2">
 {% for category in site.categories %}
     <div class="mdui-col">
-    <div class="animated bounceIn" class="mdui-card k-list-card mdui-shadow-{{site.data.site.card.card_shadow}} {% if site.data.site.card.card_hoverable == true%}mdui-hoverable{% endif %}">
+    <div class="animated bounceIn mdui-card k-list-card mdui-shadow-{{site.data.site.card.card_shadow}} {% if site.data.site.card.card_hoverable == true%}mdui-hoverable{% endif %}">
         {% assign havedata = false %}
         {% for catedata in site.data.category %}
         {% capture catename %}{{category|first}}{% endcapture %}

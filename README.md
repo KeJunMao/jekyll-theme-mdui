@@ -4,6 +4,8 @@
 
 > A Jekyll theme based on mdui
 
+> 主题停更，只做兼容性维护。期待 V2 吧！
+
 ## Contents
 
 * [General](#general)
@@ -46,17 +48,7 @@
 
 ## TODO
 
-- [x] Category - Better style
-- [x] Tags - Better style
-- [x] Site style - More custom options
-- [x] Editor
-- [x] Posts - Last update date 
-- [x] Posts - Reading time 
-- [x] Posts - Code highlighting 
-- [x] Meng -  Immersive status bar from image
-- [x] Comment - Add More
-- [ ] Analytics - Add More
-- [ ] Fix many bugs
+- [ ] V2
 
 ## Note
 

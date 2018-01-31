@@ -43,8 +43,10 @@ live2d: # live2d ,see https://github.com/EYHN/hexo-helper-live2d
   leftOrRight: "right" # left or right
   offset: 10 # offset
 
+#!!!!do not use!!!!
 animation: # animate.css, see https://github.com/daneden/animate.css
-  switch: true # switch on and you can see the animation
+  switch: false # switch on and you can see the animation,!!!!do not use!!!!
+#!!!!do not use!!!!
 
 music_player:
   player: "aplayer" #cplayer or aplayer

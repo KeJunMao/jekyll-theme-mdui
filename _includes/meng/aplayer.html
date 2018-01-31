@@ -84,6 +84,10 @@ $('.k-music-btn').click(function(){
         $('.k-music-card').css('transform','translateX(0px)');
         flag = false;
     }
+    
+    if (!$(".aplayer-list").hasClass('aplayer-list-hide')) {
+        $(".aplayer-list").addClass('aplayer-list-hide');
+    }
 });
     document.addEventListener("visibilitychange", function() {
 	    if(document.visibilityState == "hidden" ){

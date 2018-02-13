@@ -20,13 +20,13 @@
             <div class="mdui-card k-postcontent">
                 {% if page.img == "" or page.img == null %}
                 <div class="mdui-card-media mdui-ripple k-post-media mdui-valign k-noimg">
-                    <h1><a>{{page.title}}</a></h3>
+                    <h1><a>{{page.title}}</a></h1>
                 </div>
                 {% else %}
                 <div class="mdui-card-media k-post-media" style="background-image: url({{page.img}});">
                     <div class="mdui-card-media-covered mdui-card-media-covered-gradient">
                         <div class="mdui-card-primary">
-                            <div class="mdui-card-primary-title"><a class="mdui-text-color-white-text">{{page.title}}</a></div>
+                            <h1 class="mdui-card-primary-title"><a class="mdui-text-color-white-text">{{page.title}}</a></h1>
                         </div>
                     </div>
                 </div>

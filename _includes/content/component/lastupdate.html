@@ -1,7 +1,7 @@
-{% if  site.data.site.lang == 'zh-CN' %}
-{% assign lang = site.data.lang[site.data.site.lang] %}
-{% else %}
+{% if site.data.site.lang == null or site.data.site.lang == "" %}
 {% assign lang = site.data.lang.en-US %}
+{% else %}
+{% assign lang = site.data.lang[site.data.site.lang] %}
 {% endif %}
 <style>
 .k-lastupdate{

@@ -69,7 +69,7 @@ google_site_verification: ""  # google search console verification code
 
 baidu_auto_push: false  # if you used baidu auto push to commit links
 
-lang: "zh-CN"  # lang
+lang: ""  # lang
 
 deploy: "" # if you used coding pages
 

@@ -77,3 +77,43 @@ en-US:
       toLinkedin: "Share to Linkedin"
       toQq: "Share to QQ"
       toTelegram: "Share to Telegram"
+
+TEST:
+   meng:
+      head_card: 
+          rss: "TEST"
+          sitemap: "TEST"
+   editor: 
+      content: "TEST"
+      frontmatter:
+         name: "TEST"
+         title: "TEST"
+         date: "TEST"
+         categories: "TEST"
+         tags: "TEST"
+         image: "TEST"
+      preview: "TEST"
+      download: "TEST"
+   lastupdate: 
+      one: "TEST"
+      two: "TEST"
+   readtime: 
+      one: "TEST"
+      two: "TEST"
+   page:
+      search: "TEST"
+   post:
+      continue: "TEST"
+      qrcode: "TEST"
+      qrcodeContent: "TEST"
+      comments_load_button: "TEST"
+      tags: "TEST"
+   share:
+      share: "TEST"
+      toWeibo: "TEST"
+      toTwitter: "TEST"
+      toFacebook: "TEST"
+      toGoogleplus: "TEST"
+      toLinkedin: "TEST"
+      toQq: "TEST"
+      toTelegram: "TEST"

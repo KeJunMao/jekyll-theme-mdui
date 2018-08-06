@@ -27,9 +27,9 @@
     <script src="https://cdn.bootcss.com/mdui/0.3.0/js/mdui.min.js"></script>
     <script src="{{ "/assets/js/History.js" | prepend: site.baseurl }}"></script>
 
-    <link rel="preload" href="https://cdn.bootcss.com/mdui/0.3.0/css/mdui.min.css" as="style" onload="this.rel='stylesheet'">
+    <link rel="preload" href="{{ "/assets/css/mdui.css" | prepend: site.baseurl }}"  as="style" onload="this.rel='stylesheet'">
     <link rel="preload" href="{{ "/assets/css/global.css" | prepend: site.baseurl }}" as="style" onload="this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://cdn.bootcss.com/mdui/0.3.0/css/mdui.min.css"></noscript>
+    <noscript><link rel="stylesheet" href="{{ "/assets/css/mdui.css" | prepend: site.baseurl }}" ></noscript>
     <noscript><link rel="stylesheet" href="{{ "/assets/css/global.css" | prepend: site.baseurl }}"></noscript>
 
     {% include component/nprogress.html %}
@@ -86,3 +86,23 @@ var all=MathJax.Hub.getAllJax(),i;for(i=0;i<all.length;i+=1){all[i].SourceElemen
 <script src="//cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML"></script>
 {% endif %}
 </head>
+{% if site.data.site.header.m_header == true %}
+<style>
+    .header-media{
+        display: block cursor: pointer;
+        max-height: 220px;
+        min-height: 220px;
+        background-position: 50% 50%;
+        background-size: cover;
+        background-color: white;
+    }
+	.header-image{
+		height: 80px;
+		width: 80px;
+	}
+	.m-padding{
+		padding-top:40px;
+		padding-left:20px;
+	}
+</style>
+{% endif %}

@@ -15,6 +15,9 @@ layout: default
     {% endif %}
     {% endif %}
 
+    {% if paginator.page == 1 %}
+		{% include content/paginator_top_post.html %}
+	{% endif %}
     {% include content/paginator_post_list.html %}
     {% include content/paginator_button.html %}
 </div>

@@ -4,14 +4,23 @@ layout: null
 
     {% if site.data.site.uiux.meng == true %}
     {% if site.data.meng.head_card.switch == true %}
+	
+	
     .head_card-offset{
-        padding-top: 65px;
+		{% if site.data.site.header.m_header == true %}
+        padding-top:15px;
+		{% else %}
+		padding-top:65px;
+		{% endif %}
     }
+	
     @media screen and (max-width: 600px){
         .head_card-offset{
             padding-top: 0px;
         }
     }
+	
+	
     {% endif %}
     {% endif %}
 
@@ -83,7 +92,7 @@ body,header{
     flex-shrink: 0;
 }
 .k-posts-list {
-    padding-top: 65px;
+    padding-top: 15px;
 }
 @media screen and (max-width: 600px){
     .k-posts-list {

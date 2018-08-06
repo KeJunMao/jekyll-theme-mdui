@@ -1,27 +1,27 @@
 head: 
-   favicon: "https://ooo.0o0.ooo/2017/05/27/59294212bc16e.png" #  the favicon
-   high_res_favicon: "https://ooo.0o0.ooo/2017/06/08/5939484dc618e.png" #  the favicon using high quality format
-   apple_touch_icon: "https://ooo.0o0.ooo/2017/06/08/5939484dc618e.png" # the iOS Home button icon
+   favicon: "https://i.loli.net/2017/07/28/597afb42cef8a.png" #  the favicon
+   high_res_favicon: "https://i.loli.net/2017/07/28/597afb42cef8a.png" #  the favicon using high quality format
+   apple_touch_icon: "https://i.loli.net/2017/07/28/597afb42cef8a.png" # the iOS Home button icon
    keywords: "blog jekyll mdui theme" #  the site keywords
-
+header:
+    m_header: true
+    m_color: mdui-color-pink-400
+    m_background_url: "https://i.loli.net/2018/03/24/5ab63232e1e64.jpg"
+    headroom: true
+    m_icon_color: pink
 uiux:
    android_chrome_color: "#eeeeee" #  the color of the Chrome address bar
    nprogress_color: "#29d" #  the color of the top loading progress bar
    nprogress_buffer: 200 # the top loading progress bar buffers
-   meng: false # meng
-
+   meng: true
 background: 
    purecolor: "#eeeeee" # the background color
-
 img: 
-   avatar: "https://ooo.0o0.ooo/2017/05/26/5928368d409dd.png" # your avatar
-
+   avatar: "https://i.loli.net/2017/07/28/597afb42cef8a.png" # your avatar
 card: 
-   card_shadow: 1 # card shadow (0-24), 0 is not displayed
-   card_hoverable: false # When the hover to deepen the shadow
-
+   card_shadow: 5 # card shadow (0-24), 0 is not displayed
+   card_hoverable: true # When the hover to deepen the shadow
 many_authors: false
-
 sns_share: # SNS Share Switch
    twitter: true
    facebook: false
@@ -30,9 +30,8 @@ sns_share: # SNS Share Switch
    linkedin: false
    qq: true
    telegram: true
-  
 comment:
-  used: "" # disqus,livere,gitment,valine
+  used: "gitment" # disqus,livere,gitment,valine
   # disqus config
   disqus_shortname: "" # Your disqus 
   disqus_button: true # disqus load button
@@ -41,38 +40,31 @@ comment:
   disqus_api_key: "" # (Do not use)
   # livere config
   livere_type: 'city'
-  livere_data_uid: ''
+  livere_data_uid: 'MTAyMC8yOTQ5Mi82MDYw'
   # gitment config
-  owner: ""
-  repo: ""
-  client_id: ""
-  client_secret: ""
+  owner: "Mysaku"
+  repo: "jekyll-theme-mdui"
+  client_id: "2945e26ca36ad881e9b5"
+  client_secret: "816e328c91af9099932699cff0b18bc9a535213b"
   #valine config
   valine_notify: false #mail notifier
   valine_verify: false #validation code
   valine_app_id: ''
   valine_app_key: ''
   valine_placeholder: "ヾﾉ≧∀≦)o来啊，快活啊!"
-
+passage:
+  describe: true
 prism:
   themes: prism-okaidia
   components: 
     - bash 
   plugins: 
-
 mathjax: true
-
 google_analytics: ""  # google analytics code
-
 baidu_site_verification: ""  # baidu site verification code
 google_site_verification: ""  # google search console verification code
-
 baidu_auto_push: false  # if you used baidu auto push to commit links
-
 lang: ""  # lang
-
 deploy: "" # if you used coding pages
-
 custom_css: "" # Use the assets/css/customCss.css
-
 custom_js: "" # Use the assets/js/customJS.js

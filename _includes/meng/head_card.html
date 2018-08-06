@@ -4,11 +4,15 @@
 {% else %}
 {% assign lang = site.data.lang.en-US %}
 {% endif %}
+{% if  site.data.meng.head_card.text_wisdom == true %}
+<script src="https://v1.hitokoto.cn/?encode=js&select=%23hitokoto" defer></script>
+{% else %}
+{% endif %}
 <style>
     .k-head-card-media{
         display: block cursor: pointer;
-        max-height: 284px;
-        min-height: 284px;
+        max-height: 300px;
+        min-height: 300px;
         background-position: 50% 50%;
         background-size: cover;
         background-color: white;
@@ -28,21 +32,28 @@
         margin: 0 auto;
     }
 </style>
-<div class="mdui-row">
+<div class="mdui-row mdui-hidden-sm-down">
     <div class="mdui-col-sm-8">
         <div class="mdui-card k-list-card mdui-shadow-{{site.data.site.card.card_shadow}} {% if site.data.site.card.card_hoverable == true%}mdui-hoverable{% endif %}">
             <div class="mdui-card-media k-head-card-media" style="background-image:url('{{head_card.left_img}}')">
                 <div class="mdui-card-media-covered mdui-card-media-covered-gradient">
                     <div class="mdui-card-primary">
+						{% if  site.data.meng.head_card.text_wisdom == true %}
+                        <div class="mdui-card-primary-title"><a class="mdui-text-color-white-text" id="hitokoto"/></div>
+						{% else %}
                         <div class="mdui-card-primary-title"><a class="mdui-text-color-white-text">{{head_card.left_text}}</a></div>
-                    </div>
+						{% endif %}
+					</div>
                 </div>
             </div>
+						{% if site.data.meng.head_card.author == true %}
             <div class="mdui-divider"></div>
             <div class="mdui-card-header k-head-card-content">
                 <img class="mdui-card-header-avatar" src="{{site.data.site.img.avatar}}" />
                 <div class="mdui-card-header-title">{{site.author}}</div>
             </div>
+						{% else %}
+						{% endif %}
         </div>
     </div>
     <div class="mdui-col-sm-4">
@@ -50,6 +61,7 @@
             <div class="mdui-card-media k-head-card-media mdui-valign">
                 <img class="k-head-card-img" src="{{head_card.right_img}}" alt="">
             </div>
+						{% if  site.data.meng.head_card.author == true %}
             <div class="mdui-divider"></div>
             <div class="mdui-card-header k-head-card-content">
                 <div class="mdui-card-header-title mdui-float-left">{{site.title}}</div>
@@ -63,6 +75,8 @@
                     </li>
                 </ul>
             </div>
+						{% else %}
+						{% endif %}
         </div>
     </div>
 </div>

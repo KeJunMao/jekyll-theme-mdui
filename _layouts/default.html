@@ -6,12 +6,23 @@ layout: compress
     {% include head.html %}
     <body>
         {% include component/totop.html %}
+		{% if site.data.site.header.m_header == true %}
+        {% include header/m_header.html %}
+		{% else %}
         {% include header/header.html %}
+		{% endif %}
+		
+		
+
+		
         <div class="mdui-container container">
             <section class="content">
                 {{ content }}
             </section>
         </div>
+		
+		
+		
         {% if site.data.site.google_analytics != "" %}
         {% include analytics/google.html %}
         {% endif %}

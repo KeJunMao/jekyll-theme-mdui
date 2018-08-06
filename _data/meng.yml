@@ -4,66 +4,50 @@ title:  # Meng title
   hidden:  "(つェ⊂)看不到我~" # State is hidden text
   with_default_title: true # with default title
   reset_time: 1000 # If state is visible , reset default title times(ms)
-
 cursor: # Meng cursor
-  switch: false # Meng cursor switch
-  auto_url: "https://ooo.0o0.ooo/2017/06/12/593ea1901c930.png" # State is auto style
-  pointer_url: "https://ooo.0o0.ooo/2017/06/12/593ea3612fd77.png" # State is pointer style
-
+  switch: true
+  auto_url: "https://ooo.0o0.ooo/2017/06/12/593ea1901c930.png"
+  pointer_url: "https://ooo.0o0.ooo/2017/06/12/593ea3612fd77.png"
 console: # Meng console info
-  switch: true # Meng console info switch
+  switch: false # Meng console info switch
   theme_info: true # output theme info
   text: "Copyright © 2017 Jekyll-Theme-MDUI" # text
   color: "#fff" # text color
   background: "#448aff" # background color
-
-header: # Meng header color + theme-color
+header: 
   switch: true
-
 background: # Meng background
-  switch: true
-  background_img: "https://ooo.0o0.ooo/2017/06/14/5940a9b8e4c21.jpg"
+  switch: false
+  background_img: ""
   transparent_header: true
   transparent_footer: false
   text_color: '#000'
-
 card: # Meng card
   switch: true
-  background_color: 'rgba(255, 255, 255, 0.5)'
-  card_img_opacity: '0.8'
-
+  background_color: 'rgba(255, 255, 255, 1.0)'
+  card_img_opacity: '1.0'
 live2d: # live2d ,see https://github.com/EYHN/hexo-helper-live2d
   switch: false
-  model: "/assets/live2d/koharu/koharu.model.json" # model.json path
+  model: "/assets/33/33.model.json" # model.json path
   drag: true # is drag ?
-  in_mobile: false
-  width: 130 # canvas width
-  height: 190 # canvas height
-  bottom: 100 # canvas bottom
+  width: 170 # canvas width
+  height: 510 # canvas height
+  bottom: -40 # canvas bottom
   leftOrRight: "right" # left or right
-  offset: 10 # offset
-
-#!!!!do not use!!!!
-animation: # animate.css, see https://github.com/daneden/animate.css
-  switch: false # switch on and you can see the animation,!!!!do not use!!!!
-#!!!!do not use!!!!
-
-music_player:
-  player: "aplayer" #cplayer or aplayer
+  offset: 20 # offset
+aplayer:
+  switch: false
   button_color: "#1abc9c"
   music:
-    - title: 'Faded'
-      author: 'Alan Walker'
-      url: 'http://www.170mv.com/kw/other.web.rh01.sycdn.kuwo.cn/resource/n2/14/71/3899067167.mp3'
-      pic: 'http://p4.music.126.net/8dzD62VK8jLDbhEqkmpIAg==/18277181788626198.jpg?param=130y130'
-    - title: 'Unity'
-      author: 'TheFatRat'
-      url: 'http://www.170mv.com/kw/other.web.ri01.sycdn.kuwo.cn/resource/n2/44/7/1205252665.mp3'
-      pic: 'http://img4.kuwo.cn/star/starheads/240/72/35/3484765923.jpg'
-
+    title: 'Faded'
+    author: 'Alan Walker'
+    url: ''
+    pic: 'http://p4.music.126.net/8dzD62VK8jLDbhEqkmpIAg==/18277181788626198.jpg?param=130y130'
 head_card:
   switch: true
-  left_img: "https://ooo.0o0.ooo/2017/06/19/5947b272d418b.jpg"
-  left_text: "『 · 如果真爱有颜色 』"
-  right_img: "https://ooo.0o0.ooo/2017/06/08/5939484dc618e.png"
+  author: false
+  left_img: "https://ooo.0o0.ooo/2017/07/28/597b33b5aa60e.jpg"
+  text_wisdom: true
+  left_text: "『人呐就不知道』"
+  right_img: "https://i.loli.net/2017/07/28/597b01daaf4ad.png"
   offset_level: 2

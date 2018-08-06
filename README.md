@@ -1,10 +1,6 @@
-![](/jekylltheme.jpg)
-
 # Jekyll Theme MDUI
 
 > A Jekyll theme based on mdui
-
-> 主题停更，只做兼容性维护。期待 V2 吧！
 
 ## Contents
 
@@ -32,7 +28,7 @@
 
 ## Demo
 
-[KeJun's Blog](https://blog.kejun.me)
+[Mysaku's Blog](https://blog.mysaku.pw)
 
 ## Quick start 
 
@@ -42,13 +38,11 @@
 
 ## Docs
 
-[Docs](http://mdui.kejun.space/#/)(!!!Need Help!!!)
-
 [中文文档](http://mdui.kejun.space/#/zh-cn/)
 
 ## TODO
 
-- [ ] V2
+- [ ] TODO都是假的
 
 ## Note
 

@@ -1,0 +1,3 @@
+---
+layout: category_content
+---

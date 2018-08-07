@@ -28,7 +28,7 @@
 
 ## Demo
 
-[Mysaku's Blog](https://blog.mysaku.pw)
+[Jekyll-Theme-Mdui](https://mysaku.github.io/jekyll-theme-mdui)
 
 ## Quick start 
 

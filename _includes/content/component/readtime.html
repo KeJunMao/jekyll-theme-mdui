@@ -21,7 +21,7 @@
 </style>
 {% assign words = content | strip_html | strip_newlines | size %}
 {% if words < 360 %}
-<a class="mdui-btn mdui-btn-block k-readtime"  href="javascript:;">{{lang.readtime.one}}1{{lang.readtime.two}}</a>
+<a class="mdui-btn mdui-btn-block k-readtime"  href="javascript:;">{{lang.readtime.one}} 1 {{lang.readtime.two}}</a>
 {% else %}
 <a class="mdui-btn mdui-btn-block k-readtime"  href="javascript:;">{{lang.readtime.one}} {{ content | strip_html | strip_newlines | size | divided_by:360 | round}} {{lang.readtime.two}}</a>
 {% endif %}

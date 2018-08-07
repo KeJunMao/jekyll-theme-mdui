@@ -42,7 +42,8 @@
 
 ## TODO
 
-- [ ] TODO都是假的
+- [add docs for the new feature]
+- [fix passages on top can't be open by click image]
 
 ## Note
 

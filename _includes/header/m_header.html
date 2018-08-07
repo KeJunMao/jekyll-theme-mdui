@@ -56,8 +56,11 @@
 	
         <div class="mdui-toolbar {{ site.data.site.header.m_color }}">
             <span class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-white" mdui-drawer="{target: '#main-drawer', overlay: true, swipe: true}"><i class="mdui-icon material-icons">&#xe5d2;</i></span>
-            <a class="mdui-typo-headline">{{site.title |upcase }}</a>
-			
+            {% if page.title ==  %}
+			<a class="mdui-typo-headline">{{ site.title |upcase }}</a>
+			{% else %}
+			<a class="mdui-typo-headline">{{ page.title |upcase }}</a>
+			{% endif %}
 			<div class="mdui-toolbar-spacer"></div>
 			
 			<div class="mdui-textfield k-navsearch-btn mdui-textfield-expandable">
@@ -105,7 +108,7 @@
 		
 		
 	<ul class="mdui-list" mdui-collapse="{accordion: true}">
-<a mdui-drawer="{target: '#main-drawer'}" href="/">
+<a mdui-drawer="{target: '#main-drawer'}" href="{{ "/" | prepend: site.baseurl }}">
   <li class="mdui-list-item mdui-ripple">
     <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-blue">home</i>
     <div class="mdui-list-item-content">HOME</div>

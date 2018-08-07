@@ -42,14 +42,19 @@
   color: white;
 }
 </style>
+
+    {% if paginator.page == 1 %}
+		{% include content/paginator_top_post.html %}
+	{% endif %}
+	
     {% for post in paginator.posts %}
-    {% if post.top == true %}
-        {% continue %}
-    {% endif %}
+	{% if post.top == true %}
+		{% continue %}
+	{% endif %}
     <div class="animated lazyload flipInX mdui-card k-list-card mdui-shadow-{{site.data.site.card.card_shadow}} {% if site.data.site.card.card_hoverable == true%}mdui-hoverable{% endif %}">
       {% if post.img == "" or post.img == null %}
       <div class="mdui-card-media mdui-ripple k-post-media mdui-valign k-noimg">
-        <h1><a href="{{post.url| prepend: site.baseurl}}">{{post.title}}</a></h3>
+        <h1><a href="{{post.url| prepend: site.baseurl}}">{{post.title}}</a></h1>
       </div>
       {% else %}
       <div class="mdui-card-media mdui-ripple k-post-media lazy" data-original="{{post.img}}">
@@ -93,3 +98,4 @@
     </div>
     {% endfor %}
     {% include content/component/lazyload.html %}
+	

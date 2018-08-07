@@ -59,7 +59,7 @@ prism:
   components: 
     - bash 
   plugins: 
-mathjax: true
+mathjax: false
 google_analytics: ""  # google analytics code
 baidu_site_verification: ""  # baidu site verification code
 google_site_verification: ""  # google search console verification code

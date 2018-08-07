@@ -24,13 +24,16 @@
     <link rel="manifest" href="{{ "/manifest.json" | prepend: site.baseurl }}">
 
     <script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdn.bootcss.com/mdui/0.3.0/js/mdui.min.js"></script>
+    <script src="//cdnjs.loli.net/ajax/libs/mdui/0.4.1/js/mdui.min.js"></script>
     <script src="{{ "/assets/js/History.js" | prepend: site.baseurl }}"></script>
 
-    <link rel="preload" href="{{ "/assets/css/mdui.css" | prepend: site.baseurl }}"  as="style" onload="this.rel='stylesheet'">
+    <link rel="preload" href="//cdnjs.loli.net/ajax/libs/mdui/0.4.1/css/mdui.min.css"  as="style" onload="this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="//cdnjs.loli.net/ajax/libs/mdui/0.4.1/css/mdui.min.css"></noscript>
     <link rel="preload" href="{{ "/assets/css/global.css" | prepend: site.baseurl }}" as="style" onload="this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="{{ "/assets/css/mdui.css" | prepend: site.baseurl }}" ></noscript>
     <noscript><link rel="stylesheet" href="{{ "/assets/css/global.css" | prepend: site.baseurl }}"></noscript>
+	
+    <link rel="preload" href="{{ "/assets/css/sidebar.css" | prepend: site.baseurl }}" as="style" onload="this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="{{ "/assets/css/sidebar.css" | prepend: site.baseurl }}"></noscript>
 
     {% include component/nprogress.html %}
     <script>

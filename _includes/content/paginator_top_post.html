@@ -50,7 +50,7 @@
     <div class="animated flipInX mdui-card k-list-card mdui-shadow-{{site.data.site.card.card_shadow}} {% if site.data.site.card.card_hoverable == true%}mdui-hoverable{% endif %}">
       {% if post.img == "" or post.img == null %}
       <div class="mdui-card-media mdui-ripple k-post-media mdui-valign k-noimg">
-        <h1><a href="{{post.url| prepend: site.baseurl}}">{{post.title}}</a></h3>
+        <h1><a href="{{post.url| prepend: site.baseurl}}">{{post.title}}</a></h1>
       </div>
       {% else %}
       <div class="mdui-card-media mdui-ripple k-post-media lazy" data-original="{{post.img}}">
@@ -100,3 +100,4 @@
 	
 {% endfor %}
     {% include content/component/lazyload.html %}
+	

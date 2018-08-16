@@ -1,0 +1,163 @@
+body.mdui-loaded {
+  -webkit-transition: padding .3s cubic-bezier(0, 0, .2, 1);
+          transition: padding .3s cubic-bezier(0, 0, .2, 1);
+}
+body.mdui-loaded .mdui-drawer {
+  -webkit-transition: all .3s cubic-bezier(0, 0, .2, 1);
+          transition: all .3s cubic-bezier(0, 0, .2, 1);
+}
+/* 鎶藉眽鏍忓灞傦紝榛樿鍑虹幇鍦ㄥ乏渚т笖闅愯棌 */
+.mdui-drawer {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 5000;
+  width: calc(100% - 56px);
+  max-width: 280px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  white-space: nowrap;
+
+  will-change: transform;
+}
+@media (max-width: 1023px) {
+  .mdui-drawer:not(.mdui-drawer-open) {
+    -webkit-box-shadow: none !important;
+	box-shadow: none !important;
+	}
+}
+@media (min-width: 600px) {
+  .mdui-drawer {
+    width: calc(100% - 64px);
+    max-width: 320px;
+  }
+}
+@media (min-width: 1024px) {
+  .mdui-drawer {
+    width: 300px;
+    max-width: none;
+  }
+  .mdui-drawer.mdui-drawer-close {
+    -webkit-box-shadow: none !important;
+            box-shadow: none !important;
+  }
+  .mdui-drawer.mder-drawer-open {
+  }
+}
+/* 鍑虹幇鍦ㄥ彸渚х殑鎶藉眽鏍?*/
+.mdui-drawer-right {
+  right: 0;
+  left: auto;
+}
+/* 骞虫澘涓婄殑鏍峰紡 */
+@media (max-width: 1023px) {
+  .mdui-drawer {
+    /* 濮嬬粓鏈夎儗鏅拰闃村奖 */
+    background-color: #fff;
+    -webkit-box-shadow: 0 8px 10px -5px rgba(0, 0, 0, .2), 0 16px 24px 2px rgba(0, 0, 0, .14), 0 6px 30px 5px rgba(0, 0, 0, .12);
+            box-shadow: 0 8px 10px -5px rgba(0, 0, 0, .2), 0 16px 24px 2px rgba(0, 0, 0, .14), 0 6px 30px 5px rgba(0, 0, 0, .12);
+    /* 榛樿闅愯棌 */
+    -webkit-transform: translateX(-330px);
+            transform: translateX(-330px);
+  }
+  .mdui-drawer-right {
+    /* 鍙充晶 drawer 涔熼粯璁ら殣钘?*/
+    -webkit-transform: translateX(330px);
+            transform: translateX(330px);
+  }
+}
+/* 鎵嬫満涓婄殑鏍峰紡 */
+@media (max-width: 599px) {
+  .mdui-drawer {
+    -webkit-transform: translateX(-290px);
+            transform: translateX(-290px);
+  }
+  .mdui-drawer-right {
+    -webkit-transform: translateX(290px);
+            transform: translateX(290px);
+  }
+}
+/* 寮哄埗闅愯棌鎶藉眽鏍?*/
+.mdui-drawer-close {
+  -webkit-transform: translateX(-290px);
+          transform: translateX(-290px);
+}
+.mdui-drawer-close.mdui-drawer-right {
+  -webkit-transform: translateX(290px);
+          transform: translateX(290px);
+}
+@media (min-width: 600px) {
+  .mdui-drawer-close {
+    -webkit-transform: translateX(-330px);
+            transform: translateX(-330px);
+  }
+  .mdui-drawer-close.mdui-drawer-right {
+    -webkit-transform: translateX(330px);
+            transform: translateX(330px);
+  }
+}
+@media (min-width: 1024px) {
+  .mdui-drawer-close {
+    -webkit-transform: translateX(-300px);
+            transform: translateX(-300px);
+  }
+  .mdui-drawer-close.mdui-drawer-right {
+    -webkit-transform: translateX(300px);
+            transform: translateX(300px);
+  }
+}
+/* 寮哄埗鏄剧ず鎶藉眽鏍?*/
+.mdui-drawer-open {
+  -webkit-transform: translateX(0) !important;
+          transform: translateX(0) !important;
+}
+/* PC 涓婄殑鏍峰紡 */
+@media (min-width: 1024px) {
+  /* 浣?body 鑾峰緱 padding-left 鎴?padding-right锛岄伩鍏嶈鎶藉眽鏍忚鐩栦綇椤甸潰 */
+  body.mdui-drawer-body-left {
+    padding-left: 0px;
+  }
+  body.mdui-drawer-body-right {
+    padding-right: 260px;
+  }
+  /* PC 涓婇粯璁ゆ湁涓婅竟璺?*/
+  .mdui-appbar-with-toolbar .mdui-drawer {
+    top: 64px;
+  }
+  .mdui-appbar-with-tab .mdui-drawer {
+    top: 48px;
+  }
+  .mdui-appbar-with-tab-larger .mdui-drawer {
+    top: 72px;
+  }
+  .mdui-appbar-with-toolbar.mdui-appbar-with-tab .mdui-drawer {
+    top: 112px;
+  }
+  .mdui-appbar-with-toolbar.mdui-appbar-with-tab-larger .mdui-drawer {
+    top: 136px;
+  }
+}
+/* 鎶藉眽鏍忎笉鏄€忔槑鏃舵坊鍔犻槾褰?*/
+.mdui-drawer[class*="mdui-color-"]:not(.mdui-color-transparent) {
+  -webkit-box-shadow: 0 8px 10px -5px rgba(0, 0, 0, .2), 0 16px 24px 2px rgba(0, 0, 0, .14), 0 6px 30px 5px rgba(0, 0, 0, .12);
+          box-shadow: 0 8px 10px -5px rgba(0, 0, 0, .2), 0 16px 24px 2px rgba(0, 0, 0, .14), 0 6px 30px 5px rgba(0, 0, 0, .12);
+}
+/* 鎶藉眽鏍?100% 楂樺害锛岃鐩栧湪瀵艰埅鏍忎笂闈?*/
+.mdui-drawer-full-height {
+  top: 0 !important;
+}
+/**
+ * =============================================================================
+ * ************   Drawer dark   ************
+ * =============================================================================
+ */
+@media (max-width: 1023px) {
+  .mdui-theme-layout-dark .mdui-drawer {
+    background-color: #424242;
+  }
+}

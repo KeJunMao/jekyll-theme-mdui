@@ -1,0 +1,143 @@
+<style>
+    .padding {
+	padding-top: 45px;
+}
+
+.avatar {
+	width: 100px;
+	height: 100px;
+	padding-left: 16px;
+	padding-right: 16px;
+	padding-top: 24px!important;
+}
+
+.name {
+	color: black!important;
+	font-size: 40px!important;
+	font-weight: bold;
+}
+
+.title {
+	padding-left: 16px!important;
+	padding-top: 12px!important;
+	size: 12px!important;
+}
+
+a:link {
+	text-decoration: none;
+}
+
+a:visited {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+a:active {
+	text-decoration: none;
+}
+
+.primary-title {
+	color: black!important;
+}
+
+.padding-bottom-8px {
+	padding-bottom: 8px!important;
+}
+
+.padding-bottom-16px {
+	padding-bottom: 16px!important;
+}
+
+.k-post-media {
+	display: block cursor: pointer;
+	max-height: 250px;
+	min-height: 250px;
+	height: 250px;
+	background-position: 50% 50%;
+	background-size: cover;
+	background-color: #303033;
+}
+</style>
+<body>
+    <div class="padding">
+        <div class="mdui-container">
+            <div class="mdui-col-md-1 mdui-col-sm-1">
+            </div>
+            <div class="mdui-col-md-10 mdui-col-sm-10">
+                <div class="animated flipInX mdui-card mdui-shadow-{{site.data.site.card.card_shadow}} {% if site.data.site.card.card_hoverable == true%}mdui-hoverable{% endif %}">
+                    <div class="mdui-card-primary-title title">
+                        我的情侣
+                    </div>
+                    <div class="mdui-typo">
+                        <hr/>
+                    </div>
+                    <a href="{{site.data.love.header.siteurl}}" target="_blank">
+                        <img class="avatar mdui-center" src="https://ooo.0o0.ooo/2017/06/08/5939484dc618e.png"/>
+					</a>
+                        <div class="mdui-card-primary">
+                            <h1 class="padding-bottom-8px mdui-card-primary-title name mdui-text-center">
+                    <a href="{{site.data.love.header.siteurl}}" target="_blank">
+					<font color="black">
+                                {{site.data.love.header.name}}
+					</font>
+					</a>
+                            </h1>
+                            <div class="padding-bottom-8px primary-title mdui-card-primary-subtitle mdui-text-center">
+                    <a href="{{site.data.love.header.siteurl}}" target="_blank">
+					<font color="black">
+                                {{site.data.love.header.introduction}}
+					</font>
+                    </a>
+							</div>
+						</div>
+                </div>
+                </br>
+                </br>
+				{% if site.data.love.photo.photo == true %}
+                <div class=" animated flipInX lazyload mdui-card mdui-shadow-{{site.data.site.card.card_shadow}} {% if site.data.site.card.card_hoverable == true%}mdui-hoverable{% endif %}">
+                    <div class="mdui-card-primary-title title">
+                        相册
+                    </div>
+                    <div class="mdui-typo">
+                        <hr/>
+                    </div>
+                    <div class="mdui-col-md-12 mdui-col-sm-12">
+                        <div class="padding-bottom-16px mdui-col-md-4 mdui-col-sm-6">
+                            <div class="mdui-card mdui-shadow-2">
+                                <div class="mdui-card-media mdui-ripple k-post-media lazy" data-original="{{site.data.love.photo.pictureo}}">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="padding-bottom-16px mdui-col-md-4 mdui-col-sm-6">
+                            <div class="mdui-card mdui-shadow-2">
+                                <div class="mdui-card-media mdui-ripple k-post-media lazy" data-original="{{site.data.love.photo.picturet}}">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="padding-bottom-16px mdui-col-md-4 mdui-col-sm-6">
+                            <div class="mdui-card mdui-shadow-2">
+                                <div class="mdui-card-media mdui-ripple k-post-media lazy" data-original="{{site.data.love.photo.pictureth}}">
+                                </div>
+                            </div>
+                        </div>
+						<div class="padding-bottom-8px">
+						</div>
+                    </div>
+                </div>
+				{% else %}
+				{% endif %}
+            </div>
+        </div>
+	</div>
+<div class="mdui-fab-wrapper">
+<a href="{{site.data.love.header.siteurl}}" target="_blank">
+  <button class="mdui-fab mdui-ripple mdui-color-theme-accent">
+    <i class="mdui-icon material-icons">add</i>
+  </button>
+  </a>
+</div>
+    {% include content/component/lazyload.html %}
+</body>

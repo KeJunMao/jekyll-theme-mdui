@@ -42,25 +42,40 @@
   color: white;
 }
 </style>
+
+    {% if paginator.page == 1 %}
+		{% include content/paginator_top_post.html %}
+	{% endif %}
+	
     {% for post in paginator.posts %}
-    <div class="animated flipInX mdui-card k-list-card mdui-shadow-{{site.data.site.card.card_shadow}} {% if site.data.site.card.card_hoverable == true%}mdui-hoverable{% endif %}">
+	{% if post.top == true %}
+		{% continue %}
+	{% endif %}
+    <div class="animated lazyload flipInX mdui-card k-list-card mdui-shadow-{{site.data.site.card.card_shadow}} {% if site.data.site.card.card_hoverable == true%}mdui-hoverable{% endif %}">
       {% if post.img == "" or post.img == null %}
       <div class="mdui-card-media mdui-ripple k-post-media mdui-valign k-noimg">
-        <h1><a href="{{post.url| prepend: site.baseurl}}">{{post.title}}</a></h3>
+        <h1><a href="{{post.url| prepend: site.baseurl}}">{{post.title}}</a></h1>
       </div>
       {% else %}
       <div class="mdui-card-media mdui-ripple k-post-media lazy" data-original="{{post.img}}">
-        <div class="mdui-card-media-covered mdui-card-media-covered-gradient">
-          <div class="mdui-card-primary">
-            <div class="mdui-card-primary-title"><a class="mdui-text-color-white-text" href="{{post.url| prepend: site.baseurl}}">{{post.title}}</a></div>
-          </div>
-        </div>
+			<div class="mdui-card-media-covered mdui-card-media-covered-gradient">
+				<div class="mdui-card-primary">
+					<div class="mdui-card-primary-title"><a class="mdui-text-color-white-text" href="{{post.url| prepend: site.baseurl}}">{{post.title}}</a></div>
+				</div>
+			</div>
       </div>
+	  
       {% endif %}
+	  {% if site.data.site.passage.describe == true %}
+      <div class="mdui-card-content mdui-text-color-black-secondary mdui-typo">
+        {{ post.describe}} <a href="{{post.url | prepend: site.baseurl}}">{{lang.post.continue}}</a>
+      </div>
+      {% else %}
       <div class="mdui-card-content mdui-text-color-black-secondary mdui-typo">
         {{ post.excerpt | strip_html}} <a href="{{post.url | prepend: site.baseurl}}">{{lang.post.continue}}</a>
       </div>
-      <div class="mdui-divider"></div>
+	  {% endif %}
+	  <div class="mdui-divider"></div>
       <div class="mdui-card-header">
         <div class="mdui-card-menu mdui-typo">
           <a class="k-post-categories" href="{{ "/category" | prepend: site.baseurl }}/{{post.categories}}.html">{{post.categories}}</a>
@@ -83,14 +98,4 @@
     </div>
     {% endfor %}
     {% include content/component/lazyload.html %}
-  <script>
-    Array.prototype.forEach.call(document.querySelectorAll(".mdui-card-media"), function(a) {
-        var b = a.querySelector("a");
-        if (!b) {
-            return
-        }
-        a.addEventListener("click", function() {
-            b.click();
-        })
-    });
-  </script>
+	

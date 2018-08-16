@@ -1,8 +1,8 @@
 title: "Jekyll-Theme-MDUI"
-description: "A Jekyll theme based on MDUI"
+description: "A Jekyl Theme Based on MDUI"
 url: 
-baseurl: ""
-author: "KeJun"
+baseurl: "/jekyll-theme-mdui"
+author: "Mysaku"
 paginate: 5
 paginate_path: "/blog/page:num/"
 
@@ -22,3 +22,4 @@ exclude:
   - README.md
   - vendor
   - docs
+  - CHANGELOG.md

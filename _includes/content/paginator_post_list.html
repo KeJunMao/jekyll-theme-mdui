@@ -78,7 +78,9 @@
 	  <div class="mdui-divider"></div>
       <div class="mdui-card-header">
         <div class="mdui-card-menu mdui-typo">
-          <a class="k-post-categories" href="{{ "/category" | prepend: site.baseurl }}/{{post.categories}}.html">{{post.categories}}</a>
+          {% for category in post.categories %}
+            <a class="k-post-categories" href="{{ "/category" | prepend: site.baseurl }}/{{category}}.html">{{category}}</a>
+          {% endfor %}
         </div>
         {% if site.data.site.many_authors == true %}
         {% if post.author != null %}

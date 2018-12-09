@@ -3,17 +3,36 @@
 {% else %}
 {% assign lang = site.data.lang[site.data.site.lang] %}
 {% endif %}
-<script src="https://cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-<script src="//cdn.jsdelivr.net/npm/valine@1.1.6/dist/Valine.min.js"></script>
-<div  style="padding:0px 16px;" class="comment"></div>
 <script>
+    $(function () {
+        if($('script[src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"]').length === 0){
+            (function (d, s) {
+            var j, e = d.getElementsByTagName(s)[0];
+
+            if (typeof LivereTower === 'function') {
+                return;
+            }
+
+            j = d.createElement(s);
+            j.src = '//cdn1.lncld.net/static/js/3.0.4/av-min.js';
+            
+
+            e.parentNode.insertBefore(j, e);
+        })(document, 'script');
+        } 
+    })
+</script>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<div style="padding:0px 16px;" class="comment"></div>
+<script>
+setTimeout(function(){
     new Valine({
-        av: AV,
         el: '.comment',
         notify: {{site.data.site.comment.valine_notify}},
         verify: {{site.data.site.comment.valine_verify}},
         app_id: '{{site.data.site.comment.valine_app_id}}', 
         app_key: '{{site.data.site.comment.valine_app_key}}', 
         placeholder: '{{site.data.site.comment.valine_placeholder}}' 
-    });
+});
+},1000)
 </script>

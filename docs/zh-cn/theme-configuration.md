@@ -228,6 +228,8 @@ google analytics
 
 谷歌验证码，用于Google Search Console新增站点的验证，Google Search Console和Google Analytics配合起来使用更佳
 
+使用时，请选择使用HTML标记作为验证方法，然后将content内的验证码复制到此处
+
 ### baidu_auto_push
 
 是否开启百度链接提交自动推送方式，true为开启，false为关闭，开启后在页面被访问时，页面URL将立即被推送给百度，当然你也可以在[百度站长平台](http://zhanzhang.baidu.com)采用主动推送、sitemap推送或手动提交方式

@@ -16,6 +16,7 @@ date: 2016-04-14 10:24:49 +0800
 categories: technology
 tags: ubuntu apache mysql php phpmyadmin
 img: https://ooo.0o0.ooo/2017/05/27/59292b1243dc9.jpg
+describe: 还原了服务器，于是重装，顺路记录下来，路过的朋友们可以借鉴，LAMP Go!
 ---
 ```
 
@@ -58,11 +59,11 @@ lastupdate: 2017-06-25 12:24:49 +0800
 
 #### categories
 
-文章所属分类
+文章所属分类，可使用空格添加多个分类
 
 #### tags
 
-文章包含的标签，使用空格分开多个标签。
+文章包含的标签，可使用空格分开多个标签
 
 #### img
 
@@ -77,3 +78,7 @@ lastupdate: 2017-06-25 12:24:49 +0800
 #### themetextcolor
 
 移动端的header文本颜色
+
+#### describe
+
+为文章添加一段简介，简介将出现在文章卡片的下方；若不添加，则将默认使用文章开头的第一句话作为简介

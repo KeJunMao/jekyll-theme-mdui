@@ -5,9 +5,8 @@ date: 2018-02-13 13:26:16 +0800
 categories: Living
 tags: discord game yy
 img: https://i.loli.net/2018/02/13/5a8299ad7dff9.png
+describe: 为什么要使用流氓 YY ？
 ---
-
-为什么要使用流氓 YY ？
 
 首先，[点击这里](https://discordapp.com/)下载 Discord 。
 

@@ -1,3 +1,5 @@
+<div class="k-posts-list"></div>
+
 <style>
 .avatar {
 	width: 100px;
@@ -58,76 +60,64 @@ a:active {
 }
 </style>
 <body>
-    <div class="padding">
-        <div class="mdui-container">
-            <div class="mdui-col-md-1 mdui-col-sm-1">
-            </div>
-            <div class="mdui-col-md-10 mdui-col-sm-10">
-                <div class="animated flipInX mdui-card mdui-shadow-{{site.data.site.card.card_shadow}} {% if site.data.site.card.card_hoverable == true%}mdui-hoverable{% endif %}">
-                    <div class="mdui-card-primary-title title">
-                        我的情侣
-                    </div>
-                    <div class="mdui-typo">
-                        <hr/>
-                    </div>
-                    <a href="{{site.data.love.header.siteurl}}" target="_blank">
-                        <img class="avatar mdui-center" src="{{site.data.love.header.favicon}}"/>
-					</a>
-                        <div class="mdui-card-primary">
-                            <h1 class="padding-bottom-8px mdui-card-primary-title name mdui-text-center">
-                    <a href="{{site.data.love.header.siteurl}}" target="_blank">
-					<font color="black">
-                                {{site.data.love.header.name}}
-					</font>
-					</a>
-                            </h1>
-                            <div class="padding-bottom-8px primary-title mdui-card-primary-subtitle mdui-text-center">
-                    <a href="{{site.data.love.header.siteurl}}" target="_blank">
-					<font color="black">
-                                {{site.data.love.header.introduction}}
-					</font>
-                    </a>
-							</div>
-						</div>
-                </div>
-                </br>
-                </br>
-				{% if site.data.love.photo.photo == true %}
-                <div class=" animated flipInX lazyload mdui-card mdui-shadow-{{site.data.site.card.card_shadow}} {% if site.data.site.card.card_hoverable == true%}mdui-hoverable{% endif %}">
-                    <div class="mdui-card-primary-title title">
-                        相册
-                    </div>
-                    <div class="mdui-typo">
-                        <hr/>
-                    </div>
-                    <div class="mdui-col-md-12 mdui-col-sm-12">
-                        <div class="padding-bottom-16px mdui-col-md-4 mdui-col-sm-6">
-                            <div class="mdui-card mdui-shadow-2">
-                                <div class="mdui-card-media k-post-media lazy" data-original="{{site.data.love.photo.pictureo}}">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="padding-bottom-16px mdui-col-md-4 mdui-col-sm-6">
-                            <div class="mdui-card mdui-shadow-2">
-                                <div class="mdui-card-media k-post-media lazy" data-original="{{site.data.love.photo.picturet}}">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="padding-bottom-16px mdui-col-md-4 mdui-col-sm-6">
-                            <div class="mdui-card mdui-shadow-2">
-                                <div class="mdui-card-media k-post-media lazy" data-original="{{site.data.love.photo.pictureth}}">
-                                </div>
-                            </div>
-                        </div>
-						<div class="padding-bottom-8px">
-						</div>
-                    </div>
-                </div>
-				{% else %}
-				{% endif %}
-            </div>
+    <div class="mdui-container"> 
+        <div class="mdui-col-md-1 mdui-col-sm-1">
         </div>
-	</div>
+        <div class="mdui-col-md-10 mdui-col-sm-10">
+            <div class="animated flipInX mdui-card mdui-shadow-{{site.data.site.card.card_shadow}} {% if site.data.site.card.card_hoverable == true%}mdui-hoverable{% endif %}">
+                <div class="mdui-card-primary-title title">
+                    我的情侣
+                </div>
+                <div class="mdui-typo">
+                    <hr/>
+                </div>
+                <a href="{{site.data.love.header.siteurl}}" target="_blank">
+                    <img class="avatar mdui-center" src="{{site.data.love.header.favicon}}"/>
+                </a>
+                    <div class="mdui-card-primary">
+                        <h1 class="padding-bottom-8px mdui-card-primary-title name mdui-text-center">
+                <a href="{{site.data.love.header.siteurl}}" target="_blank">
+                <font color="black">
+                            {{site.data.love.header.name}}
+                </font>
+                </a>
+                        </h1>
+                        <div class="padding-bottom-8px primary-title mdui-card-primary-subtitle mdui-text-center">
+                <a href="{{site.data.love.header.siteurl}}" target="_blank">
+                <font color="black">
+                            {{site.data.love.header.introduction}}
+                </font>
+                </a>
+                        </div>
+                    </div>
+            </div>
+            </br>
+            </br>
+            {% if site.data.love.photo.photo == true %}
+            <div class=" animated flipInX lazyload mdui-card mdui-shadow-{{site.data.site.card.card_shadow}} {% if site.data.site.card.card_hoverable == true%}mdui-hoverable{% endif %}">
+                <div class="mdui-card-primary-title title">
+                    相册
+                </div>
+                <div class="mdui-typo">
+                    <hr/>
+                </div>
+                <div class="mdui-col-md-12 mdui-col-sm-12">
+                    {% for picture in site.data.love.photo.pictures %}
+                    <div class="padding-bottom-16px mdui-col-md-4 mdui-col-sm-6">
+                        <div class="mdui-card mdui-shadow-2">
+                            <div class="mdui-card-media k-post-media lazy" data-original="{{picture}}">
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                    <div class="padding-bottom-8px">
+                    </div>
+                </div>
+            </div>
+            {% else %}
+            {% endif %}
+        </div>
+    </div>
 
     {% include content/component/lazyload.html %}
 </body>

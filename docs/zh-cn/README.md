@@ -2,7 +2,7 @@
 
 > 基于 MDUI 的 Jekyll 主题
 
-!> 主题磕磕碰碰持续维护了一年，精力有限，无法继续维护。期待 V2 吧！
+!> 主题磕磕碰碰持续开发、维护了一年。精力有限，目前只做兼容性维护。期待 V2 吧！
 
 ## 是什么
 
@@ -40,5 +40,7 @@ MDUI 是一个优秀的前端框架，采用 Material Design 设计。
 ## 谁在用
 
 [KeJun](https://blog.kejun.me/) - 二次元智障
+
+[Rasphino](https://blog.rasphino.cn/) - Rasphino's Blog
 
 你可以新建一个 pull request ,或者联系我，来添加你的博客到这里。

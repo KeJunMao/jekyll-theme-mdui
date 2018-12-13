@@ -41,10 +41,6 @@ MDUI is an excellent front-end framework designed with Material Design.
 
 [KeJun](https://blog.kejun.me/) - 二次元智障
 
-[m0dulo](https://exodus.m0dulo.xyz/) - 隐宅
-
-[BOYANG YAN'S](http://yanboyang.com/)
-
-[gledos的博客](http://gledos.science) - 没有什么值钱的东西 
+[Rasphino](https://blog.rasphino.cn/) - Rasphino's Blog
 
 You can create a new pull request to add your blog here.

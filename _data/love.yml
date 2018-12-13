@@ -6,6 +6,7 @@ header:
     
 photo:
     photo: true
-    pictureo: "https://i.loli.net/2018/07/31/5b607051aef7d.jpg"
-    picturet: "https://i.loli.net/2018/07/31/5b607052ce870.jpg"
-    pictureth: "https://i.loli.net/2018/07/31/5b60705508637.jpg"
+    pictures: 
+        - "https://i.loli.net/2018/07/31/5b607051aef7d.jpg"
+        - "https://i.loli.net/2018/07/31/5b607052ce870.jpg"
+        - "https://i.loli.net/2018/07/31/5b60705508637.jpg"

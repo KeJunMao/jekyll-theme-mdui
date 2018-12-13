@@ -6,12 +6,8 @@ categories: technology
 tags: ubuntu apache mysql php phpmyadmin
 img: https://ooo.0o0.ooo/2017/05/27/59292b1243dc9.jpg
 author: test
+describe: 还原了服务器，于是重装，顺路记录下来，路过的朋友们可以借鉴，LAMP Go!
 ---
-
-还原了服务器，于是重装，顺路记录下来，路过的朋友们可以借鉴，LAMP Go!
-
-* 
-{:toc}
 
 ## Apache
 

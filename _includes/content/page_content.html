@@ -46,6 +46,11 @@
                     <div class="mdui-card-media-covered mdui-card-media-covered-gradient">
                         <div class="mdui-card-primary">
                             <h1 class="mdui-card-primary-title"><a class="mdui-text-color-white-text">{{page.title}}</a></h1>
+                            {% if page.describe != null %}
+                            <div class="mdui-card-primary-subtitle">
+                                {{page.describe}}
+                            </div>
+                            {% endif %}
                         </div>
                     </div>
                 </div>

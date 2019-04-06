@@ -36,15 +36,15 @@
 
 ## Quick start 
 
-[Quick start](http://mdui.kejun.space/#/quickstart)
+[Quick start](http://mdui.kejun.me/#/quickstart)
 
-[快速开始](http://mdui.kejun.space/#/zh-cn/quickstart)
+[快速开始](http://mdui.kejun.me/#/zh-cn/quickstart)
 
 ## Docs
 
-[Docs](http://mdui.kejun.space/#/)(!!!Need Help!!!)
+[Docs](http://mdui.kejun.me/#/)(!!!Need Help!!!)
 
-[中文文档](http://mdui.kejun.space/#/zh-cn/)
+[中文文档](http://mdui.kejun.me/#/zh-cn/)
 
 ## TODO
 

@@ -1,0 +1,65 @@
+<div class="k-posts-list"></div>
+<style>
+  .k-list-card{
+    margin-bottom: 45px;
+  }
+.k-post-media {
+    display:block
+    cursor: pointer;
+    max-height: 245px;
+    min-height: 245px;
+    background-position: 50% 50%;
+    background-size: cover;
+    background-color: #303033;
+}
+.k-post-media .mdui-card-primary-title a {
+    text-decoration: none;
+}
+.k-noimg{
+  padding-left: 16px;
+}
+.k-noimg h1::before{
+    color: #FF5151 ;
+    content: "- - -";
+}
+.k-noimg h1::after{
+    color: #FF5151 ;
+    content: "- - -";
+}
+.k-noimg h1:before,.k-noimg h1:after{
+    display: block;
+    font-size: 30px;
+    margin-top: 35px;
+}
+.k-noimg a,.k-noimg h1{
+  text-decoration: none;
+  color: white;
+  font-size: 24px;
+  font-weight: inherit;
+}
+.k-head-card-content .mdui-card-header-title{
+line-height: 40px;
+margin-left: 0;
+}
+.k-head-card-content{
+margin-right: 12px;
+}
+</style>
+
+<div class="mdui-row-md-4 mdui-row-sm">
+    <div class="mdui-col">
+    <div class="animated bounceIn mdui-card k-list-card mdui-shadow-{{site.data.site.card.card_shadow}} {% if site.data.site.card.card_hoverable == true%}mdui-hoverable{% endif %}">
+       <div class="mdui-card-media mdui-ripple k-post-media mdui-valign k-noimg">
+           <h1>{{ lang.error.main }} </a> <br /> <br /> <span class="mdui-text-color-blue">{{ lang.error.404x }}</span> </h3>
+       </div>
+    </div>
+    </div>
+    <div class="mdui-card-header k-head-card-content">
+    <a style="color: #000000; text-decoration: none;" href="{{ "/" | prepend: site.baseurl }}">
+    <div class="mdui-card-header-title">
+    <i style="font-style: normal;" class="material-icons">keyboard_arrow_right</i> 回到主页
+    </div>
+    </a>
+    </div>
+
+</div>

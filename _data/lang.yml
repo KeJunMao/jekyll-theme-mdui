@@ -37,7 +37,10 @@ zh-CN:
       toLinkedin: "分享到 Linkedin"
       toQq: "分享到 QQ"
       toTelegram: "分享到 Telegram"
-
+   error:
+      main: "错误"
+      404x: "404未找到"
+      403x: "403资源不可用"
 en-US:
    meng:
       head_card: 
@@ -77,43 +80,7 @@ en-US:
       toLinkedin: "Share to Linkedin"
       toQq: "Share to QQ"
       toTelegram: "Share to Telegram"
-
-TEST:
-   meng:
-      head_card: 
-          rss: "TEST"
-          sitemap: "TEST"
-   editor: 
-      content: "TEST"
-      frontmatter:
-         name: "TEST"
-         title: "TEST"
-         date: "TEST"
-         categories: "TEST"
-         tags: "TEST"
-         image: "TEST"
-      preview: "TEST"
-      download: "TEST"
-   lastupdate: 
-      one: "TEST"
-      two: "TEST"
-   readtime: 
-      one: "TEST"
-      two: "TEST"
-   page:
-      search: "TEST"
-   post:
-      continue: "TEST"
-      qrcode: "TEST"
-      qrcodeContent: "TEST"
-      comments_load_button: "TEST"
-      tags: "TEST"
-   share:
-      share: "TEST"
-      toWeibo: "TEST"
-      toTwitter: "TEST"
-      toFacebook: "TEST"
-      toGoogleplus: "TEST"
-      toLinkedin: "TEST"
-      toQq: "TEST"
-      toTelegram: "TEST"
+   error:
+      main: "Error"
+      404x: "404 Not found"
+      403x: "403 Resource not available"

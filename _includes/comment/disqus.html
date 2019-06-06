@@ -4,72 +4,69 @@
 {% assign lang = site.data.lang[site.data.site.lang] %}
 {% endif %}
 <style>
-    #disqus_thread{
+    #disqus_thread {
         padding: 16px;
         display: none;
     }
 </style>
 {% if site.data.site.comment.disqus_shortname != "" %}
 <div class="mdui-divider"></div>
-    {% if site.data.site.comment.disqus_proxy == false %}
-    {% if site.data.site.comment.disqus_button == true %}
-    <button id="load-disqus" class="mdui-btn mdui-btn-block mdui-center" onclick="disqus.load();" data="{{ site.data.site.comment.disqus_shortname }}">{{lang.post.comments_load_button}}</button>
-    <div id="disqus_thread"></div>
-    <script>
-var disqus = {
-    load : 
-    function disqus(){
-        $('#disqus_thread').css('display','block');
-        if ($('#dsq-app4').attr('name') == 'dsq-app4'){
+{% if site.data.site.comment.disqus_proxy == false %}
+{% if site.data.site.comment.disqus_button == true %}
+<button id="load-disqus" class="mdui-btn mdui-btn-block mdui-center" onclick="disqus.load();"
+    data="{{ site.data.site.comment.disqus_shortname }}">{{lang.post.comments_load_button}}</button>
+<div id="disqus_thread"></div>
+<script>
+    var disqus = {
+        load: function disqus() {
+            $('#disqus_thread').css('display', 'block');
+            var disqus_shortname = $("#load-disqus").attr("data");
+            if (typeof DISQUS !== 'object') {
+                (function () {
+                    var s = document.createElement('script');
+                    s.async = true;
+                    s.type = 'text/javascript';
+                    s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                    (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0])
+                    .appendChild(s);
+                }());
+            } else {
+                DISQUS.reset({
+                    reload: true,
+                });
+            }
+            $('#load-disqus').remove();
+        }
+    };
+</script>
+{% else %}
+<div id="disqus_thread"></div>
+<script>
+    function disqus() {
+        var disqus_shortname = '{{ site.data.site.comment.disqus_shortname }}';
+        if (typeof DISQUS !== 'object') {
+            (function () {
+                var s = document.createElement('script');
+                s.async = true;
+                s.type = 'text/javascript';
+                s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(
+                    s);
+            }());
+        } else {
             DISQUS.reset({
                 reload: true,
-                config: function () {  
-                }
+                config: function () {}
             });
-        }else{
-        var disqus_shortname = $("#load-disqus").attr("data");
-        if(typeof DISQUS !== 'object') {
-            (function () {
-                var s = document.createElement('script'); s.async = true;
-                s.type = 'text/javascript';
-                s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-                (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-            }());
-        }
-        }
-        $('#load-disqus').remove(); 
-    }
-};
-    </script>
-    {% else %}
-    <div id="disqus_thread"></div>
-    <script>
-        function disqus(){
-        var disqus_shortname = '{{ site.data.site.comment.disqus_shortname }}';
-        if(typeof DISQUS !== 'object') {
-            (function () {
-                var s = document.createElement('script'); s.async = true;
-                s.type = 'text/javascript';
-                s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-                (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-            }());
-        }
-        if ($('#dsq-app4').attr('name') == 'dsq-app4'){
-        DISQUS.reset({
-            reload: true,
-            config: function () {  
-            }
-        });
         }
     }
     disqus();
-    </script>
-    {% endif %}
-    {% endif %}
+</script>
+{% endif %}
+{% endif %}
 {% if site.data.site.comment.disqus_proxy %}
 <div class="mdui-divider"></div>
 <div id="disqusreadonly" style="padding-top: 16px;">
 </div>
 {% endif %}
 {% endif %}
-

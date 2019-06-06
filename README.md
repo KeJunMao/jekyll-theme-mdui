@@ -20,7 +20,7 @@
 
 ## General
 
-[![Version](https://img.shields.io/badge/version-0.5.2-green.svg?style=flat-square)]()
+[![Version](https://img.shields.io/badge/version-0.5.3-green.svg?style=flat-square)]()
 [![Jekyll](https://img.shields.io/badge/Jekyll-3.5+-green.svg?style=flat-square)](https://jekyllrb.com/)
 [![Gem](https://img.shields.io/gem/dt/jekyll-theme-mdui.svg?style=flat-square)](https://rubygems.org/gems/jekyll-theme-mdui/)
 

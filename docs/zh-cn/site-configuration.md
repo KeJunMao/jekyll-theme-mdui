@@ -11,7 +11,7 @@
 ```yaml
 title: "Jekyll-Theme-MDUI"
 description: "A Jekyll theme based on MDUI"
-url: 
+url:
 baseurl: ""
 author: "KeJun"
 paginate: 5
@@ -35,20 +35,20 @@ theme: jekyll-theme-mdui
 站点网址，如
 
 ```yaml
-url: https://kejun.space/blog/
+url: https://kejun.me/blog/
 ```
 
 ### baseurl
 
 站点目录。
 
-如果你期望博客的访问为：`https://kejun.space/blog/`,那么该字段为：
+如果你期望博客的访问为：`https://kejun.me/blog/`,那么该字段为：
 
 ```yaml
 basseurl: "/blog"
 ```
 
-如果你期望博客的访问为：`https://blog.kejun.space/`,那么该字段为：
+如果你期望博客的访问为：`https://blog.kejun.me/`,那么该字段为：
 
 ```yaml
 basseurl: ""

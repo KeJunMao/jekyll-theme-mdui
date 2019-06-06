@@ -36,7 +36,7 @@ MDUI 是一套用于开发 Material Design 网页的前端框架。
 * 不依赖非安全插件（可直接部署到Github）
 * PWA
 * 多样性 SNS
-* 在线编辑器[demo](https://blog.kejun.space/pages/editor.html)
+* 在线编辑器[demo](https://blog.kejun.me/pages/editor.html)
 * 快速插入提示，如下：
 
 ## 食用方法
@@ -47,7 +47,7 @@ MDUI 是一套用于开发 Material Design 网页的前端框架。
 
 [KeJunMao/jekyll-theme-mdui](https://github.com/KeJunMao/jekyll-theme-mdui)
 
-[KeJun Blog](https://blog.kejun.space/)
+[KeJun Blog](https://blog.kejun.me/)
 
 ## License
 

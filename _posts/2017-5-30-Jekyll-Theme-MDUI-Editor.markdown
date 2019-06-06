@@ -3,12 +3,12 @@ layout: post
 title: Jekyll Theme MDUI Editor
 date: 2017-5-30 0:0:0 +0800
 categories: Living
-tags: mdui jekyll theme editor 
+tags: mdui jekyll theme editor
 img: https://ooo.0o0.ooo/2017/05/30/592d41ed710a5.jpg
 ---
 静态博客在线攥写文章不是梦。
 
-* 
+*
 {:toc}
 
 ## 功能
@@ -32,7 +32,6 @@ img: https://ooo.0o0.ooo/2017/05/30/592d41ed710a5.jpg
 
 ## 预览
 
-[demo](https://blog.kejun.space/pages/editor.html)
+[demo](https://blog.kejun.me/pages/editor.html)
 
 ![](https://ooo.0o0.ooo/2017/05/30/592d4280948fb.jpg)
-

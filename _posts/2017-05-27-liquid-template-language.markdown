@@ -10,8 +10,6 @@ describe: 此博文用于记录研究 jekyll 时遇到的有趣 `liquid` 语言�
 
 ## 统计捐赠
 
-> 效果：[捐赠](https://storyline.kejun.space/pages/menus/donate.html)
-
 1. 在`_data`目录下创建一个名为`donate.yml`的文件。
 2. 按如下格式填写：
 ```yml

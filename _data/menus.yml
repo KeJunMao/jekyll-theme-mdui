@@ -1,5 +1,5 @@
 - name: HOME
-  url: /
+  url: /pages/test.html
   icon: home
 - name: CATEGORY
   url: /pages/category.html

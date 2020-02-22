@@ -55,16 +55,19 @@ jQuery(document).ready(function($) {
         NProgress.start();
 	});
 	History.Adapter.bind(window, 'statechange', function(){
-		var State = History.getState();
+    var flag = 0;
+    var State = History.getState();
 		$.get(State.url, function(data){
         $('.mdui-tooltip').remove();
         $(".mdui-container").fadeOut(300,function(){
-            $('.container').html($(data).find('.content')); 
+          if (flag++>0)return;
+            const content = $(data).find('.content');
+            $('.container').html($(content));
             document.title = data.match(/<title>(.*?)<\/title>/)[1];
             defaultTitle = document.title;
             NProgress.done();
-            $('#k-menus').html($(data).find('#k-menus').children()); 
-            $('#k-mobile-menus').html($(data).find('#k-mobile-menus').children()); 
+            $('#k-menus').html($(data).find('#k-menus').children());
+            $('#k-mobile-menus').html($(data).find('#k-mobile-menus').children());
             $(".content").css('top','50px');
             $(".content").css('position','relative');
             $(".mdui-container").fadeIn();

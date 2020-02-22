@@ -43,6 +43,7 @@
 <div id="disqus_thread"></div>
 <script>
     function disqus() {
+      $('#disqus_thread').css('display', 'block');
         var disqus_shortname = '{{ site.data.site.comment.disqus_shortname }}';
         if (typeof DISQUS !== 'object') {
             (function () {

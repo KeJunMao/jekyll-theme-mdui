@@ -8,93 +8,62 @@
 <div class="k-posts-list"></div>
 
 <style>
-  .k-list-card{
-    margin-bottom: 45px;
-  }
-.k-post-media {
-    display:block
-    cursor: pointer;
-    max-height: 245px;
-    min-height: 245px;
-    background-position: 50% 50%;
-    background-size: cover;
-    background-color: #303033;
+.small-icon{
+	font-size: 14px;
 }
-.k-post-media .mdui-card-primary-title a {
-    text-decoration: none;
+.fixed-padding-top{
+	padding-top: 10px;
 }
-.k-post-categories {
-    line-height: 40px;
-}
-.k-noimg{
-  padding-left: 16px;
-}
-.k-noimg h1::before{
-    content: "“";
-}
-.k-noimg h1::after{
-    content: "”";
-}
-.k-noimg h1:before,.k-noimg h1:after{
-    display: block;
-    font-size: 80px;
-    margin-top: 40px;
-}
-.k-noimg a,.k-noimg h1{
-  text-decoration: none;
-  color: white;
+.post-list-fixed{
+	padding-left: 8px;
+	padding-right: 8px;
 }
 </style>
 <div class="k-container">
+<div style="padding-top:8px;padding-bottom:8px;" class="mdui-typo-headline">
+    {{ filename }}
+</div>
     {% for post in site.categories[filename] %}
-    <div class="animated fadeInUp mdui-card k-list-card mdui-shadow-{{site.data.site.card.card_shadow}} {% if site.data.site.card.card_hoverable == true%}mdui-hoverable{% endif %}">
+    <div class="animated flipInX mdui-card k-list-card mdui-shadow-{{site.data.site.card.card_shadow}} {% if site.data.site.card.card_hoverable == true%}mdui-hoverable{% endif %}">
       {% if post.img == "" or post.img == null %}
       <div class="mdui-card-media mdui-ripple k-post-media mdui-valign k-noimg">
         <h1><a href="{{post.url| prepend: site.baseurl}}">{{post.title}}</a></h3>
       </div>
       {% else %}
-      <div class="mdui-card-media mdui-ripple k-post-media lazy" data-original="{{post.img}}" style="background-image:url()">
+      <div class="mdui-card-media mdui-ripple k-post-media lazy" data-original="{{post.img}}">
         <div class="mdui-card-media-covered mdui-card-media-covered-gradient">
           <div class="mdui-card-primary">
+			<br>
+		  {% if post.password == true %}
+            <div class="mdui-card-primary-title"><a class="mdui-text-color-white-text" href="{{post.url| prepend: site.baseurl}}">{{post.title}}({{lang.page.passwd}})</a></div>
+		  {% else %}
             <div class="mdui-card-primary-title"><a class="mdui-text-color-white-text" href="{{post.url| prepend: site.baseurl}}">{{post.title}}</a></div>
-          </div>
+		  {% endif %}
+		  </div>
         </div>
       </div>
       {% endif %}
-	  {% if post.describe != null %}
-      <div class="mdui-card-content mdui-text-color-black-secondary mdui-typo">
-        {{ post.describe}} <a href="{{post.url | prepend: site.baseurl}}">{{lang.post.continue}}</a>
+      {% if post.describe != null %}
+      <div class="mdui-card-content mdui-typo">
+        {{post.describe}} <div class=" mdui-float-right"><a href="{{post.url | prepend: site.baseurl}}">{{lang.post.continue}}</a></div>
       </div>
       {% else %}
+      <div class="mdui-card-content mdui-typo">
+        {{ post.excerpt | strip_html}} <div class=" mdui-float-right"><a href="{{post.url | prepend: site.baseurl}}">{{lang.post.continue}}</a></div>
+      </div>
+      {% endif %}
+	  <div class="post-list-fixed mdui-card-action">
+		    <div class="mdui-divider"></div>
+	  </div>
       <div class="mdui-card-content mdui-text-color-black-secondary mdui-typo">
-        {{ post.excerpt | strip_html}} <a href="{{post.url | prepend: site.baseurl}}">{{lang.post.continue}}</a>
-      </div>
-	  {% endif %}
-      <div class="mdui-divider"></div>
-      <div class="mdui-card-header">
-        <div class="mdui-card-menu mdui-typo">
-          {% for category in post.categories %}
-            <a class="k-post-categories" href="{{ "/category" | prepend: site.baseurl }}/{{category}}.html">{{category}}</a>
-          {% endfor %}
-        </div>
-        {% if site.data.site.many_authors == true %}
-        {% if post.author != null %}
-        {% assign author = site.data.authors[post.author] %}
-        <img class="mdui-card-header-avatar" src="{{author.avatar}}" />
-        <div class="mdui-card-header-title">{{author.name}}</div>
-        {% else %}
-        <img class="mdui-card-header-avatar" src="{{site.data.site.img.avatar}}" />
-        <div class="mdui-card-header-title">{{site.author}}</div>
-        {% endif %}
-        {% else %}
-        <img class="mdui-card-header-avatar" src="{{site.data.site.img.avatar}}" />
-        <div class="mdui-card-header-title">{{site.author}}</div>
-        {% endif %}
-        <div class="mdui-card-header-subtitle">{{ post.date | date: "%b %-d, %Y" }}</div>
-      </div>
-    </div>
+        <div class="k-post-categories mdui-float-left"><i class="mdui-icon material-icons small-icon">&#xe192;</i>&nbsp;{{ post.date | date: "%b %-d, %Y" }}</div>
+        {% for category in post.categories %}
+        <div class="k-post-categories mdui-float-right"><a href="{{ "/category" | prepend: site.baseurl }}/{{category}}.html">{{category}}</a></div>
+		{% endfor %}
+	  </div>
+	</div>
     {% endfor %}
-    </div>
+</div>
     {% include content/component/lazyload.html %}
 <script>
     Array.prototype.forEach.call(document.querySelectorAll(".mdui-card-media"), function(a) {

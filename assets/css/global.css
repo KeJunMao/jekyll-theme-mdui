@@ -5,7 +5,7 @@ layout: null
     {% if site.data.site.uiux.meng == true %}
     {% if site.data.meng.head_card.switch == true %}
     .head_card-offset{
-        padding-top: 65px;
+        padding-top: 75px;
     }
     @media screen and (max-width: 600px){
         .head_card-offset{
@@ -79,11 +79,11 @@ body,header{
 .k-container{
     margin: 0 auto;
     width: 100%;
-    max-width: 900px;
+    max-width: 700px;
     flex-shrink: 0;
 }
 .k-posts-list {
-    padding-top: 65px;
+    padding-top: 75px;
 }
 @media screen and (max-width: 600px){
     .k-posts-list {
@@ -93,6 +93,46 @@ body,header{
             width: 100%;
         }
 }
+
+
+.k-list-card{
+  margin-bottom: 45px;
+}
+.k-post-media {
+    display:block
+    cursor: pointer;
+    max-height: 425px;
+    min-height: 425px;
+    height: 425px;
+    background-position: 50% 50%;
+    background-size: cover;
+    background-color: #303033;
+}
+.k-post-media .mdui-card-primary-title a {
+    text-decoration: none;
+}
+.k-post-categories {
+    padding-bottom: 16px;
+}
+.k-noimg{
+  padding-left: 16px;
+}
+.k-noimg h1::before{
+    content: "“";
+}
+.k-noimg h1::after{
+    content: "”";
+}
+.k-noimg h1:before,.k-noimg h1:after{
+    display: block;
+    font-size: 80px;
+    margin-top: 40px;
+}
+.k-noimg a,.k-noimg h1{
+  text-decoration: none;
+  color: white;
+}
+
 @media (min-width: 600px){
     footer .k-footer-sns{
     display: -webkit-box!important;

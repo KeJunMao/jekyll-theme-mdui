@@ -4,17 +4,16 @@
 - name: CATEGORY
   url: /category/
   icon: "&#xe53b;"
-- name: TAGS
+- other: TAGS
   url: /tags/
-  icon: "&#xe893;"
-- name: LOVER
+  icon: "&#xe867;"
+- other: LOVER
   url: /love/
   icon: "&#xe87d;"
-  color: "red"
-- name: FRIENDS
+- other: FRIENDS
   url: /friends/
   icon: "&#xe8a3;"
-- name: EDITOR
+- other: EDITOR
   url: /editor/
   icon: "&#xe150;"
 - name: navSearch

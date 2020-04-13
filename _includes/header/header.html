@@ -65,6 +65,9 @@
     width: 100%;
     text-align: left;
 }
+.fixed-menus{
+	padding-top: 8px;
+}
 </style>
 <header mdui-headroom class="mdui-appbar mdui-shadow-0 mdui-appbar-fixed">
     <div class="mdui-toolbar">
@@ -73,12 +76,30 @@
         <div class="mdui-toolbar-spacer"></div>
         <div class="mdui-hidden-xs-down">
             <div class="k-header-menus" id="k-menus">
-        {% for menu in site.data.menus %}
-        {% if menu.name != "navSearch" %}
-        <a href="{{menu.url | prepend: site.baseurl }}" class="mdui-btn mdui-ripple {% if menu.url  == page.url %}mdui-list-item-active{% endif %}">{{menu.name}}</a>
-        {% endif %}
-        {% endfor %}
-        </div>
+			{% for menu in site.data.menus %}
+			{% if menu.name != "navSearch" %}
+			{% if menu.name != null %}
+				<a href="{{menu.url | prepend: site.baseurl }}" class="mdui-btn mdui-ripple {% if menu.url  == page.url %}mdui-list-item-active{% endif %}">{{menu.name}}</a>
+			{% endif %}
+			{% endif %}
+			{% endfor %}
+				<a mdui-menu="{target:'#k-homemenu'}" class="mdui-btn mdui-ripple {% if menu.url  == page.url %}mdui-list-item-active{% endif %}">{{lang.menu.other}}</a>
+				<ul class="mdui-menu" id="k-homemenu">
+			{% for menu in site.data.menus %}
+			{% if menu.other != null %}
+					<li class="mdui-menu-item">
+						<a href="{{menu.url | prepend: site.baseurl }}" class="mdui-ripple"><i class="mdui-menu-item-icon mdui-icon material-icons">{{menu.icon}}</i>{{menu.other}}</a>
+					</li>
+			{% endif %}
+			{% endfor %}
+					<div class="post-list-fixed mdui-card-action">
+							<div class="mdui-divider"></div>
+					</div>
+					<li class="mdui-menu-item">
+						<a target="_blank" href="{{ "/sitemap.xml" | prepend: site.baseurl }}" class="mdui-ripple"><i class="mdui-menu-item-icon mdui-icon material-icons">code</i>{{lang.meng.head_card.sitemap}}</a>
+					</li>
+				</ul>
+			</div>
         {% if navSearch == true %}
         <div class="mdui-textfield k-navsearch-btn mdui-textfield-expandable">
             <button class="mdui-textfield-icon k-navsearch-open mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">&#xe8b6;</i></button>
@@ -95,28 +116,53 @@
         </div>
     </div>
 </header>
-<div class="mdui-drawer mdui-drawer-close" id="k-menu">
+<div class="mdui-shadow-0 mdui-drawer mdui-drawer-close" id="k-menu">
     {% if navSearch == true %}
     <div class="mdui-textfield">
         <div class="typeahead__container">
             <div class="typeahead__field">
                 <span class="typeahead__query">
-                    <i class="mdui-icon material-icons">&#xe8b6;</i>
-                    <input class="mdui-textfield-input k-nav-search" type="text" placeholder="{{lang.page.search}}"/>
+                    <i style="padding-left:24px;" class="mdui-icon material-icons">&#xe8b6;</i>
+                    <input style="width:185px;" class="mdui-textfield-input k-nav-search" type="text" placeholder="{{lang.page.search}}"/>
                 </span>
             </div>
         </div>
     </div>
     {% endif %}
-    <ul id="k-mobile-menus" class="mdui-list">
-        {% for menu in site.data.menus %}
+    <ul id="md-menu" class="fixed-menus mdui-list">
+		{% for menu in site.data.menus %}
         {% if menu.name != "navSearch" %}
-        <a href="{{menu.url | prepend: site.baseurl }}" class="mdui-list-item mdui-ripple {% if menu.url == page.url %}mdui-list-item-active{% endif %}">
-            <i class="mdui-list-item-icon mdui-icon material-icons">{{menu.icon}}</i>
+		{% if menu.name != null %}
+		<a href="{{ menu.url | prepend: site.baseurl | prepend: site.baseurl }}">
+        <li class="{% if menu.url == page.url %}mdui-list-item-active{% endif %} menu-item menu-item-type-custom menu-item-object-custom mdui-list-item mdui-ripple">
+            <i class="mdui-list-item-icon mdui-icon material-icons">&nbsp;{{menu.icon}}</i>
             <div class="mdui-list-item-content">{{menu.name}}</div>
-        </a>
+        </li>
+		</a>
+        {% endif %}
         {% endif %}
         {% endfor %}
+		{% for menu in site.data.menus %}
+        {% if menu.name != "navSearch" %}
+		{% if menu.other != null %}
+		<a href="{{menu.url | prepend: site.baseurl }}">
+        <li class="{% if menu.url == page.url %}mdui-list-item-active{% endif %} menu-item menu-item-type-custom menu-item-object-custom mdui-list-item mdui-ripple">
+            <i class="mdui-list-item-icon mdui-icon material-icons">&nbsp;{{menu.icon}}</i>
+            <div class="mdui-list-item-content">{{menu.other}}</div>
+        </li>
+		</a>
+        {% endif %}
+        {% endif %}
+        {% endfor %}
+		<div class="post-list-fixed mdui-card-action">
+				<div class="mdui-divider"></div>
+		</div>
+		<a target="_blank" href="{{"/sitemap.xml" | prepend: site.baseurl }}">
+        <li class="{% if menu.other.url == page.url %}mdui-list-item-active{% endif %} menu-item menu-item-type-custom menu-item-object-custom mdui-list-item mdui-ripple">
+            <i class="mdui-list-item-icon mdui-icon material-icons">&nbsp;code</i>
+            <div class="mdui-list-item-content">{{lang.meng.head_card.sitemap}}</div>
+        </li>
+		</a>
     </ul>
 </div>
 {% if navSearch == true %}

@@ -1,4 +1,8 @@
 zh-CN:
+   friends:
+      lover: "一个恋人"
+      friends: "一群伙伴"
+      photos: "我们的照片"
    meng:
       head_card: 
           rss: "订阅"
@@ -6,7 +10,7 @@ zh-CN:
    editor: 
       content: "内容"
       frontmatter:
-         name: "Front Matter"
+         name: "头配置"
          title: "标题"
          date: "日期"
          categories: "分类"
@@ -22,12 +26,14 @@ zh-CN:
       two: "分钟"
    page:
       search: "搜索"
+      passwd: "密码保护"
    post:
       continue: "阅读全文"
       qrcode: "二维码"
       qrcodeContent: "在其它设备中阅读本文章"
       comments_load_button: "阅读评论 「请确保 Disqus 可以正常加载」"
       tags: "标签"
+      top: "置顶文章"
    share:
       share: "分享"
       toWeibo: "分享到 微博"
@@ -37,11 +43,16 @@ zh-CN:
       toLinkedin: "分享到 Linkedin"
       toQq: "分享到 QQ"
       toTelegram: "分享到 Telegram"
-   error:
-      main: "错误"
-      404x: "404未找到"
-      403x: "403资源不可用"
+   password:
+      enter: "让我康康"
+      wrong: "密码错误"
+   menu:
+      other: "其他"
 en-US:
+   friends:
+      lover: "My Lover"
+      friends: "Other Friends"
+      photo: "Our Photos"
    meng:
       head_card: 
           rss: "RSS"
@@ -65,12 +76,14 @@ en-US:
       two: "minutes to read this article."
    page:
       search: "Search"
+      passwd: "Password protected"
    post:
       continue: "Read more"
       qrcode: "QR Code"
       qrcodeContent: "Read this article on other devices"
-      comments_load_button: "Read Comments"
+      comments_load_button: "Read Comments(If you can load it)"
       tags: "Tags"
+      top: "Sticky"
    share:
       share: "Share "
       toWeibo: "Share to Weibo"
@@ -80,7 +93,47 @@ en-US:
       toLinkedin: "Share to Linkedin"
       toQq: "Share to QQ"
       toTelegram: "Share to Telegram"
-   error:
-      main: "Error"
-      404x: "404 Not found"
-      403x: "403 Resource not available"
+   password:
+      enter: "Enter"
+      wrong: "Password wrong"
+   menu:
+      other: "Other"
+TEST:
+   meng:
+      head_card: 
+          rss: "TEST"
+          sitemap: "TEST"
+   editor: 
+      content: "TEST"
+      frontmatter:
+         name: "TEST"
+         title: "TEST"
+         date: "TEST"
+         categories: "TEST"
+         tags: "TEST"
+         image: "TEST"
+      preview: "TEST"
+      download: "TEST"
+   lastupdate: 
+      one: "TEST"
+      two: "TEST"
+   readtime: 
+      one: "TEST"
+      two: "TEST"
+   page:
+      search: "TEST"
+   post:
+      continue: "TEST"
+      qrcode: "TEST"
+      qrcodeContent: "TEST"
+      comments_load_button: "TEST"
+      tags: "TEST"
+   share:
+      share: "TEST"
+      toWeibo: "TEST"
+      toTwitter: "TEST"
+      toFacebook: "TEST"
+      toGoogleplus: "TEST"
+      toLinkedin: "TEST"
+      toQq: "TEST"
+      toTelegram: "TEST"

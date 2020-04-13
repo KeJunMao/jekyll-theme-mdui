@@ -61,10 +61,10 @@ body,header{
     width: 10px;
 }
 ::-webkit-scrollbar-thumb {
-    background: rgba(0,0,0,0.1);
+    background: rgba(0,0,255,0.4);
 }
 ::-webkit-scrollbar-thumb:window-inactive {
-    background: rgba(0,0,255,0.4);
+    background: rgba(0,0,0,0.1);
 }
   body {
     display: flex;

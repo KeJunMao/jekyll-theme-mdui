@@ -88,7 +88,7 @@
 			{% for menu in site.data.menus %}
 			{% if menu.other != null %}
 					<li class="mdui-menu-item">
-						<a href="{{menu.url | prepend: site.baseurl }}" class="mdui-ripple"><i class="mdui-menu-item-icon mdui-icon material-icons">{{menu.icon}}</i>{{menu.other}}</a>
+						<a href="{{menu.url | prepend: site.baseurl }}" class="mdui-ripple mdui-text-uppercase"><i class="mdui-menu-item-icon mdui-icon material-icons">{{menu.icon}}</i>{{menu.other}}</a>
 					</li>
 			{% endif %}
 			{% endfor %}
@@ -122,7 +122,7 @@
         <div class="typeahead__container">
             <div class="typeahead__field">
                 <span class="typeahead__query">
-                    <i style="padding-left:24px;" class="mdui-icon material-icons">&#xe8b6;</i>
+                    <i style="padding-left:18px;" class="mdui-icon material-icons">&#xe8b6;</i>
                     <input style="width:185px;" class="mdui-textfield-input k-nav-search" type="text" placeholder="{{lang.page.search}}"/>
                 </span>
             </div>
@@ -136,7 +136,7 @@
 		<a href="{{ menu.url | prepend: site.baseurl | prepend: site.baseurl }}">
         <li class="{% if menu.url == page.url %}mdui-list-item-active{% endif %} menu-item menu-item-type-custom menu-item-object-custom mdui-list-item mdui-ripple">
             <i class="mdui-list-item-icon mdui-icon material-icons">&nbsp;{{menu.icon}}</i>
-            <div class="mdui-list-item-content">{{menu.name}}</div>
+            <div class="mdui-list-item-content mdui-text-uppercase">{{menu.name}}</div>
         </li>
 		</a>
         {% endif %}
@@ -148,7 +148,7 @@
 		<a href="{{menu.url | prepend: site.baseurl }}">
         <li class="{% if menu.url == page.url %}mdui-list-item-active{% endif %} menu-item menu-item-type-custom menu-item-object-custom mdui-list-item mdui-ripple">
             <i class="mdui-list-item-icon mdui-icon material-icons">&nbsp;{{menu.icon}}</i>
-            <div class="mdui-list-item-content">{{menu.other}}</div>
+            <div class="mdui-list-item-content mdui-text-uppercase">{{menu.other}}</div>
         </li>
 		</a>
         {% endif %}
@@ -160,7 +160,7 @@
 		<a target="_blank" href="{{"/sitemap.xml" | prepend: site.baseurl }}">
         <li class="{% if menu.other.url == page.url %}mdui-list-item-active{% endif %} menu-item menu-item-type-custom menu-item-object-custom mdui-list-item mdui-ripple">
             <i class="mdui-list-item-icon mdui-icon material-icons">&nbsp;code</i>
-            <div class="mdui-list-item-content">{{lang.meng.head_card.sitemap}}</div>
+            <div class="mdui-list-item-content mdui-text-uppercase">{{lang.meng.head_card.sitemap}}</div>
         </li>
 		</a>
     </ul>

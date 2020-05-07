@@ -32,9 +32,9 @@ sns_share: # SNS Share Switch
    telegram: true
 
 comment:
-  used: "disqus" # disqus,livere,gitment,valine
+  used: "" # disqus,livere,gitment,valine
   # disqus config
-  disqus_shortname: "kejun" # Your disqus
+  disqus_shortname: "" # Your disqus
   disqus_button: false # disqus load button
   disqus_proxy: false # # disqus proxy(Do not use)
   disqus_proxy_url: "" # (Do not use)

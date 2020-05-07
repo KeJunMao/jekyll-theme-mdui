@@ -1,3 +1,9 @@
-{% if site.data.site.comment.used != "" %}
-    {% include comment/{{site.data.site.comment.used}}.html %}
+{% assign comment = site.data.site.comment.used %}
+
+{% if comment.first %}
+  {% for c in comment %}
+    {% include comment/{{c}}.html %}
+  {% endfor %}
+{% elsif comment != '' %}
+  {% include comment/{{comment}}.html %}
 {% endif %}

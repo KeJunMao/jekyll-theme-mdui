@@ -15,9 +15,9 @@
 
 ```yaml
 comment:
-  used: disqus 
+  used: disqus
   # disqus config
-  disqus_shortname: "kejun" # Your disqus 
+  disqus_shortname: "" # Your disqus
   disqus_button: false # disqus load button
 ```
 
@@ -57,6 +57,21 @@ comment:
   valine_app_id: ''
   valine_app_key: ''
   valine_placeholder: "ヾﾉ≧∀≦)o来啊，快活啊!"
+```
+
+### 同时启用多种
+
+为响应 [moi.rpy](3066628847@qq.com) 同学的需求，添加了此功能。
+
+但是请尽可能仅使用单一评论系统，目前没有什么时间来维护多种评论可能出现意外样式的问题。
+
+只要将 `used` 字段改为数组，并写入你想要的评论系统即可。请确保对应评论系统的 config 存在、真实、有效。
+
+```yaml
+comment:
+  used:
+    - valine
+    - disqus
 ```
 
 ## 参数详解

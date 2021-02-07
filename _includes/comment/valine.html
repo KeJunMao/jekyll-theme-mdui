@@ -28,10 +28,8 @@
 setTimeout(function(){
     new Valine({
         el: '.comment',
-        notify: {{site.data.site.comment.valine_notify}},
-        verify: {{site.data.site.comment.valine_verify}},
-        app_id: '{{site.data.site.comment.valine_app_id}}', 
-        app_key: '{{site.data.site.comment.valine_app_key}}', 
+        appId: '{{site.data.site.comment.valine_app_id}}', 
+        appKey: '{{site.data.site.comment.valine_app_key}}', 
         placeholder: '{{site.data.site.comment.valine_placeholder}}' 
 });
 },1000)

@@ -48,8 +48,6 @@ comment:
   client_id: ""
   client_secret: ""
   #valine config
-  valine_notify: false #mail notifier
-  valine_verify: false #validation code
   valine_app_id: ''
   valine_app_key: ''
   valine_placeholder: "ヾﾉ≧∀≦)o来啊，快活啊!"

@@ -26,13 +26,13 @@
     <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
     <link rel="manifest" href="{{ "/manifest.json" | prepend: site.baseurl }}">
 
-    <script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdn.bootcss.com/mdui/0.3.0/js/mdui.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mdui/0.3.0/js/mdui.min.js"></script>
     <script src="{{ "/assets/js/History.js" | prepend: site.baseurl }}"></script>
 
-    <link rel="preload" href="https://cdn.bootcss.com/mdui/0.3.0/css/mdui.min.css" as="style" onload="this.rel='stylesheet'">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/mdui/0.3.0/css/mdui.min.css" as="style" onload="this.rel='stylesheet'">
     <link rel="preload" href="{{ "/assets/css/global.css" | prepend: site.baseurl }}" as="style" onload="this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://cdn.bootcss.com/mdui/0.3.0/css/mdui.min.css"></noscript>
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdui/0.3.0/css/mdui.min.css"></noscript>
     <noscript><link rel="stylesheet" href="{{ "/assets/css/global.css" | prepend: site.baseurl }}"></noscript>
 
     {% include component/nprogress.html %}
@@ -89,6 +89,6 @@ Macros:{a:"\\alpha",b:"\\beta",c:"\\chi",d:"\\delta",e:"\\epsilon",f:"\\phi",g:"
 MathJax.Hub.Queue(function(){
 var all=MathJax.Hub.getAllJax(),i;for(i=0;i<all.length;i+=1){all[i].SourceElement().parentNode.className+=' has-jax';}});
 </script>
-<script src="//cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML"></script>
 {% endif %}
 </head>

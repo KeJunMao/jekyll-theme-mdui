@@ -6,7 +6,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["KeJun"]
   spec.email         = ["kejun1997@gmail.com"]
 
-  spec.summary       = "A Jekyll theme based on mdui"
+  spec.summary       = "Material Design for Jekyll powered by MDUI"
   spec.homepage      = "https://github.com/KeJunMao/jekyll-theme-mdui.git"
   spec.license       = "MIT"
 

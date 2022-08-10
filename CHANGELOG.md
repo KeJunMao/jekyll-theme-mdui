@@ -2,7 +2,6 @@
 # [0.5.0](https://github.com/KeJunMao/jekyll-theme-mdui/compare/v0.5.2...v0.5.0) (2017-08-15)
 
 
-
 <a name="0.5.2"></a>
 ## [0.5.2](https://github.com/KeJunMao/jekyll-theme-mdui/compare/v0.5.1...v0.5.2) (2017-08-15)
 
@@ -12,13 +11,13 @@
 * **layout:** fix category_list in gem install ([597dd32](https://github.com/KeJunMao/jekyll-theme-mdui/commit/597dd32))
 
 
+
 ### Features
 
 * **comment:** add valine comment ([53c27f0](https://github.com/KeJunMao/jekyll-theme-mdui/commit/53c27f0))
 * **layout:** add category_list and category_content ([3489720](https://github.com/KeJunMao/jekyll-theme-mdui/commit/3489720))
 * **meng:** add a new music player ([5c366b8](https://github.com/KeJunMao/jekyll-theme-mdui/commit/5c366b8))
 * **site:** add customCSS and JS ([993cc3a](https://github.com/KeJunMao/jekyll-theme-mdui/commit/993cc3a))
-
 
 
 <a name="0.5.1"></a>
@@ -38,7 +37,6 @@
 * **layout:** add lazyload in home ([565d747](https://github.com/KeJunMao/jekyll-theme-mdui/commit/565d747))
 * **meng:** add button for head card ([2b8dc6f](https://github.com/KeJunMao/jekyll-theme-mdui/commit/2b8dc6f))
 * **post:** add no img post style ([93b12d6](https://github.com/KeJunMao/jekyll-theme-mdui/commit/93b12d6))
-
 
 
 <a name="0.5.0"></a>
@@ -110,6 +108,3 @@
 * **version:** 0.2.4 ([2a2d002](https://github.com/KeJunMao/jekyll-theme-mdui/commit/2a2d002))
 * **version:** 0.25 ([82b977e](https://github.com/KeJunMao/jekyll-theme-mdui/commit/82b977e))
 * **version:** 0.3.0 ([1f8a388](https://github.com/KeJunMao/jekyll-theme-mdui/commit/1f8a388))
-
-
-

@@ -1,12 +1,12 @@
 # Jekyll Theme MDUI
 
-> A Jekyll theme based on mdui
+> Material Design for Jekyll powered by MDUI
 
 !> The following content using Google Translate, please use with caution!
 
 ## What is it
 
-Jekyll Theme MDUI is a Jekyll theme based on MDUI.
+Jekyll MDUI is a Material Design theme for Jekyll powered by the MDUI framework.
 
 We do not rely on any plugins that GitHub Pages does not support. You can be the perfect hosting in Github Pages.
 

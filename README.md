@@ -2,7 +2,7 @@
 
 # Jekyll Theme MDUI
 
-> A Jekyll theme based on mdui
+> Material Design for Jekyll powered by MDUI
 
 > 主题停更，只做兼容性维护。期待 V2 吧！
 

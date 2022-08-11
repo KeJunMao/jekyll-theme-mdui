@@ -8,3 +8,4 @@ assets/live2d
 package-lock.json
 .vscode
 .jekyll-cache
+.DS_Store
